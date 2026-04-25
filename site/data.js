@@ -29,8 +29,6 @@ window.SITE_DATA = {
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
       venue: "NBER Tax Policy and the Economy, Volume 41",
       status: "forthcoming",
-      abstract:
-        "We study how state-level tax incentives shaped the geography of U.S. venture capital, exploiting the staggered adoption of state-level Qualified Small Business Stock (QSBS) conformity to identify the causal effect of capital-gains tax incentives on startup investing across regions. Our results show that targeted tax relief for early-stage equity meaningfully expanded VC activity beyond traditional coastal hubs.",
       topConferences: [
         { name: "NBER Tax Policy and the Economy Conference, 2026", url: "https://www.nber.org/conferences/41st-annual-nber-tax-policy-and-economy-conference-2026" },
       ],
@@ -44,31 +42,43 @@ window.SITE_DATA = {
       n: 2,
       title: "Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program",
       url: "https://conference.nber.org/conf_papers/f233872.pdf",
+      versions: [
+        { name: "Working Paper", url: "https://conference.nber.org/conf_papers/f233872.pdf" },
+        { name: "Oxford CBT WP", url: "https://oxfordtax.sbs.ox.ac.uk/sitefiles/wp25.10-guilherme-junqueira.pdf" },
+      ],
+      bibtex: `@unpublished{campello2026taxincentives,
+  author = {Campello, Murillo and Junqueira, Guilherme},
+  title  = {Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program},
+  year   = {2026},
+  note   = {Working Paper}
+}`,
+      apa: "Campello, M., & Junqueira, G. (2026). Tax incentives and venture capital risk-taking: Evidence from the QSBS program. Working Paper.",
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
       abstract:
-        "We study how the federal Qualified Small Business Stock (QSBS) program — a capital-gains tax exclusion targeted at early-stage equity — alters the risk-taking behavior of venture capital investors. Using novel data and quasi-experimental variation in eligibility, we document that QSBS-induced tax relief leads VCs to fund younger, riskier, and more innovative startups, with implications for the supply of risk capital and the composition of innovation in the United States.",
+        "Do tax subsidies prompt investors to take on risk? We address this question looking at investors' responses to changes to the Qualified Small Business Stock (QSBS) program, which cut capital gains taxes on startup investing. We do so under a framework in which some startup investors—venture capitalists (VCs)—combine outside funding with incentive-based compensation, while others invest their own funds. Using bunching, regression discontinuity, triple-differences, and matching designs that exploit industry eligibility, investment vintage, and holding-period requirements, we analyze data from 158 thousand investor–firm pairings over two decades. We first identify strategic investment timing, with subsidies prompting clustering at tax-eligible holding-period thresholds. We then document strategic capital allocation, with firms just below eligibility thresholds receiving more funding than those just above. Most notably, when and where tax subsidies apply, VCs shift their project selection toward riskier ventures: they invest more in pre-commercial stage startups, become more likely to provide startups with their initial capital, and invest more in startups with pre-existing debt, while becoming less likely to co-syndicate their investments. Tax-subsidized VC-backed ventures show higher failure rates. On the flip side, they attain higher valuations at exit and are more likely to reach \"unicorn status.\" None of these patterns are observed for comparable non-VC investors receiving the same tax subsidies. Our tests also suggest that tax incentives lead to reallocation toward more innovative industries, yielding more impactful patents. Our study is the first to show that tax policy can shift entrepreneurial financing toward riskier, more innovative, valuable ventures.",
       awards: ["Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum"],
       coverage: [
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
-        { name: "Indiana University — ECGI Online Series (Public Lecture)", url: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello" },
       ],
       topConferences: [
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
         { name: "FIRS 2026", url: "https://www.conftool.org/firs2026/sessions.php" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
-        { name: "NBER New Developments in Long-Term Asset Management Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026" },
-        { name: "NBER Place-Based Policies and Entrepreneurship Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
+        { name: "NBER New Dev. in Long-Term Asset Management Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.youtube.com/watch?v=__BDxxwHTlk" },
+        { name: "NBER Place-Based Policies & Entrepreneurship Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
         { name: "NBER Public Economics Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
-        { name: "NBER Economic Analysis of Business Taxation Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
+        { name: "NBER Econ. Analysis of Business Taxation Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
+        { name: "ECGI Public Lecture*", url: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello", recordingUrl: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello" },
       ],
       conferences: [
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
         { name: "FIRS 2026", url: "https://www.conftool.org/firs2026/sessions.php" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
-        { name: "NBER New Developments in Long-Term Asset Management Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026" },
-        { name: "NBER Place-Based Policies and Entrepreneurship Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
+        { name: "NBER New Dev. in Long-Term Asset Management Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.youtube.com/watch?v=__BDxxwHTlk" },
+        { name: "NBER Place-Based Policies & Entrepreneurship Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
         { name: "NBER Public Economics Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
-        { name: "NBER Economic Analysis of Business Taxation Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
+        { name: "NBER Econ. Analysis of Business Taxation Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
+        { name: "ECGI Public Lecture*", url: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello", recordingUrl: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello" },
         { name: "University of Melbourne's Finance Down Under Conference 2026", url: "https://fbe.unimelb.edu.au/conferences/fdu" },
         { name: "LSE Workshop on Capital Gains Tax 2026", url: "https://www.lse.ac.uk/international-inequalities/research/wealth-elites-and-tax-justice/centax" },
         { name: "SGF Conference at the University of Zurich 2026", url: "https://www.df.uzh.ch/en/news-events/events/2026/2026-SGF-conference.html" },
@@ -86,7 +96,7 @@ window.SITE_DATA = {
       seminars: [
         { name: "Bank of England*", year: 2025 },
         { name: "CUNEF Universidad*", year: 2025 },
-        { name: "Indiana University*", year: 2025 },
+        { name: "ECGI Public Lecture*", year: 2025 },
         { name: "Insper Instituto de Ensino e Pesquisa", year: 2025 },
         { name: "University of Alabama*", year: 2025 },
         { name: "University of Cambridge*", year: 2025 },
@@ -107,12 +117,22 @@ window.SITE_DATA = {
       n: 3,
       title: "Entrepreneurship on a Safety Net: Evidence from the World's Largest Cash Transfer Program",
       url: "https://westernfinance-portal.org/viewpaper?n=1044036",
+      versions: [
+        { name: "Working Paper", url: "https://westernfinance-portal.org/viewpaper?n=1044036" },
+      ],
+      bibtex: `@unpublished{campello2026entrepreneurship,
+  author = {Campello, Murillo and Junqueira, Guilherme and Lagaras, Spyridon},
+  title  = {Entrepreneurship on a Safety Net: Evidence from the World's Largest Cash Transfer Program},
+  year   = {2026},
+  note   = {Working Paper}
+}`,
+      apa: "Campello, M., Junqueira, G., & Lagaras, S. (2026). Entrepreneurship on a safety net: Evidence from the world's largest cash transfer program. Working Paper.",
       coauthors: [
         { name: "Murillo Campello", url: "https://murillocampello.com/" },
         { name: "Spyridon Lagaras", url: "https://sites.google.com/view/spyridonlagaras/home" },
       ],
       abstract:
-        "We examine how unconditional cash transfers shape entrepreneurial entry, exploiting the staggered rollout of Brazil's Bolsa Família — the world's largest cash transfer program. We find that recipients are significantly more likely to start small businesses, with effects concentrated among households facing tight liquidity constraints. The results suggest that social safety nets can complement, rather than crowd out, productive risk-taking by low-income workers.",
+        "Do social transfer programs boost entrepreneurship among low-income populations? We address this question by examining Brazil's Bolsa Família—the world's largest cash transfer program—and its effects on entrepreneurial entry, performance, and economic mobility. Using administrative data covering 2.3 million sole-proprietorships, we track entrepreneurs through the complete business lifecycle—from entry through performance to post-failure employment. We address selection combining instrumental variables—exploiting bunching across program eligibility thresholds—with matching and granular fixed effects. We first show that cash transfers increase transitions into entrepreneurship from both non-employment and wage employment, increasing beneficiaries' representation among entrepreneurs. We then identify systematic performance disadvantages: cash-transfer entrepreneurs exhibit lower survival, business growth, employment creation, and credit access, eventually facing higher rates of tax violations and debt collection proceedings. Performance gaps appear to reflect two mechanisms: managerial constraints—evident in hiring less-educated workers at higher wages with stable employment—and program dependence, revealed by income bunching at eligibility thresholds and widening gaps among longer-tenured beneficiaries. Yet these same hiring patterns, along with stronger recruitment of racial minorities, produce positive spillovers extending beyond cash-transfer recipients. Examining post-entrepreneurship trajectories, we find that cash-transfer entrepreneurs transition back to employment faster and their wage losses are 61% smaller than those of other failed entrepreneurs. Overall, our analysis reveals that cash-transfer businesses remain trapped in subsistence, generating neither growth nor economic transformation, but the entrepreneurial experience itself builds human capital that disproportionately benefits beneficiaries.",
       topConferences: [
         { name: "WFA 2026", url: "https://westernfinance-portal.org/conference" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
@@ -155,8 +175,6 @@ window.SITE_DATA = {
         { name: "Murillo Campello", url: "https://murillocampello.com/" },
         { name: "Changcheng Song", url: "https://sites.google.com/site/songchch02/" },
       ],
-      abstract:
-        "Using a randomized housing lottery as an exogenous shock to homeownership, we show that becoming a homeowner reduces the likelihood of starting a business. The mechanism operates through reduced labor mobility and increased debt-service obligations rather than wealth effects, with implications for housing policy and entrepreneurship.",
       topConferences: [
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
@@ -170,8 +188,9 @@ window.SITE_DATA = {
       n: 5,
       title: "Measuring Innovation in U.S. Food Markets",
       coauthors: [],
+
       topConferences: [
-        { name: "NBER Innovation Information Initiative 2025", url: "https://www.nber.org/conferences/innovation-information-initiative-technical-working-group-meeting-fall-2025" },
+        { name: "NBER Innovation Information Initiative 2025", url: "https://www.nber.org/conferences/innovation-information-initiative-technical-working-group-meeting-fall-2025", recordingUrl: "https://www.youtube.com/watch?v=5ji3nPiLcx8" },
       ],
     },
     {
@@ -228,24 +247,28 @@ window.SITE_DATA = {
       author: "James Hines",
       venue: "CESifo Area Conference on Public Economics",
       year: 2026,
+      slidesUrl: "https://www.dropbox.com/scl/fi/qfxopjq5lrdpf3ko9qilz/Discussion_Hines_2026_CESifo_Conference.pdf?rlkey=hnv554grxs2eerxaidfc05760&raw=1",
     },
     {
       paper: "Navigating Crowdfunding Security-Type Choices and Their Long-Term Implications",
       author: "Robert Reardon",
       venue: "RCF–ECGI Corporate Finance and Governance Conference",
       year: 2025,
+      slidesUrl: "https://www.dropbox.com/scl/fi/s6b5hupbv73dszujo9b7a/Discussion_Reardon_ECGI_Stevens_2025.pdf?rlkey=bey3ss5grw47rly1z5bineyu0&raw=1",
     },
     {
       paper: "The Uneven Effects of SEC's Accredited Investor Reform",
       author: "Alina Munteanu",
       venue: "Boca Finance and Real Estate Conference",
       year: 2025,
+      slidesUrl: "https://www.dropbox.com/scl/fi/nrw8c9hzr4p2qqjuuer3m/Discussion_Munteanu_Boca_2025.pdf?rlkey=tiyh9mo0y8qpwuxi7rd9ras0n&raw=1",
     },
     {
       paper: "Financial Distress Likelihood of European SMEs in Times of Economic Policy Uncertainty",
       author: "F. Hawachi and I. Requeijo",
       venue: "Spanish Finance Association's 32nd Finance Forum",
       year: 2025,
+      slidesUrl: "https://www.dropbox.com/scl/fi/dv5pq4f9w4o7ogajsxfdv/Discussion_Hawach_Requeijo_32_Fin_Forum.pdf?rlkey=gpr4ph8ruqxhtf5llcjl2vccz&raw=1",
     },
   ],
   sessionChair: [
