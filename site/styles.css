@@ -128,7 +128,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 .mm-ri li { padding-left: 22px; position: relative; }
 .mm-ri li::before {
   content: '\2014'; position: absolute; left: 0; top: 0;
-  color: var(--ink-4); font-weight: 300;
+  color: var(--accent); font-weight: 400;
 }
 
 @media (max-width: 760px) {
