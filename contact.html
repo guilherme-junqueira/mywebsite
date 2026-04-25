@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Guilherme Junqueira</title>
+<link rel="stylesheet" href="site/styles.css?v=46" />
+<meta name="description" content="Contact information for Guilherme Junqueira." />
+<link rel="canonical" href="https://gjunqueira.com/contact.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="site/assets/favicon-180.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guilherme Junqueira" />
+<meta property="og:title" content="Contact — Guilherme Junqueira" />
+<meta property="og:description" content="Contact information for Guilherme Junqueira." />
+<meta property="og:url" content="https://gjunqueira.com/contact.html" />
+<meta property="og:image" content="https://gjunqueira.com/site/assets/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact — Guilherme Junqueira" />
+<meta name="twitter:description" content="Contact information for Guilherme Junqueira." />
+<meta name="twitter:image" content="https://gjunqueira.com/site/assets/og-image.jpg" />
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="site/data.js?v=54"></script>
+<script type="text/babel" src="site/layout.jsx?v=32"></script>
+<script type="text/babel" data-presets="react">
+  const D = window.SITE_DATA;
+  function Contact() {
+    return (
+      <Layout active="contact">
+        <h1 className="cl-page-title">Contact</h1>
+
+        <div className="cl-contact-block">
+          <h2>Email</h2>
+          <p><a href={`mailto:${D.email}`}>{D.email}</a></p>
+        </div>
+
+        <div className="cl-contact-block">
+          <h2>Office</h2>
+          <p>{D.office}<br/>
+            <span style={{color:'var(--ink-3)', fontSize:15}}>Warrington College of Business · {D.officeAddress}</span>
+          </p>
+        </div>
+
+        <div className="cl-contact-block">
+          <h2>Online</h2>
+          <div className="row"><span className="lbl">UF Profile</span><a href={D.ufPage} target="_blank" rel="noopener">warrington.ufl.edu</a></div>
+          <div className="row"><span className="lbl">CV</span><a href={D.cvUrl} target="_blank" rel="noopener">Download PDF ↓</a></div>
+          <div className="row"><span className="lbl">X</span><a href={D.twitter} target="_blank" rel="noopener">@{D.twitterHandle}</a></div>
+          <div className="row"><span className="lbl">LinkedIn</span><a href={D.linkedin} target="_blank" rel="noopener">guilhermejunqueira</a></div>
+        </div>
+      </Layout>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Contact />);
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Research — Guilherme Junqueira</title>
+<link rel="stylesheet" href="site/styles.css?v=46" />
+<meta name="description" content="Working papers and publications on venture capital, tax incentives, cash transfers, and entrepreneurship." />
+<link rel="canonical" href="https://gjunqueira.com/research.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="site/assets/favicon-180.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guilherme Junqueira" />
+<meta property="og:title" content="Research — Guilherme Junqueira" />
+<meta property="og:description" content="Working papers and publications on venture capital, tax incentives, cash transfers, and entrepreneurship." />
+<meta property="og:url" content="https://gjunqueira.com/research.html" />
+<meta property="og:image" content="https://gjunqueira.com/site/assets/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Research — Guilherme Junqueira" />
+<meta name="twitter:description" content="Working papers and publications on venture capital, tax incentives, cash transfers, and entrepreneurship." />
+<meta name="twitter:image" content="https://gjunqueira.com/site/assets/og-image.jpg" />
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="site/data.js?v=54"></script>
+<script type="text/babel" src="site/layout.jsx?v=32"></script>
+<script type="text/babel" data-presets="react">
+  const D = window.SITE_DATA;
+
+  function PaperDetail({ p }) {
+    const authorLine = p.coauthors.length
+      ? <React.Fragment>with {p.coauthors.map((c,i) => (
+          <React.Fragment key={`${p.n}-${i}`}>
+            {i > 0 ? ', ' : ''}
+            {c.url ? <a href={c.url} target="_blank" rel="noopener">{c.name}</a> : c.name}
+          </React.Fragment>
+        ))}</React.Fragment>
+      : <span style={{color:'var(--ink-3)', fontStyle:'italic'}}>Solo project.</span>;
+
+    // Selected = topConferences; full list = conferences
+    const selected = (p.topConferences || []).filter(c => c && c.url);
+    const conferences = p.conferences || [];
+    const seminars = p.seminars || [];
+    // Only show disclosure if there's more than what's already in Selected
+    const hasMore = conferences.length > selected.length || seminars.length > 0;
+
+    return (
+      <article className="cl-paper-detail">
+        <div className="num">[{String(p.n).padStart(2,'0')}]</div>
+        <h3>
+          {p.url && p.url !== '#' ? <a href={p.url} target="_blank" rel="noopener">{p.title}</a> : p.title}
+        </h3>
+        <div className="authors">
+          {authorLine}
+          {p.venue && <React.Fragment> — <span className="venue">{p.venue}</span>{p.status?`, ${p.status}`:''}</React.Fragment>}
+        </div>
+
+        {p.awards && <div className="badges"><span className="badge-award">★ {p.awards[0]}</span></div>}
+
+        {p.coverage && (
+          <div className="badges">
+            <strong style={{color:'var(--ink-3)', fontWeight:500}}>Media &amp; coverage: </strong>
+            {p.coverage.map((c,i)=> <React.Fragment key={i}>{i>0?' · ':''}<a href={c.url} target="_blank" rel="noopener">{c.name}</a></React.Fragment>)}
+          </div>
+        )}
+
+        {selected.length > 0 && (
+          <div className="badges">
+            <strong style={{color:'var(--ink-3)', fontWeight:500}}>Selected presentations: </strong>
+            {selected.map((c,i)=> <React.Fragment key={i}>{i>0?' · ':''}<a href={c.url} target="_blank" rel="noopener" style={{color:'var(--ink-2)', textDecoration:'underline', textDecorationColor:'var(--rule)', textUnderlineOffset:'3px'}}>{c.name}</a></React.Fragment>)}
+          </div>
+        )}
+
+        {p.note && <p className="note">{p.note}</p>}
+
+        {hasMore && (
+          <details className="cl-expand">
+            <summary>All conferences &amp; seminars</summary>
+            <div className="cl-expand-body">
+              {conferences.length > 0 && (
+                <div className="group">
+                  <div className="lbl">Conferences ({conferences.length})</div>
+                  <div className="cl-conf-inline">{conferences.map((c,i) => (
+                    <React.Fragment key={i}>
+                      {i>0 ? ' · ' : ''}
+                      {typeof c === 'object'
+                        ? (c.url ? <a href={c.url} target="_blank" rel="noopener" style={{color:'var(--ink-2)', textDecoration:'underline', textDecorationColor:'var(--rule)', textUnderlineOffset:'3px'}}>{c.name}</a> : c.name)
+                        : c}
+                    </React.Fragment>
+                  ))}</div>
+                </div>
+              )}
+              {seminars.length > 0 && (
+                <div className="group">
+                  <div className="lbl">Seminars ({seminars.length})</div>
+                  <div className="cl-conf-inline">{seminars.map((s,i) => {
+                    const name = (typeof s === 'string') ? s : s.name;
+                    return <React.Fragment key={i}>{i>0 ? ' · ' : ''}{name}</React.Fragment>;
+                  })}</div>
+                </div>
+              )}
+              <div style={{fontSize:12, color:'var(--ink-4)', marginTop:8, fontStyle:'italic'}}>* presented by co-author</div>
+            </div>
+          </details>
+        )}
+      </article>
+    );
+  }
+
+  function Research() {
+    return (
+      <Layout active="research" wide>
+        <h1 className="cl-page-title">Research</h1>
+        <p className="cl-page-sub">Private capital · entrepreneurship &amp; innovation · development &amp; finance · labor &amp; finance.</p>
+
+        <h2 className="cl-section-h">Publication</h2>
+        {D.publications.map(p => <PaperDetail key={p.n} p={p} />)}
+
+        <h2 className="cl-section-h">Working Papers</h2>
+        {D.workingPapers.map(p => <PaperDetail key={p.n} p={p} />)}
+
+        <h2 className="cl-section-h">Works in Progress</h2>
+        {D.worksInProgress.map(p => <PaperDetail key={p.n} p={p} />)}
+      </Layout>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<Research />);
+</script>
+</body>
+</html>

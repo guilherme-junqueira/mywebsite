@@ -1,0 +1,273 @@
+// Updated site data with all real links
+window.SITE_DATA = {
+  name: "Guilherme Junqueira",
+  role: "Finance Ph.D. Candidate",
+  affiliation: "University of Florida · Warrington College of Business",
+  ufPage: "https://warrington.ufl.edu/directory/guilherme-junqueira/",
+  email: "gjunqueira@ufl.edu",
+  cvUrl: "https://www.dropbox.com/scl/fi/8hy57owk2mf6vcoat2vk1/CV_Junqueira_Guilherme.pdf?rlkey=w43lvnootw9a7yeo1e0njb65o&st=yfmffcxb&raw=1",
+  twitter: "https://x.com/_GJunqueira",
+  twitterHandle: "_GJunqueira",
+  linkedin: "https://www.linkedin.com/in/guilhermejunqueira/",
+  scholar: "#",
+  office: "Stuzin Hall, Office 311",
+  officeAddress: "1454 Union Rd, Gainesville, FL 32611",
+  visiting: [
+    { label: "Visiting Ph.D. Student, Fall 2026", at: "Tuck School of Business, Dartmouth", url: "https://tuck.dartmouth.edu/" },
+    { label: "Visiting Researcher", at: "Insper", url: "https://www.insper.edu.br/en/home" },
+  ],
+  fields: ["Private Capital", "Entrepreneurship & Innovation", "Development & Finance", "Labor & Finance"],
+  bio:
+    "I study how the design of tax incentives, cash transfer programs, and housing policy shapes who starts, finances, and grows new firms — with implications for private capital, innovation, and economic mobility. My work combines administrative and proprietary micro-data with quasi-experimental methods to speak to questions in entrepreneurship, development, and corporate finance.",
+  longBio:
+    "I am a fourth-year finance Ph.D. candidate at the University of Florida's Warrington College of Business. I will be a Visiting Ph.D. Student at Dartmouth's Tuck School of Business in Fall 2026, and I am a Visiting Researcher at Insper. My research sits at the intersection of private capital, entrepreneurship, and public policy. I use administrative and proprietary micro-data — together with quasi-experimental designs — to study how the design of tax incentives, transfer programs, and housing policy shapes who starts, finances, and grows new firms, and what that means for innovation and economic mobility.",
+  publications: [
+    {
+      n: 1,
+      title: "Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing",
+      url: "#",
+      coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
+      venue: "NBER Tax Policy and the Economy, Volume 41",
+      status: "forthcoming",
+      abstract:
+        "We study how state-level tax incentives shaped the geography of U.S. venture capital, exploiting the staggered adoption of state-level Qualified Small Business Stock (QSBS) conformity to identify the causal effect of capital-gains tax incentives on startup investing across regions. Our results show that targeted tax relief for early-stage equity meaningfully expanded VC activity beyond traditional coastal hubs.",
+      topConferences: [
+        { name: "NBER Tax Policy and the Economy Conference, 2026", url: "https://www.nber.org/conferences/41st-annual-nber-tax-policy-and-economy-conference-2026" },
+      ],
+      conferences: [
+        { name: "NBER Tax Policy and the Economy Conference, 2026", url: "https://www.nber.org/conferences/41st-annual-nber-tax-policy-and-economy-conference-2026" },
+      ],
+    },
+  ],
+  workingPapers: [
+    {
+      n: 2,
+      title: "Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program",
+      url: "https://conference.nber.org/conf_papers/f233872.pdf",
+      coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
+      abstract:
+        "We study how the federal Qualified Small Business Stock (QSBS) program — a capital-gains tax exclusion targeted at early-stage equity — alters the risk-taking behavior of venture capital investors. Using novel data and quasi-experimental variation in eligibility, we document that QSBS-induced tax relief leads VCs to fund younger, riskier, and more innovative startups, with implications for the supply of risk capital and the composition of innovation in the United States.",
+      awards: ["Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum"],
+      coverage: [
+        { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
+        { name: "Indiana University — ECGI Online Series (Public Lecture)", url: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello" },
+      ],
+      topConferences: [
+        { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
+        { name: "FIRS 2026", url: "https://www.conftool.org/firs2026/sessions.php" },
+        { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
+        { name: "NBER New Developments in Long-Term Asset Management Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026" },
+        { name: "NBER Place-Based Policies and Entrepreneurship Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
+        { name: "NBER Public Economics Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
+        { name: "NBER Economic Analysis of Business Taxation Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
+      ],
+      conferences: [
+        { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
+        { name: "FIRS 2026", url: "https://www.conftool.org/firs2026/sessions.php" },
+        { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
+        { name: "NBER New Developments in Long-Term Asset Management Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026" },
+        { name: "NBER Place-Based Policies and Entrepreneurship Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
+        { name: "NBER Public Economics Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
+        { name: "NBER Economic Analysis of Business Taxation Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
+        { name: "University of Melbourne's Finance Down Under Conference 2026", url: "https://fbe.unimelb.edu.au/conferences/fdu" },
+        { name: "LSE Workshop on Capital Gains Tax 2026", url: "https://www.lse.ac.uk/international-inequalities/research/wealth-elites-and-tax-justice/centax" },
+        { name: "SGF Conference at the University of Zurich 2026", url: "https://www.df.uzh.ch/en/news-events/events/2026/2026-SGF-conference.html" },
+        { name: "CESifo Area Conference on Public Economics 2026", url: "https://www.ifo.de/en/cesifo/event/2026-04-15/cesifo-area-conference-public-economics-2026" },
+        { name: "London Business School's Private Capital Symposium 2025", url: "https://drive.google.com/file/d/1-sO1gMD8QtmN0qakvzS66MGGKq0BkfJH/view" },
+        { name: "University of Oregon Finance Conference 2025", url: "https://business.uoregon.edu/faculty/departments/finance/conference" },
+        { name: "University of Oxford Private Equity Research Consortium Symposium 2025*", url: "https://uncipc.org/wp-content/uploads/2025/06/PERC-Oxford-2025_Materials2.pdf" },
+        { name: "University of Oxford Centre for Business Taxation Doctoral Conference 2025", url: "https://oxfordtax.web.ox.ac.uk/sitefiles/doctoral-conference-2025-programme.pdf" },
+        { name: "Finance Theory Group Summer School Conference 2025", url: "https://foster.uw.edu/wp-content/uploads/2025/06/evening_schedule.pdf" },
+        { name: "Latin American Economic Association (LACEA) Conference 2025", url: "https://www.lacea2025.org/en" },
+        { name: "Boca Finance and Real Estate Conference 2025", url: "https://business.fau.edu/boca-finance-and-real-estate-conference/" },
+        { name: "RCF-ECGI Corporate Finance & Governance Conference 2025", url: "https://www.ecgi.global/system/files/2025-09/rcf-ecgi-2025-day-1-track-a-programme.pdf" },
+        { name: "Spanish Finance Association's 32nd Finance Forum 2025", url: "https://finance-forum.es/" },
+      ],
+      seminars: [
+        { name: "Bank of England*", year: 2025 },
+        { name: "CUNEF Universidad*", year: 2025 },
+        { name: "Indiana University*", year: 2025 },
+        { name: "Insper Instituto de Ensino e Pesquisa", year: 2025 },
+        { name: "University of Alabama*", year: 2025 },
+        { name: "University of Cambridge*", year: 2025 },
+        { name: "University of Milan*", year: 2025 },
+        { name: "University of Naples Federico II*", year: 2025 },
+        { name: "University of São Paulo", year: 2025 },
+        { name: "UT San Antonio", year: 2025 },
+        { name: "National University of Singapore", year: 2026 },
+        { name: "Rutgers University*", year: 2026 },
+        { name: "Tulane University*", year: 2026 },
+        { name: "University of Edinburgh*", year: 2026 },
+        { name: "University of Glasgow*", year: 2026 },
+        { name: "University of Miami*", year: 2026 },
+        { name: "University of Tennessee*", year: 2026 },
+      ],
+    },
+    {
+      n: 3,
+      title: "Entrepreneurship on a Safety Net: Evidence from the World's Largest Cash Transfer Program",
+      url: "https://westernfinance-portal.org/viewpaper?n=1044036",
+      coauthors: [
+        { name: "Murillo Campello", url: "https://murillocampello.com/" },
+        { name: "Spyridon Lagaras", url: "https://sites.google.com/view/spyridonlagaras/home" },
+      ],
+      abstract:
+        "We examine how unconditional cash transfers shape entrepreneurial entry, exploiting the staggered rollout of Brazil's Bolsa Família — the world's largest cash transfer program. We find that recipients are significantly more likely to start small businesses, with effects concentrated among households facing tight liquidity constraints. The results suggest that social safety nets can complement, rather than crowd out, productive risk-taking by low-income workers.",
+      topConferences: [
+        { name: "WFA 2026", url: "https://westernfinance-portal.org/conference" },
+        { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
+        { name: "CEPR Development Economics Symposium 2026", url: "https://cepr.org/events/event-series/development-economics-symposium/cepr-development-economics-joint-tcd-2026-1" },
+        { name: "CEPR Summer Conference on Financial Intermediation and Corporate Finance 2026*", url: "https://cepr.org/events/8th-summer-conference-financial-intermediation-and-corporate-finance" },
+        { name: "ABFER Annual Conference 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
+        { name: "Society of Labor Economists (SOLE) Annual Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
+        { name: "HEC Paris Entrepreneurship Workshop 2025", url: "https://hecparisentrepreneurship.github.io/" },
+      ],
+      conferences: [
+        { name: "WFA 2026", url: "https://westernfinance-portal.org/conference" },
+        { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
+        { name: "CEPR Development Economics Symposium 2026", url: "https://cepr.org/events/event-series/development-economics-symposium/cepr-development-economics-joint-tcd-2026-1" },
+        { name: "CEPR Summer Conference on Financial Intermediation and Corporate Finance 2026*", url: "https://cepr.org/events/8th-summer-conference-financial-intermediation-and-corporate-finance" },
+        { name: "ABFER Annual Conference 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
+        { name: "Society of Labor Economists (SOLE) Annual Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
+        { name: "Inaugural Rutgers Finance Research Conference 2026*", url: "https://www.ssrn.com/index.cfm/en/janda/announcement/?id=18444" },
+        { name: "Luso-Brazilian Finance Network (Lubrafin) Meeting 2026", url: "https://sites.google.com/view/lubrafin/home" },
+        { name: "University of Minnesota Data-Intensive Research Conference 2026", url: "https://lcc.umn.edu/DIRC" },
+        { name: "Lake District Workshop in Corporate Finance 2026*", url: "https://wp.lancs.ac.uk/ldwcf/" },
+        { name: "IFN Stockholm Conference on Firms and Human Capital 2026*", url: "https://www.ifn.se/en/seminars-and-calendar/ifn-stockholm-conference/2026-firm-competitiveness/" },
+        { name: "CCA-ESCP Workshop on Fin. Institutions & Corporate Finance 2026*", url: "https://escp.eu/events/ccaescpworkshop" },
+        { name: "HEC Paris Entrepreneurship Workshop 2025", url: "https://hecparisentrepreneurship.github.io/" },
+        { name: "WEFI Student-Led Workshop 2025", url: "https://workshop-efi.com/student-led-workshop/" },
+      ],
+      seminars: [
+        { name: "Brazilian Finance Society", year: 2025 },
+        { name: "Copenhagen Business School*", year: 2025 },
+        { name: "Insper Instituto de Ensino e Pesquisa", year: 2025 },
+        { name: "University College Dublin", year: 2026 },
+        { name: "University of Florida (Economics Dept.)", year: 2026 },
+        { name: "Washington University in St. Louis*", year: 2026 },
+      ],
+    },
+    {
+      n: 4,
+      title: "Homeownership Hinders Entrepreneurship: Evidence from a Housing Lottery",
+      url: "#",
+      coauthors: [
+        { name: "Murillo Campello", url: "https://murillocampello.com/" },
+        { name: "Changcheng Song", url: "https://sites.google.com/site/songchch02/" },
+      ],
+      abstract:
+        "Using a randomized housing lottery as an exogenous shock to homeownership, we show that becoming a homeowner reduces the likelihood of starting a business. The mechanism operates through reduced labor mobility and increased debt-service obligations rather than wealth effects, with implications for housing policy and entrepreneurship.",
+      topConferences: [
+        { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
+      ],
+      conferences: [
+        { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
+      ],
+    },
+  ],
+  worksInProgress: [
+    {
+      n: 5,
+      title: "Measuring Innovation in U.S. Food Markets",
+      coauthors: [],
+      topConferences: [
+        { name: "NBER Innovation Information Initiative 2025", url: "https://www.nber.org/conferences/innovation-information-initiative-technical-working-group-meeting-fall-2025" },
+      ],
+    },
+    {
+      n: 6,
+      title: "The Industrial Organization of Private Equity",
+      coauthors: [
+        { name: "Murillo Campello", url: "https://murillocampello.com/" },
+        { name: "Michael S. Weisbach", url: "https://u.osu.edu/weisbach.2/" },
+      ],
+      note: "Granted access to MSCI–Burgiss data by the Private Equity Research Consortium.",
+    },
+    {
+      n: 7,
+      title: "The Anatomy of Creative Destruction",
+      coauthors: [],
+    },
+  ],
+  teaching: [
+    { course: "Financial Management (FIN 4414)",
+      level: "Undergraduate, U. Florida",
+      role: "Instructor of Record",
+      desc: "Corporate capital-raising across the financing lifecycle — venture capital, IPOs, SEOs, bank lending, bond issuances, and project finance & leasing — taught through lectures and Harvard cases (e.g., Pear VC, Netflix, Goodyear, Alibaba).",
+      offerings: [
+        { term: "Summer 2026", note: "Upcoming" },
+        { term: "Summer 2025", note: "Overall rating: 5.00 / 5.00",
+          noteRef: "Finance Dept. mean: 3.66/5.00 · College mean: 4.10/5.00",
+          syllabus: "https://asset.warrington.ufl.edu/syllabi/20255_FIN4414_Financial%20Management_0774_Junqueira,G.pdf" },
+      ],
+    },
+  ],
+  awards: [
+    { date: "Mar 2026", text: "Certificate of Outstanding Merit, University of Florida." },
+    { date: "Mar 2026", text: "Warrington College's Nomination for University-Level Int'l Student Achievement Award." },
+    { date: "Jan 2026", text: "Selected for the IFP PhD Course on Economics of Ideas, Science, and Innovation (Feb–Apr 2026).", url: "https://ifp.org/economics-of-ideas/" },
+    { date: "Jul 2025", text: "Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum.", url: "https://aefin.es/conference-awards/" },
+    { date: "May 2025", text: "Taught Financial Management for UF's undergraduate program (overall rating: 5.00/5.00)." },
+    { date: "Apr 2025", text: "Selected for the Finance Theory Group Summer School 2025 (Jun 25–28).", url: "https://foster.uw.edu/faculty-research/academic-departments/finance-and-business-economics/financial-theory-group-summer-school-2025/" },
+    { date: "Nov 2024", text: "Selected as a 2025 Graduate Fellow in the NBER Innovation Information Initiative (I3).", url: "https://www.nber.org/programs-projects/projects-and-centers/innovative-information-initiative" },
+    { date: "Apr 2024", text: "Selected for the Finance & Product Markets Summer School 2024 (Aug 12–16).", url: "https://www.usi.ch/en/feeds/29040" },
+    { date: "Mar 2024", text: "Selected for the NBER Entrepreneurship Boot Camp 2024 (Jul 15–19).", url: "https://www.nber.org/conferences/entrepreneurship-research-boot-camp-summer-2024" },
+  ],
+  // Upcoming/scheduled talks (a curated list for the home page)
+  upcomingTalks: [
+    { date: "2026", text: "NBER Tax Policy and the Economy Conference", url: "https://www.nber.org/conferences/41st-annual-nber-tax-policy-and-economy-conference-2026" },
+    { date: "2026", text: "SFS Cavalcade", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
+    { date: "2026", text: "WFA Annual Meeting", url: "https://westernfinance-portal.org/conference" },
+    { date: "2026", text: "EFA Annual Meeting", url: "https://www.conftool.com/efa2026/sessions.php" },
+    { date: "2026", text: "ABFER Annual Conference", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
+  ],
+  // Discussions and session chair roles
+  discussions: [
+    {
+      paper: "Is C-SALT Harmful to Economic Health?",
+      author: "James Hines",
+      venue: "CESifo Area Conference on Public Economics",
+      year: 2026,
+    },
+    {
+      paper: "Navigating Crowdfunding Security-Type Choices and Their Long-Term Implications",
+      author: "Robert Reardon",
+      venue: "RCF–ECGI Corporate Finance and Governance Conference",
+      year: 2025,
+    },
+    {
+      paper: "The Uneven Effects of SEC's Accredited Investor Reform",
+      author: "Alina Munteanu",
+      venue: "Boca Finance and Real Estate Conference",
+      year: 2025,
+    },
+    {
+      paper: "Financial Distress Likelihood of European SMEs in Times of Economic Policy Uncertainty",
+      author: "F. Hawachi and I. Requeijo",
+      venue: "Spanish Finance Association's 32nd Finance Forum",
+      year: 2025,
+    },
+  ],
+  sessionChair: [
+    { role: "Session Chair, Corporate Tax Track", venue: "CESifo Area Conference on Public Economics", year: 2026, location: "Munich, Germany" },
+  ],
+  // Featured talk videos
+  videos: [
+    { title: "NBER New Dev. in Long-Term Asset Management", year: 2026, url: "https://www.youtube.com/watch?v=__BDxxwHTlk", paper: "Tax Incentives and Venture Capital Risk-Taking" },
+    { title: "NBER Innovation Information Initiative", year: 2025, url: "https://www.youtube.com/watch?v=5ji3nPiLcx8", paper: "Measuring Innovation in U.S. Food Markets" },
+  ],
+  gallery: [
+    // Row 1 — anchor moments
+    { src: "site/assets/gallery-1.jpeg", caption: "Best Paper Award, Spanish Finance Association", year: 2025 },
+    { src: "site/assets/gallery-lbs-2025.jpg?v=3", caption: "Presenting at the London Business School's Private Capital Symposium", year: 2025, pos: "50% 70%" },
+    { src: "site/assets/gallery-cambridge-2025.jpg", caption: "High Table dinner at Pembroke College, University of Cambridge, with advisor Murillo Campello", year: 2025 },
+    // Row 2 — presentations and ceremony
+    { src: "site/assets/gallery-finance-forum-2025.jpg", caption: "Presenting at the Spanish Finance Association's 32nd Finance Forum", year: 2025 },
+    { src: "site/assets/gallery-ucd-2026.jpg", caption: "Presenting at the Finance Seminar Series of University College Dublin", year: 2026 },
+    { src: "site/assets/gallery-cert-uf-2026.jpg", caption: "Receiving a Certificate of Outstanding Merit, University of Florida", year: 2026 },
+    // Row 3 — group photos
+    { src: "site/assets/gallery-oxford-cbt-2025.jpg", caption: "Oxford University CBT Doctoral Conference", year: 2025 },
+    { src: "site/assets/gallery-nber-bootcamp-2024.jpg", caption: "NBER Entrepreneurship Boot Camp", year: 2024 },
+    { src: "site/assets/gallery-lugano-2024.jpg", caption: "Finance & Product Markets Summer School", year: 2024 },
+  ],
+};
