@@ -13,8 +13,8 @@
   --accent-deep: #8f7445;
   --link: #2961a8;            /* subtle blue for links inside body */
   --link-deep: #1a4684;
-  --serif: "Cormorant Garamond", "Charter", "Iowan Old Style", Georgia, serif;
-  --sans: "Source Sans 3", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: "Palatino Linotype", "Book Antiqua", "URW Palladio L", Palatino, Georgia, serif;
+  --sans: "Palatino Linotype", "Book Antiqua", "URW Palladio L", Palatino, Georgia, serif;
 }
 * { box-sizing: border-box; }
 html, body {
