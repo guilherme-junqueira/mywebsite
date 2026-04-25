@@ -59,7 +59,7 @@
         <div className="cl-gallery">
           {D.gallery.map((g, i) => (
             <figure key={`real-${i}`} onClick={() => setActive({ src: g.src, cap: `${g.caption} — ${g.year}` })} style={{cursor:'zoom-in'}}>
-              <img src={g.src} alt={g.caption} style={g.pos ? {objectPosition: g.pos} : undefined} />
+              <img src={g.src} alt={g.caption} loading={i < 3 ? "eager" : "lazy"} decoding="async" style={g.pos ? {objectPosition: g.pos} : undefined} />
               <figcaption>
                 {g.caption} <span className="year">({g.year})</span>
               </figcaption>
