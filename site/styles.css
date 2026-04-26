@@ -235,6 +235,9 @@ html[data-theme="dark"] .cl-mobile-more-panel {
   .mm-name { font-size: 44px; }
 }
 
+.mm-talk-links { margin-top: 24px; font-size: 15px; }
+.mm-talk-sep { color: var(--ink-4); margin: 0 8px; }
+
 /* ─── Section / page headers ─────────────────────────────────────── */
 .cl-section-h {
   font-family: var(--serif); font-weight: 500;
