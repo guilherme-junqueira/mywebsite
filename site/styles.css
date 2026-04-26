@@ -610,18 +610,12 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 }
 
 /* Home — talks list refinements */
-.mm-talk-date {
-  font-family: var(--sans);
-  font-size: 13px;
-  color: var(--ink-4);
-  font-variant-numeric: tabular-nums;
-  margin-left: 4px;
-}
 .mm-talk-links {
   margin-top: 14px;
   font-family: var(--sans);
   font-size: 12.5px;
   letter-spacing: 0.06em;
+  color: var(--ink-4);
 }
 .mm-talk-links a {
   color: var(--ink-3);
@@ -631,4 +625,8 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 }
 .mm-talk-links a:hover {
   color: var(--ink);
+}
+.mm-talk-links .mm-talk-sep {
+  margin: 0 10px;
+  color: var(--ink-4);
 }
