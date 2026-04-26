@@ -4,63 +4,33 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Research — Guilherme Junqueira</title>
-<link rel="stylesheet" href="site/styles.css?v=51" />
-<meta name="description" content="Working papers and publications on venture capital, tax incentives, cash transfers, and entrepreneurship." />
-<link rel="canonical" href="https://gjunqueira.com/research.html" />
+<script src="site/theme-init.js?v=1777171418575"></script>
+<link rel="stylesheet" href="site/styles.css?v=1777171418575" />
 <link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="site/assets/favicon-180.png" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Guilherme Junqueira" />
-<meta property="og:title" content="Research — Guilherme Junqueira" />
-<meta property="og:description" content="Working papers and publications on venture capital, tax incentives, cash transfers, and entrepreneurship." />
-<meta property="og:url" content="https://gjunqueira.com/research.html" />
-<meta property="og:image" content="https://gjunqueira.com/site/assets/og-image.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Research — Guilherme Junqueira" />
-<meta name="twitter:description" content="Working papers and publications on venture capital, tax incentives, cash transfers, and entrepreneurship." />
-<meta name="twitter:image" content="https://gjunqueira.com/site/assets/og-image.jpg" />
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1J0G0VJF08"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1J0G0VJF08');
-</script>
-<!-- Cloudflare Web Analytics -->
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "19f67333b9494263af5b223569dd9a4b"}'></script>
 </head>
 <body>
 <div id="root"></div>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=65"></script>
-<script type="text/babel" src="site/layout.jsx?v=32"></script>
+<script src="site/data.js?v=1777171418575"></script>
+<script type="text/babel" src="site/layout.jsx?v=1777171418575"></script>
 <script type="text/babel" data-presets="react">
   const D = window.SITE_DATA;
 
   function CopyBtn({ text }) {
     const [copied, setCopied] = React.useState(false);
     const onCopy = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+      e.preventDefault(); e.stopPropagation();
       navigator.clipboard.writeText(text).then(() => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
+        setCopied(true); setTimeout(() => setCopied(false), 1500);
       }).catch(() => {});
     };
-    return (
-      <button type="button" className="copy-btn" onClick={onCopy}>
-        {copied ? '✓ Copied' : 'Copy'}
-      </button>
-    );
+    return <button type="button" className="copy-btn" onClick={onCopy}>{copied ? '✓ Copied' : 'Copy'}</button>;
   }
 
   function AbstractCiteRow({ p }) {
-    const [open, setOpen] = React.useState(null); // 'abstract' | 'cite' | null
+    const [open, setOpen] = React.useState(null);
     const has = (k) => Boolean(p[k]);
     if (!has('abstract') && !has('bibtex')) return null;
     const toggle = (which) => setOpen(o => o === which ? null : which);
@@ -79,27 +49,19 @@
           )}
         </div>
         {open === 'abstract' && (
-          <div className="toggle-body">
-            <p className="abstract-text">{p.abstract}</p>
-          </div>
+          <div className="toggle-body"><p className="abstract-text">{p.abstract}</p></div>
         )}
         {open === 'cite' && (
           <div className="toggle-body">
             {p.bibtex && (
               <div className="cite-block">
-                <div className="cite-head">
-                  <span className="cite-label">BibTeX</span>
-                  <CopyBtn text={p.bibtex} />
-                </div>
+                <div className="cite-head"><span className="cite-label">BibTeX</span><CopyBtn text={p.bibtex} /></div>
                 <pre className="cite-pre">{p.bibtex}</pre>
               </div>
             )}
             {p.apa && (
               <div className="cite-block">
-                <div className="cite-head">
-                  <span className="cite-label">APA</span>
-                  <CopyBtn text={p.apa} />
-                </div>
+                <div className="cite-head"><span className="cite-label">APA</span><CopyBtn text={p.apa} /></div>
                 <div className="cite-text">{p.apa}</div>
               </div>
             )}
@@ -107,6 +69,22 @@
         )}
       </div>
     );
+  }
+
+  // Render the Spanish Finance Forum venue with its Best Paper tag bolded & parenthesized
+  function renderVenueName(name) {
+    if (/Spanish Finance Association['\u2019]s 32nd Finance Forum/i.test(name)) {
+      // Strip trailing year if present (kept after the tag)
+      const m = name.match(/^(.*Spanish Finance Association['\u2019]s 32nd Finance Forum)(.*)$/i);
+      const head = m ? m[1] : name;
+      const tail = m ? m[2] : '';
+      return (
+        <React.Fragment>
+          {head}{tail} <span className="best-paper-tag">(<strong>Best Paper of the Conference</strong>)</span>
+        </React.Fragment>
+      );
+    }
+    return name;
   }
 
   function PaperDetail({ p }) {
@@ -119,11 +97,9 @@
         ))}</React.Fragment>
       : <span style={{color:'var(--ink-3)', fontStyle:'italic'}}>Solo project.</span>;
 
-    // Selected = topConferences; full list = conferences
     const selected = (p.topConferences || []).filter(c => c && c.url);
     const conferences = p.conferences || [];
     const seminars = p.seminars || [];
-    // Only show disclosure if there's more than what's already in Selected
     const hasMore = conferences.length > selected.length || seminars.length > 0;
 
     return (
@@ -153,18 +129,18 @@
 
         {p.coverage && (
           <div className="badges">
-            <strong style={{color:'var(--ink-3)', fontWeight:500}}>Featured in: </strong>
+            <strong className="badges-label">Featured in:</strong>{' '}
             {p.coverage.map((c,i)=> <React.Fragment key={i}>{i>0?' · ':''}<a href={c.url} target="_blank" rel="noopener">{c.name}</a></React.Fragment>)}
           </div>
         )}
 
         {selected.length > 0 && (
           <div className="badges">
-            <strong style={{color:'var(--ink-3)', fontWeight:500}}>Selected presentations: </strong>
+            <strong className="badges-label">Selected presentations:</strong>
             {selected.map((c,i)=> (
               <React.Fragment key={i}>
                 {i>0?' · ':''}
-                <a href={c.url} target="_blank" rel="noopener" style={{color:'var(--ink-2)', textDecoration:'underline', textDecorationColor:'var(--rule)', textUnderlineOffset:'3px'}}>{c.name}</a>
+                <a href={c.url} target="_blank" rel="noopener" style={{color:'var(--ink-2)', textDecoration:'underline', textDecorationColor:'var(--rule)', textUnderlineOffset:'3px'}}>{renderVenueName(c.name)}</a>
                 {c.recordingUrl && <> <a href={c.recordingUrl} target="_blank" rel="noopener" style={{color:'var(--accent-deep)', fontWeight:500}}>(Video)</a></>}
               </React.Fragment>
             ))}
@@ -180,12 +156,12 @@
               {conferences.length > 0 && (
                 <div className="group">
                   <div className="lbl">Conferences ({conferences.length})</div>
-                  <div className="cl-conf-inline">{conferences.map((c,i) => (
+                  <div>{conferences.map((c,i) => (
                     <React.Fragment key={i}>
                       {i>0 ? ' · ' : ''}
                       {typeof c === 'object'
-                        ? (c.url ? <a href={c.url} target="_blank" rel="noopener" style={{color:'var(--ink-2)', textDecoration:'underline', textDecorationColor:'var(--rule)', textUnderlineOffset:'3px'}}>{c.name}</a> : c.name)
-                        : c}
+                        ? (c.url ? <a href={c.url} target="_blank" rel="noopener" style={{color:'var(--ink-2)', textDecoration:'underline', textDecorationColor:'var(--rule)', textUnderlineOffset:'3px'}}>{renderVenueName(c.name)}</a> : renderVenueName(c.name))
+                        : renderVenueName(c)}
                     </React.Fragment>
                   ))}</div>
                 </div>
@@ -193,7 +169,7 @@
               {seminars.length > 0 && (
                 <div className="group">
                   <div className="lbl">Seminars ({seminars.length})</div>
-                  <div className="cl-conf-inline">{seminars.map((s,i) => {
+                  <div>{seminars.map((s,i) => {
                     const name = (typeof s === 'string') ? s : s.name;
                     return <React.Fragment key={i}>{i>0 ? ' · ' : ''}{name}</React.Fragment>;
                   })}</div>

@@ -4,61 +4,47 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Talks — Guilherme Junqueira</title>
-<link rel="stylesheet" href="site/styles.css?v=51" />
-<meta name="description" content="Recorded conference talks and all conference and seminar presentations by year." />
-<link rel="canonical" href="https://gjunqueira.com/talks.html" />
+<script src="site/theme-init.js?v=1777171418575"></script>
+<link rel="stylesheet" href="site/styles.css?v=1777171418575" />
 <link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="site/assets/favicon-180.png" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Guilherme Junqueira" />
-<meta property="og:title" content="Talks — Guilherme Junqueira" />
-<meta property="og:description" content="Recorded conference talks and all conference and seminar presentations by year." />
-<meta property="og:url" content="https://gjunqueira.com/talks.html" />
-<meta property="og:image" content="https://gjunqueira.com/site/assets/og-image.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Talks — Guilherme Junqueira" />
-<meta name="twitter:description" content="Recorded conference talks and all conference and seminar presentations by year." />
-<meta name="twitter:image" content="https://gjunqueira.com/site/assets/og-image.jpg" />
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1J0G0VJF08"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1J0G0VJF08');
-</script>
-<!-- Cloudflare Web Analytics -->
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "19f67333b9494263af5b223569dd9a4b"}'></script>
 </head>
 <body>
 <div id="root"></div>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=65"></script>
-<script type="text/babel" src="site/layout.jsx?v=32"></script>
+<script src="site/data.js?v=1777171418575"></script>
+<script type="text/babel" src="site/layout.jsx?v=1777171418575"></script>
 <script type="text/babel" data-presets="react">
   const D = window.SITE_DATA;
+
+  // ③ play button — SVG triangle, dark on cream-white circle
+  const PlayIcon = () => (
+    <svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true">
+      <path d="M3 2 L18 11 L3 20 Z" fill="#1a1a1a"/>
+    </svg>
+  );
+
+  // Bold "Best Paper of the Conference" tag after the Spanish Finance Forum.
+  function renderVenue(name) {
+    if (/Spanish Finance Association['\u2019]s 32nd Finance Forum/i.test(name)) {
+      return (
+        <React.Fragment>
+          {name} <span className="best-paper-tag">(<strong>Best Paper of the Conference</strong>)</span>
+        </React.Fragment>
+      );
+    }
+    return name;
+  }
 
   function ytThumb(url) {
     const m = url.match(/[?&]v=([^&]+)/);
     return m ? `https://img.youtube.com/vi/${m[1]}/hqdefault.jpg` : null;
   }
 
-  // Aggregate all talks across papers (conferences + seminars). Each paper carries
-  // its own short tag we surface alongside the venue.
-  // Year is parsed from trailing 4-digit number; entries with trailing "*" are by co-author.
   function buildAllTalks() {
-    const allPapers = [
-      ...(D.publications || []),
-      ...(D.workingPapers || []),
-      ...(D.worksInProgress || []),
-    ];
-
+    const allPapers = [...(D.publications||[]), ...(D.workingPapers||[]), ...(D.worksInProgress||[])];
     const tagFor = (p) => {
-      // short paper-level tag for grouping context
       const t = p.title || "";
       if (/Democratizing Venture Capital/i.test(t)) return "QSBS Geography";
       if (/Tax Incentives and Venture Capital/i.test(t)) return "QSBS Risk-Taking";
@@ -68,16 +54,11 @@
       if (/Industrial Organization of Private Equity/i.test(t)) return "PE Industrial Org.";
       return t.split(":")[0];
     };
-
     const out = [];
     for (const p of allPapers) {
       const tag = tagFor(p);
-      // Conferences (use full list, not just topConferences)
       let conf = (p.conferences && p.conferences.length) ? p.conferences : (p.topConferences || []);
-      // For publications-only papers, ensure topConferences are also included
-      if (p.topConferences && (!p.conferences || p.conferences.length === 0)) {
-        conf = p.topConferences;
-      }
+      if (p.topConferences && (!p.conferences || p.conferences.length === 0)) conf = p.topConferences;
       for (const c of conf) {
         const raw = c.name;
         const byCoauthor = /\*\s*$/.test(raw);
@@ -85,45 +66,31 @@
         const ym = cleanName.match(/(20\d{2})\s*$/);
         const year = ym ? parseInt(ym[1], 10) : null;
         const display = ym ? cleanName.slice(0, ym.index).replace(/[,\s]+$/, '').trim() : cleanName;
-        out.push({
-          year,
-          venue: display,
-          url: c.url,
-          byCoauthor,
-          tag,
-          kind: "conference",
-        });
+        out.push({ year, venue: display, url: c.url, byCoauthor, tag, kind: "conference" });
       }
-      // Seminars (now dated objects)
       for (const s of (p.seminars || [])) {
         const raw = (typeof s === "string") ? s : s.name;
         const byCoauthor = /\*\s*$/.test(raw);
         const cleanName = raw.replace(/\*\s*$/, "").trim();
         const year = (typeof s === "string") ? null : (s.year || null);
-        out.push({
-          year,
-          venue: cleanName,
-          byCoauthor,
-          tag,
-          kind: "seminar",
-        });
+        out.push({ year, venue: cleanName, byCoauthor, tag, kind: "seminar" });
       }
     }
-
-    // De-duplicate identical (venue, year, tag) — same paper at same venue shouldn't appear twice
     const seen = new Set();
     return out.filter(t => {
       const k = `${t.kind}|${t.venue}|${t.year}|${t.tag}`;
-      if (seen.has(k)) return false;
-      seen.add(k);
-      return true;
+      if (seen.has(k)) return false; seen.add(k); return true;
     });
   }
 
   function Talks() {
+    React.useEffect(() => {
+      // Set --talk-total to (count + 1) so first li (counter -1) starts at count.
+      const main = document.querySelector('main.cl-main');
+      const lis = document.querySelectorAll('.cl-year-block .cl-talks-list li');
+      if (main) main.style.setProperty('--talk-total', String(lis.length + 1));
+    });
     const all = buildAllTalks();
-
-    // De-dup: count how many papers map to each (venue, year, byCoauthor) so we can show "(N Papers)"
     const byKey = new Map();
     for (const t of all) {
       const k = `${t.venue}|${t.year}|${t.byCoauthor}`;
@@ -131,55 +98,21 @@
       else byKey.get(k).count += 1;
     }
     const merged = Array.from(byKey.values());
-
-    // Explicit hand-ordered priority lists per year. Venues matched here appear in the
-    // listed order; everything else falls through to alphabetic order after them.
     const PRIORITY = {
-      2026: [
-        "NBER New Dev. in Long-Term Asset Management",
-        "NBER Tax Policy and the Economy",
-        "SFS Cavalcade",
-        "WFA",
-        "FIRS",
-        "EFA",
-        "LSE Workshop on Capital Gains Tax",
-        "CEPR Development Economics Symposium",
-        "CEPR Summer Conference on Financial Intermediation and Corporate Finance",
-        "Society of Labor Economists (SOLE) Annual Meeting",
-        "IFN Stockholm Conference on Firms and Human Capital",
-        "University of Melbourne's Finance Down Under Conference",
-        "SGF Conference at the University of Zurich",
-        "Inaugural Rutgers Finance Research Conference",
-        "World Bank Land and Property Research Conference",
-      ],
-      2025: [
-        "NBER Innovation Information Initiative",
-        "NBER Place-Based Policies & Entrepreneurship",
-        "NBER Public Economics",
-        "NBER Econ. Analysis of Business Taxation",
-        "London Business School's Private Capital Symposium",
-        "University of Oregon Finance Conference",
-      ],
+      2026: ["NBER New Dev. in Long-Term Asset Management","NBER Tax Policy and the Economy","SFS Cavalcade","WFA","FIRS","EFA"],
+      2025: ["NBER Innovation Information Initiative","NBER Place-Based Policies & Entrepreneurship","NBER Public Economics","London Business School's Private Capital Symposium"],
     };
     const priorityRank = (venue, year) => {
-      const list = PRIORITY[year];
-      if (!list) return Infinity;
-      for (let i = 0; i < list.length; i++) {
-        if (venue.toLowerCase().includes(list[i].toLowerCase())) return i;
-      }
+      const list = PRIORITY[year]; if (!list) return Infinity;
+      for (let i = 0; i < list.length; i++) if (venue.toLowerCase().includes(list[i].toLowerCase())) return i;
       return Infinity;
     };
-
-    // Group ALL (conferences + seminars) by year, descending.
-    // Within a year: priority rank first (hand-ordered list), then alphabetic.
     const years = Array.from(new Set(merged.map(t => t.year).filter(Boolean))).sort((a,b) => b - a);
-    const byYear = Object.fromEntries(
-      years.map(y => [y, merged.filter(t => t.year === y).sort((a,b) => {
-        const ra = priorityRank(a.venue, y), rb = priorityRank(b.venue, y);
-        if (ra !== rb) return ra - rb;
-        return a.venue.localeCompare(b.venue);
-      })])
-    );
+    const byYear = Object.fromEntries(years.map(y => [y, merged.filter(t => t.year === y).sort((a,b) => {
+      const ra = priorityRank(a.venue, y), rb = priorityRank(b.venue, y);
+      if (ra !== rb) return ra - rb;
+      return a.venue.localeCompare(b.venue);
+    })]));
 
     return (
       <Layout active="talks">
@@ -193,7 +126,9 @@
               <div className="thumb" style={{
                 backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.45)), url(${ytThumb(v.url)})`,
                 backgroundSize: 'cover', backgroundPosition: 'center'
-              }}></div>
+              }}>
+                <div className="play-btn"><PlayIcon /></div>
+              </div>
               <div className="meta">
                 <div className="ttl">{v.title} ({v.year})</div>
                 <div className="sub">Paper: {v.paper}</div>
@@ -221,9 +156,7 @@
                     {conf.map((t,i) => (
                       <li key={i}>
                         <span className="body">
-                          {t.url
-                            ? <a href={t.url} target="_blank" rel="noopener">{t.venue}</a>
-                            : t.venue}
+                          {t.url ? <a href={t.url} target="_blank" rel="noopener">{renderVenue(t.venue)}</a> : renderVenue(t.venue)}
                           {t.count > 1 && <span className="cl-mult"> ({t.count} Papers)</span>}
                           {t.byCoauthor && <span className="cl-co">*</span>}
                         </span>
@@ -239,9 +172,7 @@
                     {sem.map((t,i) => (
                       <li key={i}>
                         <span className="body">
-                          {t.url
-                            ? <a href={t.url} target="_blank" rel="noopener">{t.venue}</a>
-                            : t.venue}
+                          {t.url ? <a href={t.url} target="_blank" rel="noopener">{renderVenue(t.venue)}</a> : renderVenue(t.venue)}
                           {t.byCoauthor && <span className="cl-co">*</span>}
                         </span>
                       </li>
