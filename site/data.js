@@ -148,7 +148,7 @@ window.SITE_DATA = {
         { name: "CEPR Summer Conference on Financial Intermediation and Corporate Finance 2026*", url: "https://cepr.org/events/8th-summer-conference-financial-intermediation-and-corporate-finance" },
         { name: "ABFER Annual Conference 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
         { name: "Society of Labor Economists (SOLE) Annual Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
-        { name: "Inaugural Rutgers Finance Research Conference 2026*", url: "https://www.ssrn.com/index.cfm/en/janda/announcement/?id=18444" },
+        { name: "Inaugural Rutgers Finance Research Conference 2026*", url: "https://www.business.rutgers.edu/finance-research-conference" },
         { name: "Luso-Brazilian Finance Network (Lubrafin) Meeting 2026", url: "https://sites.google.com/view/lubrafin/home" },
         { name: "University of Minnesota Data-Intensive Research Conference 2026", url: "https://lcc.umn.edu/DIRC" },
         { name: "Lake District Workshop in Corporate Finance 2026*", url: "https://wp.lancs.ac.uk/ldwcf/" },
