@@ -281,12 +281,12 @@ window.SITE_DATA = {
   gallery: [
     // Row 1 — anchor moments
     { src: "site/assets/gallery-1.jpeg", caption: "Best Paper Award, Spanish Finance Association", year: 2025 },
-    { src: "site/assets/gallery-lbs-2025.jpg?v=3", caption: "Presenting at the London Business School's Private Capital Symposium", year: 2025, pos: "50% 70%" },
+    { src: "site/assets/gallery-lbs-2025.jpg?v=3", caption: "London Business School's Private Capital Symposium", year: 2025, pos: "50% 70%" },
     { src: "site/assets/gallery-cambridge-2025.jpg", caption: "High Table dinner at Pembroke College, University of Cambridge, with advisor Murillo Campello", year: 2025 },
     // Row 2 — presentations and ceremony
-    { src: "site/assets/gallery-finance-forum-2025.jpg", caption: "Presenting at the Spanish Finance Association's 32nd Finance Forum", year: 2025 },
+    { src: "site/assets/gallery-finance-forum-2025.jpg", caption: "Spanish Finance Association's 32nd Finance Forum", year: 2025 },
     { src: "site/assets/gallery-hec-paris.JPG?v=2", caption: "HEC Paris Entrepreneurship Workshop", year: 2025 },
-    { src: "site/assets/gallery-cert-uf-2026.jpg", caption: "Receiving a Certificate of Outstanding Merit, University of Florida", year: 2026 },
+    { src: "site/assets/gallery-cert-uf-2026.jpg", caption: "Certificate of Outstanding Merit, University of Florida", year: 2026 },
     // Row 3 — group photos
     { src: "site/assets/gallery-oxford-cbt-2025.jpg", caption: "Oxford University CBT Doctoral Conference", year: 2025 },
     { src: "site/assets/gallery-nber-bootcamp-2024.jpg", caption: "NBER Entrepreneurship Boot Camp", year: 2024 },
