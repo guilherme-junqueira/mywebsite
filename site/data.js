@@ -78,7 +78,6 @@ window.SITE_DATA = {
         { name: "NBER Place-Based Policies & Entrepreneurship Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
         { name: "NBER Public Economics Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
         { name: "NBER Econ. Analysis of Business Taxation Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
-        { name: "ECGI Public Lecture*", url: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello", recordingUrl: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello" },
         { name: "University of Melbourne's Finance Down Under Conference 2026", url: "https://fbe.unimelb.edu.au/conferences/fdu" },
         { name: "LSE Workshop on Capital Gains Tax 2026", url: "https://www.lse.ac.uk/international-inequalities/research/wealth-elites-and-tax-justice/centax" },
         { name: "SGF Conference at the University of Zurich 2026", url: "https://www.df.uzh.ch/en/news-events/events/2026/2026-SGF-conference.html" },
