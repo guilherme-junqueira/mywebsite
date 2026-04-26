@@ -115,17 +115,27 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 }
 .cl-mobile-more-btn:hover { color: var(--ink); border-color: var(--ink-4); }
 .cl-mobile-more-panel {
-  position: absolute; right: 0; top: calc(100% + 8px); z-index: 10;
-  background: var(--bg); border: 1px solid var(--rule); border-radius: 4px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  padding: 12px 0; min-width: 180px;
+  position: absolute; left: 0; top: calc(100% + 8px); z-index: 50;
+  background: var(--bg);
+  border: 1px solid var(--ink-4);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+  padding: 6px 0; min-width: 200px;
+}
+html[data-theme="dark"] .cl-mobile-more-panel {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.3);
 }
 .cl-mobile-more-panel a {
-  display: block; padding: 8px 18px;
-  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--ink-3); font-weight: 500;
+  display: block; padding: 10px 18px;
+  font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink); font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
 }
-.cl-mobile-more-panel a:hover { color: var(--ink); background: var(--bg-soft); text-decoration: none; }
+.cl-mobile-more-panel a:hover,
+.cl-mobile-more-panel a:focus {
+  color: var(--ink); background: var(--bg-soft); text-decoration: none;
+}
 .cl-nav-overflow { display: contents; }
 .cl-nav-overflow > a { display: inline; }
 
