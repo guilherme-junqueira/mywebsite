@@ -293,3 +293,4 @@ window.SITE_DATA = {
     { src: "site/assets/gallery-lugano-2024.jpg", caption: "Finance & Product Markets Summer School", year: 2024 },
   ],
 };
+
