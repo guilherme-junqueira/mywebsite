@@ -235,7 +235,22 @@ html[data-theme="dark"] .cl-mobile-more-panel {
   .mm-name { font-size: 44px; }
 }
 
-.mm-talk-links { margin-top: 4px; font-size: 15px; }
+.mm-talk-links {
+  margin-top: -14px;          /* pulls row up under the last talk */
+  font-size: 15px;
+  color: var(--ink-2);
+}
+.mm-talk-links a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.mm-talk-links a:hover {
+  color: var(--accent-deep);
+  text-decoration-color: var(--accent);
+}
 .mm-talk-sep { color: var(--ink-4); margin: 0 8px; }
 
 /* ─── Section / page headers ─────────────────────────────────────── */
