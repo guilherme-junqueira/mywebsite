@@ -54,7 +54,6 @@
       { id: 'teaching', label: 'Teaching', href: 'teaching.html' },
       { id: 'gallery', label: 'Gallery', href: 'gallery.html' },
       { id: 'cv', label: 'CV (PDF) ↗', href: D.cvUrl, external: true, cta: true },
-      { id: 'contact', label: 'Contact', href: 'contact.html' },
     ];
     const primary = items.filter(i => PRIMARY.includes(i.id));
     const overflow = items.filter(i => !PRIMARY.includes(i.id));
