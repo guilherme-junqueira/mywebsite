@@ -68,7 +68,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   font-size: 24px; font-weight: 600; color: var(--ink);
   white-space: nowrap; flex-shrink: 0;
 }
-.cl-nav .brand:hover { color: var(--ink); text-decoration: none; }
+.cl-nav .brand:hover { color: var(--accent-deep); text-decoration: none; }
 .cl-nav nav { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
 .cl-nav nav a {
   color: var(--ink-3); font-size: 12.5px;
