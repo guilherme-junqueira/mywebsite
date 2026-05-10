@@ -18,8 +18,8 @@
   --ink-4: #8a8a8a;
   --rule: #d8d6d0;
   --rule-soft: #e8e6e0;
-  --accent: #b89968;
-  --accent-deep: #8f7445;
+  --accent: #9a7a4a;          /* was #b89968 — darker, more aged-brass */
+  --accent-deep: #7d6238;     /* was #8f7445 */
   --link: #2961a8;
   --link-deep: #1a4684;
   --serif: "EB Garamond", "Charter", "Iowan Old Style", Georgia, serif;
@@ -36,8 +36,8 @@ html[data-theme="dark"] {
   --ink-4: #6a6155;
   --rule: #2e2922;
   --rule-soft: #25211b;
-  --accent: #d4b683;          /* slight lift in dark for contrast */
-  --accent-deep: #b89968;
+  --accent: #c9aa72;          /* was #d4b683 */
+  --accent-deep: #ad8e58;     /* was #b89968 */
   --link: #7ba3d8;
   --link-deep: #a8c2e2;
 }
