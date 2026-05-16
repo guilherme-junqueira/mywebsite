@@ -32,42 +32,59 @@
     return (
       <Layout active="home" mm>
         <div className="mm-grid">
-          <img className="mm-photo" src="site/assets/headshot.jpg?v=2" alt="Guilherme Junqueira" />
-          <div>
+          <div className="mm-left">
             <h1 className="mm-name">Guilherme Junqueira</h1>
-            <p className="mm-title">4th-Year Finance Ph.D. Candidate <span className="mm-title-aff">· University of Florida</span></p>
-            <p className="mm-school">Visiting Ph.D. Student (Fall 2026) · Tuck at Dartmouth College</p>
-            <p className="mm-school">Visiting Researcher · Insper</p>
-            <p className="mm-contact">
-              <a href={`mailto:${D.email}`}>{D.email}</a>
-              <span className="mm-contact-sep">·</span>
-              <a href={D.cvUrl} target="_blank" rel="noopener">CV (PDF)</a>
-            </p>
-            <hr className="mm-divider" />
-            <p className="mm-ri-label"><strong>Research Interests:</strong></p>
-            <ul className="mm-ri">
-              <li>Private Capital</li>
-              <li>Entrepreneurship &amp; Innovation</li>
-              <li>Development &amp; Finance</li>
-              <li>Labor &amp; Finance</li>
-            </ul>
-            <p className="mm-ri-label"><strong>Selected Recent and Scheduled Talks:</strong></p>
-            <ul className="mm-ri">
-              <li>NBER Tax Policy and the Economy Annual Conference <span className="mm-talk-date">· Sep 2026</span></li>
-              <li>LSE Workshop on Capital Gains Tax <span className="mm-talk-date">· Sep 2026</span></li>
-              <li>EFA (2 Papers) <span className="mm-talk-date">· Aug 2026</span></li>
-              <li>WFA <span className="mm-talk-date">· Jun 2026</span></li>
-              <li>SFS Cavalcade <span className="mm-talk-date">· May 2026</span></li>
-              <li>FIRS <span className="mm-talk-date">· May 2026</span></li>
-              <li>ABFER <span className="mm-talk-date">· May 2026</span></li>
-              <li>NBER New Developments in Long-Term Asset Management <span className="mm-talk-date">· Apr 2026</span></li>
-            </ul>
-            <p className="mm-talk-links">
-              <a href="research.html">See research ↗</a>
-              <span className="mm-talk-sep">·</span>
-              <a href="talks.html">Full list of talks ↗</a>
-            </p>
+            <p className="mm-role">4th-Year Finance Ph.D. Candidate · University of Florida</p>
+            <p className="mm-affil">Visiting Ph.D. Student (Fall 2026) · Tuck at Dartmouth</p>
+            <p className="mm-affil">Visiting Researcher · Insper</p>
+            <p className="mm-interests">Private Capital · Entrepreneurship · Innovation</p>
+            <div className="mm-bar"></div>
+            <div className="mm-btn-row">
+              <a className="mm-btn mm-btn-primary" href={D.cvUrl} target="_blank" rel="noopener">Curriculum Vitae</a>
+              <a className="mm-btn" href={`mailto:${D.email}`}>Email</a>
+              <a className="mm-btn" href={D.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+            </div>
           </div>
+          <div className="mm-photo-wrap">
+            <div className="mm-photo-frame"></div>
+            <img className="mm-photo" src="site/assets/headshot.jpg?v=2" alt="Guilherme Junqueira" />
+          </div>
+        </div>
+
+        <div className="mm-talks-section">
+          <h2 className="mm-talks-h">Selected Recent &amp; Scheduled Talks</h2>
+          <ul className="mm-talks-list">
+            <li>NBER Tax Policy and the Economy Annual Conference <span className="mm-talk-date">· Sep 2026</span></li>
+            <li>LSE Workshop on Capital Gains Tax <span className="mm-talk-date">· Sep 2026</span></li>
+            <li>EFA (2 Papers) <span className="mm-talk-date">· Aug 2026</span></li>
+            <li>WFA <span className="mm-talk-date">· Jun 2026</span></li>
+            <li>SFS Cavalcade <span className="mm-talk-date">· May 2026</span></li>
+            <li>FIRS <span className="mm-talk-date">· May 2026</span></li>
+            <li>ABFER <span className="mm-talk-date">· May 2026</span></li>
+            <li>Society of Labor Economists (SOLE) Meeting <span className="mm-talk-date">· May 2026</span></li>
+            <li>NBER New Developments in Long-Term Asset Management <span className="mm-talk-date">· Apr 2026</span></li>
+          </ul>
+          <p className="mm-talk-links">
+            <a href="research.html">See research ↗</a>
+            <span className="mm-talk-sep">·</span>
+            <a href="talks.html">Full list of talks ↗</a>
+          </p>
+        </div>
+
+        <div className="mm-talks-section">
+          <h2 className="mm-talks-h">What's New</h2>
+          <ul className="mm-talks-list">
+            <li><span><em>"Democratizing Venture Capital"</em> forthcoming at <strong>NBER Tax Policy and the Economy</strong>, Vol. 41.</span><span className="mm-talk-date">2026</span></li>
+            <li><span>Will attend the <strong>Econometric Society Summer School in Structural Finance</strong>, University of Michigan, Ann Arbor.</span><span className="mm-talk-date">Aug 2026</span></li>
+            <li><span>Teaching <em>Financial Management (FIN 4414)</em> to undergraduates at the University of Florida.</span><span className="mm-talk-date">Summer 2026</span></li>
+            <li><span>Awarded <strong>Certificate of Outstanding Merit</strong>, University of Florida.</span><span className="mm-talk-date">Mar 2026</span></li>
+            <li><span>Our <em>"Industrial Organization of Private Equity"</em> project was granted <strong>MSCI–Burgiss data access</strong> by the PERC.</span><span className="mm-talk-date">Aug 2025</span></li>
+            <li><span>Taught <em>Financial Management (FIN 4414)</em> to undergraduates at the University of Florida (overall rating: 5.00/5.00).</span><span className="mm-talk-date">Summer 2025</span></li>
+            <li><span>Attended the <strong>Finance Theory Group Summer School</strong>, University of Washington, Seattle, WA.</span><span className="mm-talk-date">Jun 2025</span></li>
+            <li><span>Selected as a <strong>2025 Graduate Fellow in the NBER Innovation Information Initiative</strong>.</span><span className="mm-talk-date">Nov 2024</span></li>
+            <li><span>Attended the <strong>NBER Entrepreneurship Research Boot Camp</strong>, Cambridge, MA.</span><span className="mm-talk-date">Jul 2024</span></li>
+            <li><span>Attended the <strong>Finance &amp; Product Markets Summer School</strong>, Lugano, Switzerland.</span><span className="mm-talk-date">Aug 2024</span></li>
+          </ul>
         </div>
       </Layout>
     );

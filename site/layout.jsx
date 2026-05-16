@@ -8,42 +8,6 @@
   const D = window.SITE_DATA;
   const PRIMARY = ['home', 'research', 'talks', 'cv'];
 
-  // ── Icons ─────────────────────────────────────────────────────
-  const SunIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="4"/>
-      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-    </svg>
-  );
-  const MoonIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
-  );
-
-  // ── Theme toggle ─────────────────────────────────────────────
-  function ThemeToggle() {
-    const [theme, setTheme] = React.useState(() =>
-      document.documentElement.getAttribute('data-theme') || 'light'
-    );
-    React.useEffect(() => {
-      document.documentElement.setAttribute('data-theme', theme);
-      try { localStorage.setItem('gj-theme', theme); } catch (e) {}
-    }, [theme]);
-    const flip = () => setTheme(t => (t === 'dark' ? 'light' : 'dark'));
-    return (
-      <button
-        type="button"
-        className="cl-theme-toggle"
-        onClick={flip}
-        aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-        title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-      >
-        {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-      </button>
-    );
-  }
-
   // ── Nav ──────────────────────────────────────────────────────
   function Nav({ active }) {
     const items = [
@@ -52,7 +16,6 @@
       { id: 'talks', label: 'Talks', href: 'talks.html' },
       { id: 'discussions', label: 'Discussions', href: 'discussions.html' },
       { id: 'teaching', label: 'Teaching', href: 'teaching.html' },
-      { id: 'gallery', label: 'Gallery', href: 'gallery.html' },
       { id: 'cv', label: 'CV (PDF) ↗', href: D.cvUrl, external: true, cta: true },
     ];
     const primary = items.filter(i => PRIMARY.includes(i.id));
@@ -108,7 +71,6 @@
                 </div>
               )}
             </span>
-            <ThemeToggle />
           </nav>
         </header>
       </div>
@@ -146,5 +108,5 @@
     );
   }
 
-  Object.assign(window, { Layout, Nav, Footer, ThemeToggle });
+  Object.assign(window, { Layout, Nav, Footer });
 })();

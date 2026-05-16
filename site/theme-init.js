@@ -1,14 +1,5 @@
-// Theme bootstrap — runs in <head> before paint to avoid FOUC.
+// Theme bootstrap — dark mode removed; always light.
+// Kept as a no-op shim so cached pages don't 404 on this script tag.
 (function () {
-  try {
-    var t = localStorage.getItem('gj-theme');
-    if (t === 'dark' || t === 'light') {
-      document.documentElement.setAttribute('data-theme', t);
-    } else {
-      // Default: light, regardless of OS preference (per user spec)
-      document.documentElement.setAttribute('data-theme', 'light');
-    }
-  } catch (e) {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
+  try { localStorage.removeItem('gj-theme'); } catch (e) {}
 })();

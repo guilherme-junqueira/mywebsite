@@ -27,6 +27,15 @@ window.SITE_DATA = {
       title: "Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing",
       url: "#",
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
+      bibtex: `@unpublished{campello2026democratizing,
+  author = {Campello, Murillo and Junqueira, Guilherme},
+  title  = {Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing},
+  year   = {2026},
+  note   = {Working Paper}
+}`,
+      apa: "Campello, M., & Junqueira, G. (2026). Democratizing venture capital: Tax incentives and the geographic expansion of startup investing. Working Paper.",
+      abstract:
+        "Can tax subsidies expand the geographic reach of startup investing? We address this question by studying the 2009 enhancement of the Qualified Small Business Stock (QSBS) program, which eliminated federal capital gains taxes on investments in qualifying startups. Despite decades of growth, institutional startup investing is confined to a handful of coastal hubs, leaving most of the country with little access to the risk-seeking capital that finances high-growth entrepreneurship. Using investment-level data covering 158 thousand investor\u2013firm pairings, we show that the QSBS enhancement increased by 33% the probability that a previously unserved U.S. metropolitan area received venture capital (VC) investment in qualifying sectors. VC investment in ineligible sectors showed no comparable expansion, nor did angel investment qualifying for the same benefits. The program also reshaped investment across the full distribution of underserved markets: investors actively reallocated capital from ineligible to eligible sectors within already-active metros, with the largest compositional shifts in the most underserved areas. VCs entering previously unserved and underserved markets did so with less-syndicated, more concentrated positions, consistent with pioneering behavior in thin ecosystems where local co-investors are scarce and tax-induced risk-seeking behavior documented in the literature. These markets attracted investment shaped by local economic structure rather than transplanted from established hubs, with industrial and manufacturing startups gaining ground relative to the software-heavy activity typical of incumbent centers. Firms entering these markets were not systematically lower quality than those in established VC hubs: failure rates, patent rates, and employment per firm are similar across metro tiers, and both previously unserved and underserved metros produced their first \u201Cunicorns.\u201D Our findings suggest that a geographically neutral subsidy can generate meaningful geographic redistribution when it is large enough to overcome the informational frictions and network gaps that concentrate investor funds in established hubs.",
       venue: "NBER Tax Policy and the Economy, Volume 41",
       status: "forthcoming",
       topConferences: [
@@ -68,7 +77,7 @@ window.SITE_DATA = {
         { name: "NBER Place-Based Policies & Entrepreneurship, Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
         { name: "NBER Public Economics, Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
         { name: "NBER Econ. Analysis of Business Taxation, Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
-        { name: "ECGI Public Lecture*", url: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello", recordingUrl: "https://www.ecgi.global/publications/videos/tax-incentives-and-venture-capital-risk-taking-murillo-campello" },
+        { name: "London Business School's Private Capital Symposium 2025", url: "https://drive.google.com/file/d/1-sO1gMD8QtmN0qakvzS66MGGKq0BkfJH/view" },
       ],
       conferences: [
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
@@ -136,9 +145,10 @@ window.SITE_DATA = {
         { name: "WFA 2026", url: "https://westernfinance-portal.org/conference" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
         { name: "CEPR Development Economics Symposium 2026", url: "https://cepr.org/events/event-series/development-economics-symposium/cepr-development-economics-joint-tcd-2026-1" },
-        { name: "ABFER Annual Conference 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
+        { name: "CEPR Summer Conference on Financial Intermediation and Corporate Finance 2026*", url: "https://cepr.org/events/8th-summer-conference-financial-intermediation-and-corporate-finance" },
+        { name: "ABFER 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
         { name: "University of Washington 7th Summer Finance Conference 2026*", url: "https://foster.uw.edu/faculty-research/academic-departments/finance-and-business-economics/summer-finance-conference/" },
-        { name: "Society of Labor Economists (SOLE) Annual Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
+        { name: "Society of Labor Economists (SOLE) Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
         { name: "HEC Paris Entrepreneurship Workshop 2025", url: "https://hecparisentrepreneurship.github.io/" },
       ],
       conferences: [
@@ -146,9 +156,9 @@ window.SITE_DATA = {
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
         { name: "CEPR Development Economics Symposium 2026", url: "https://cepr.org/events/event-series/development-economics-symposium/cepr-development-economics-joint-tcd-2026-1" },
         { name: "CEPR Summer Conference on Financial Intermediation and Corporate Finance 2026*", url: "https://cepr.org/events/8th-summer-conference-financial-intermediation-and-corporate-finance" },
-        { name: "ABFER Annual Conference 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
+        { name: "ABFER 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
         { name: "University of Washington 7th Summer Finance Conference 2026*", url: "https://foster.uw.edu/faculty-research/academic-departments/finance-and-business-economics/summer-finance-conference/" },
-        { name: "Society of Labor Economists (SOLE) Annual Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
+        { name: "Society of Labor Economists (SOLE) Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
         { name: "Inaugural Rutgers Finance Research Conference 2026*", url: "https://www.business.rutgers.edu/finance-research-conference" },
         { name: "Luso-Brazilian Finance Network (Lubrafin) Meeting 2026", url: "https://sites.google.com/view/lubrafin/home" },
         { name: "University of Minnesota Data-Intensive Research Conference 2026", url: "https://lcc.umn.edu/DIRC" },
@@ -204,13 +214,13 @@ window.SITE_DATA = {
     },
     {
       n: 7,
-      title: "The Anatomy of Creative Destruction",
+      title: "Job Market Paper [Title TBA]",
       coauthors: [],
     },
   ],
   teaching: [
     { course: "Financial Management (FIN 4414)",
-      level: "Undergraduate, U. Florida",
+      level: "Undergraduate, University of Florida",
       role: "Instructor of Record",
       desc: "Corporate capital-raising across the financing lifecycle — venture capital, IPOs, SEOs, bank lending, bond issuances, and project finance & leasing — taught through lectures and Harvard cases (e.g., Pear VC, Netflix, Goodyear, Alibaba).",
       offerings: [
