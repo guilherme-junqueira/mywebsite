@@ -153,7 +153,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   align-items: center;
 }
 .mm-photo {
-  display: block; width: 100%; aspect-ratio: 1/1; object-fit: cover;
+  display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover;
   border-radius: 6px; background: var(--rule-soft);
   box-shadow: 0 1px 0 rgba(0,0,0,0.04);
   image-rendering: -webkit-optimize-contrast;
@@ -723,6 +723,28 @@ main { counter-reset: talk-num var(--talk-total, 59); }
   background: var(--link-deep); border-color: var(--link-deep); color: #fff;
 }
 
+.mm-bio {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 28px 0 0;
+  max-width: 580px;
+}
+.mm-bio + .mm-bio { margin-top: 14px; }
+.mm-bio strong { color: var(--ink); font-weight: 600; }
+.mm-affil a {
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.mm-affil a:hover {
+  color: var(--link);
+  text-decoration-color: var(--link);
+}
+
 .mm-photo-wrap {
   position: relative; max-width: 320px; margin-left: auto;
 }
@@ -732,7 +754,7 @@ main { counter-reset: talk-num var(--talk-total, 59); }
   pointer-events: none;
 }
 .mm-photo-wrap .mm-photo {
-  position: relative; aspect-ratio: 1/1; max-width: 320px;
+  position: relative; aspect-ratio: 4/5; max-width: 320px;
 }
 
 .mm-talks-section {
