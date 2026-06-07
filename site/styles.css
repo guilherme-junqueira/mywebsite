@@ -725,7 +725,7 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 
 .mm-bio {
   font-family: var(--serif);
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.65;
   color: var(--ink-2);
   margin: 28px 0 0;
@@ -733,6 +733,9 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 }
 .mm-bio + .mm-bio { margin-top: 14px; }
 .mm-bio strong { color: var(--ink); font-weight: 600; }
+.mm-bio a { color: var(--link); font-weight: 600; text-decoration: none; }
+.mm-bio a strong { color: var(--link); }
+.mm-bio a:hover { text-decoration: underline; text-underline-offset: 3px; color: var(--link-deep); }
 .mm-affil a {
   color: var(--ink-2);
   text-decoration: underline;

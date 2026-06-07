@@ -77,6 +77,7 @@ window.SITE_DATA = {
         { name: "NBER Place-Based Policies & Entrepreneurship, Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
         { name: "NBER Public Economics, Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
         { name: "NBER Econ. Analysis of Business Taxation, Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
+        { name: "LSE Workshop on Capital Gains Tax 2026", url: "https://www.lse.ac.uk/international-inequalities/research/wealth-elites-and-tax-justice/centax" },
         { name: "London Business School's Private Capital Symposium 2025", url: "https://drive.google.com/file/d/1-sO1gMD8QtmN0qakvzS66MGGKq0BkfJH/view" },
       ],
       conferences: [
@@ -100,6 +101,7 @@ window.SITE_DATA = {
         { name: "Boca Finance and Real Estate Conference 2025", url: "https://business.fau.edu/boca-finance-and-real-estate-conference/" },
         { name: "RCF-ECGI Corporate Finance & Governance Conference 2025", url: "https://www.ecgi.global/system/files/2025-09/rcf-ecgi-2025-day-1-track-a-programme.pdf" },
         { name: "Spanish Finance Association's 32nd Finance Forum 2025", url: "https://finance-forum.es/" },
+        { name: "Luso-Brazilian Finance Network (Lubrafin) Meeting 2026*", url: "https://sites.google.com/view/lubrafin/home" },
       ],
       seminars: [
         { name: "Bank of England*", year: 2025 },
@@ -149,6 +151,7 @@ window.SITE_DATA = {
         { name: "ABFER 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
         { name: "University of Washington 7th Summer Finance Conference 2026*", url: "https://foster.uw.edu/faculty-research/academic-departments/finance-and-business-economics/summer-finance-conference/" },
         { name: "Society of Labor Economists (SOLE) Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
+        { name: "Inaugural Rutgers Finance Research Conference 2026*", url: "https://www.business.rutgers.edu/finance-research-conference" },
         { name: "HEC Paris Entrepreneurship Workshop 2025", url: "https://hecparisentrepreneurship.github.io/" },
       ],
       conferences: [
@@ -160,7 +163,8 @@ window.SITE_DATA = {
         { name: "University of Washington 7th Summer Finance Conference 2026*", url: "https://foster.uw.edu/faculty-research/academic-departments/finance-and-business-economics/summer-finance-conference/" },
         { name: "Society of Labor Economists (SOLE) Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
         { name: "Inaugural Rutgers Finance Research Conference 2026*", url: "https://www.business.rutgers.edu/finance-research-conference" },
-        { name: "Luso-Brazilian Finance Network (Lubrafin) Meeting 2026", url: "https://sites.google.com/view/lubrafin/home" },
+        { name: "Luso-Brazilian Finance Network (Lubrafin) Meeting 2026*", url: "https://sites.google.com/view/lubrafin/home" },
+        { name: "NFA Conference 2026*", url: "https://northernfinanceassociation.org/" },
         { name: "University of Minnesota Data-Intensive Research Conference 2026", url: "https://lcc.umn.edu/DIRC" },
         { name: "Lake District Workshop in Corporate Finance 2026*", url: "https://wp.lancs.ac.uk/ldwcf/" },
         { name: "IFN Stockholm Conference on Firms and Human Capital 2026*", url: "https://www.ifn.se/en/seminars-and-calendar/ifn-stockholm-conference/2026-firm-competitiveness/" },

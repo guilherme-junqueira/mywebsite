@@ -101,9 +101,9 @@
     const all = buildAllTalks();
     const byKey = new Map();
     for (const t of all) {
-      const k = `${t.venue}|${t.year}|${t.byCoauthor}`;
+      const k = `${t.kind}|${t.venue}|${t.year}`;
       if (!byKey.has(k)) byKey.set(k, { ...t, count: 1 });
-      else byKey.get(k).count += 1;
+      else { const e = byKey.get(k); e.count += 1; e.byCoauthor = e.byCoauthor || t.byCoauthor; }
     }
     const merged = Array.from(byKey.values());
     const PRIORITY = {
