@@ -190,9 +190,11 @@ window.SITE_DATA = {
         { name: "Changcheng Song", url: "https://sites.google.com/site/songchch02/" },
       ],
       topConferences: [
+        { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
       conferences: [
+        { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
     },
