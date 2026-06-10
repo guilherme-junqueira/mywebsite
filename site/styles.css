@@ -156,8 +156,6 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover;
   border-radius: 6px; background: var(--rule-soft);
   box-shadow: 0 1px 0 rgba(0,0,0,0.04);
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: high-quality;
 }
 /* .mm-name now defined in V1 block below */
 .mm-title {
@@ -725,7 +723,7 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 
 .mm-bio {
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.65;
   color: var(--ink-2);
   margin: 28px 0 0;
