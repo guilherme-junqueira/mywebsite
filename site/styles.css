@@ -9,22 +9,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* V1 Cool palette — pale blue-gray bg, navy ink, blue link/accent */
-  --bg: #f5f7fa;
-  --bg-soft: #ecf0f6;
-  --ink: #1d2d4b;
-  --ink-2: #3d4f6c;
-  --ink-3: #6b7d99;
-  --ink-4: #95a4b8;
-  --rule: #d4dce8;
-  --rule-soft: #e6ebf2;
-  --accent: #2961a8;          /* accent unified with link (was warm gold) */
-  --accent-deep: #1a4684;
-  --link: #2961a8;
-  --link-deep: #1a4684;
-  --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
-  --sans: "Inter", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  /* Apple Polish palette — near-white bg, near-black ink, single blue accent */
+  --bg: #fbfbfd;
+  --bg-soft: #f5f5f7;
+  --ink: #1d1d1f;
+  --ink-2: #4b4b50;
+  --ink-3: #86868b;
+  --ink-4: #a1a1a6;
+  --rule: #e8e8ed;
+  --rule-soft: #f0f0f2;
+  --accent: #0071e3;
+  --accent-deep: #0058b8;
+  --link: #0071e3;
+  --link-deep: #0058b8;
+  /* Apple is all-sans: SF on Apple devices, Inter as the web fallback.
+     --serif repointed to the same sans so existing serif headings render SF-style. */
+  --serif: -apple-system, "SF Pro Display", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: -apple-system, "SF Pro Text", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "SF Mono", "JetBrains Mono", Menlo, monospace;
 }
 
 * { box-sizing: border-box; }
@@ -42,37 +44,33 @@ a { color: var(--link); text-decoration: none; }
 a:hover { color: var(--link-deep); text-decoration: underline; text-underline-offset: 2px; }
 
 /* ─── Nav ────────────────────────────────────────────────────────── */
-.cl-nav-wrap { border-bottom: 1px solid var(--rule); }
+.cl-nav-wrap {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(251,251,253,0.78);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--rule);
+}
 .cl-nav {
-  padding: 28px 60px 22px; max-width: 1180px; margin: 0 auto;
+  padding: 15px 40px; max-width: 1180px; margin: 0 auto;
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
 }
 .cl-nav .brand {
-  font-family: var(--serif);
-  font-size: 24px; font-weight: 600; color: var(--ink);
+  font-family: var(--sans);
+  font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: -0.02em;
   white-space: nowrap; flex-shrink: 0;
 }
 .cl-nav .brand { transition: color .15s ease; }
 .cl-nav .brand:hover { color: var(--link); text-decoration: none; }
 .cl-nav nav { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
 .cl-nav nav a {
-  color: var(--ink-3); font-size: 12.5px;
-  letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500;
+  color: var(--ink-2); font-size: 13.5px;
+  letter-spacing: 0; text-transform: none; font-weight: 400;
   padding: 4px 0; position: relative; white-space: nowrap;
+  transition: color .15s ease;
 }
-/* All nav tabs: gold underline preview on hover */
-.cl-nav nav a::after {
-  content: ''; position: absolute; left: 0; right: 0; bottom: -2px;
-  height: 2px; background: var(--accent);
-  transform: scaleX(0); transform-origin: left center;
-  transition: transform .18s ease;
-}
-.cl-nav nav a:hover { color: var(--ink); text-decoration: none; }
-.cl-nav nav a:hover::after { transform: scaleX(1); }
-.cl-nav nav a.active { color: var(--ink); }
-.cl-nav nav a.active::after {                    /* ⑤ thicker active underline */
-  height: 2.5px; transform: scaleX(1);
-}
+.cl-nav nav a:hover { color: var(--accent); text-decoration: none; }
+.cl-nav nav a.active { color: var(--ink); font-weight: 500; }
 
 /* CV tab — same style as other tabs (no pill) */
 
@@ -123,8 +121,8 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 
 /* Layout */
 .cl-main { max-width: 1180px; margin: 0 auto; padding: 22px 60px 60px; }
-.cl-main.mm { max-width: 1100px; padding-top: 48px; }
-.cl-main.wide { max-width: 1240px; }
+.cl-main.mm { max-width: 1180px; padding-top: 48px; }
+.cl-main.wide { max-width: 1180px; }
 
 @media (max-width: 760px) {
   .cl-main { padding: 32px 24px 40px; }
@@ -140,7 +138,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
     flex-wrap: wrap;                /* tabs themselves can wrap if narrow */
     justify-content: flex-start;
   }
-  .cl-nav nav a { font-size: 11.5px; letter-spacing: 0.12em; }
+  .cl-nav nav a { font-size: 13px; letter-spacing: 0; }
   /* ⑥ on mobile: hide overflow nav items, show More button */
   .cl-mobile-more { display: inline-flex; }
   .cl-nav-overflow { display: none; }
@@ -154,8 +152,8 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 }
 .mm-photo {
   display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover;
-  border-radius: 6px; background: var(--rule-soft);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  border-radius: 18px; background: var(--rule-soft);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.10);
 }
 /* .mm-name now defined in V1 block below */
 .mm-title {
@@ -231,9 +229,9 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 
 /* ─── Section / page headers ─────────────────────────────────────── */
 .cl-section-h {
-  font-family: var(--serif); font-weight: 600;
-  font-size: 32px; letter-spacing: -0.01em; color: var(--ink);
-  margin: 14px 0 14px 0;
+  font-family: var(--sans); font-weight: 600;
+  font-size: 21px; letter-spacing: -0.02em; color: var(--ink);
+  margin: 14px 0 16px 0;
 }
 .cl-page-title {
   font-family: var(--serif); font-size: 56px; font-weight: 600;
@@ -261,13 +259,14 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 }
 .cl-paper-detail h3 { margin: 0; }
 .cl-paper-detail .paper-body { padding-right: 150px; }
+.cl-paper-detail:not(:has(.paper-versions)) .paper-body { padding-right: 0; }
 @media (max-width: 720px) {
   .cl-paper-detail .paper-body { padding-right: 0; }
 }
 .cl-paper-detail h3 {
   font-family: var(--serif);
   font-size: 20.5px; line-height: 1.3;
-  font-weight: 700; margin: 4px 0 6px 0; letter-spacing: -0.005em;
+  font-weight: 700; margin: 4px 0 6px 0; letter-spacing: -0.02em;
 }
 .cl-paper-detail h3 a { color: var(--ink); }
 .cl-paper-detail h3 a:hover { color: var(--link); }
@@ -290,8 +289,8 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   display: flex; align-items: center; justify-content: flex-start; gap: 7px;
   background: var(--bg);
   border: 1px solid var(--rule);
-  border-radius: 3px;
-  padding: 7px 10px;
+  border-radius: 8px;
+  padding: 8px 12px;
   font-family: var(--sans);
   font-size: 12px;
   font-weight: 500;
@@ -327,7 +326,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 .paper-toggles .toggle-link {
   background: var(--bg-soft);
   border: 1px solid var(--rule);
-  border-radius: 3px;
+  border-radius: 8px;
   padding: 5px 12px;
   cursor: pointer;
   font-family: inherit; font-size: 11.5px; letter-spacing: 0.1em;
@@ -359,7 +358,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   color: var(--ink-3); font-weight: 600;
 }
 .paper-toggles .copy-btn {
-  background: var(--bg); border: 1px solid var(--rule); border-radius: 3px;
+  background: var(--bg); border: 1px solid var(--rule); border-radius: 8px;
   padding: 2px 8px; font-size: 11px; color: var(--ink-2);
   font-family: inherit; cursor: pointer; line-height: 1.4;
   letter-spacing: 0.02em;
@@ -391,6 +390,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 .cl-paper-detail .best-paper-tag {
   font-weight: 700; color: var(--accent-deep);
 }
+.cl-paper-detail .badges .award-text { color: var(--ink); font-weight: 500; }
 
 /* ① — award badge becomes a real callout, gold reserved here */
 .cl-paper-detail .badge-award {
@@ -426,7 +426,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   padding: 5px 12px;
   background: var(--bg-soft);
   border: 1px solid var(--rule);
-  border-radius: 3px;
+  border-radius: 8px;
   transition: background-color .12s, border-color .12s, color .12s;
 }
 .cl-expand summary::-webkit-details-marker { display: none; }
@@ -513,6 +513,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 
 /* Talks list */
 .cl-talks-list { list-style: none; padding: 0; margin: 0; }
+.cl-year-block .cl-talks-list { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 6px 24px; }
 .cl-talks-list li {
   padding: 14px 0; border-bottom: 1px solid var(--rule-soft);
   display: grid; grid-template-columns: 90px 1fr; gap: 14px; align-items: baseline;
@@ -533,9 +534,8 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 .cl-year-block:first-of-type { margin-top: 12px; }
 .cl-year-head {
   font-family: var(--sans);
-  font-size: 16px; font-weight: 600; letter-spacing: 0.04em;
-  color: var(--ink); margin: 0 0 10px; padding-bottom: 6px;       /* ① WAS gold → ink */
-  border-bottom: 1px solid var(--rule);
+  font-size: 22px; font-weight: 700; letter-spacing: -0.02em;
+  color: var(--ink); margin: 0 0 14px; padding-bottom: 0;
 }
 /* Descending numbering across all year-blocks (newest = highest number). */
 main { counter-reset: talk-num var(--talk-total, 59); }
@@ -583,7 +583,7 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 .cl-videos { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 12px; }
 .cl-videos a.card { display: block; text-decoration: none; color: inherit; }
 .cl-videos .thumb {
-  aspect-ratio: 16/9; background: var(--ink); border-radius: 2px;
+  aspect-ratio: 16/9; background: var(--ink); border-radius: 14px;
   position: relative; overflow: hidden;
 }
 .cl-videos .thumb .play-btn {
@@ -667,9 +667,9 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 .mm-left { display: flex; flex-direction: column; }
 
 .mm-name {
-  font-family: var(--serif);
-  font-size: 60px; font-weight: 600; letter-spacing: -0.02em;
-  margin: -10px 0 14px 0; line-height: 1; color: var(--ink);
+  font-family: var(--sans);
+  font-size: 56px; font-weight: 700; letter-spacing: -0.03em;
+  margin: -6px 0 14px 0; line-height: 1.03; color: var(--ink);
   white-space: nowrap;
 }
 
@@ -688,51 +688,47 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 
 .mm-interests {
   font-family: var(--sans);
-  font-size: 18px; color: var(--link); font-weight: 600;
+  font-size: 18px; color: var(--accent); font-weight: 600; letter-spacing: -0.01em;
   line-height: 1.45;
-  margin: 26px 0 14px 0;
+  margin: 26px 0 18px 0;
 }
 
-.mm-bar {
-  width: 64px; height: 2px; background: var(--link);
-  margin: 0 0 28px 0; border: 0; border-radius: 1px;
-}
+.mm-bar { display: none; }
 
 .mm-btn-row {
   display: flex; gap: 14px; flex-wrap: wrap;
 }
 .mm-btn {
-  display: inline-block; padding: 13px 24px;
-  border: 1.5px solid var(--rule); background: transparent;
-  color: var(--link-deep); text-decoration: none;
-  font-family: var(--mono);
-  font-size: 11.5px; letter-spacing: 0.16em; font-weight: 500; text-transform: uppercase;
-  transition: border-color .18s, background .18s, color .18s;
-  border-radius: 3px;
+  display: inline-block; padding: 11px 22px;
+  border: 0; background: var(--bg-soft);
+  color: var(--ink); text-decoration: none;
+  font-family: var(--sans);
+  font-size: 14px; letter-spacing: 0; font-weight: 400; text-transform: none;
+  transition: background .18s, color .18s, opacity .18s;
+  border-radius: 980px;
 }
 .mm-btn:hover {
-  border-color: var(--link); background: var(--bg);
-  text-decoration: none; color: var(--link-deep);
+  background: #ececef; text-decoration: none; color: var(--ink);
 }
 .mm-btn-primary {
-  background: var(--link); border-color: var(--link); color: #fff;
+  background: var(--accent); color: #fff;
 }
 .mm-btn-primary:hover {
-  background: var(--link-deep); border-color: var(--link-deep); color: #fff;
+  background: var(--accent-deep); color: #fff;
 }
 
 .mm-bio {
-  font-family: var(--serif);
-  font-size: 20px;
-  line-height: 1.65;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--ink-2);
   margin: 28px 0 0;
   max-width: 580px;
 }
 .mm-bio + .mm-bio { margin-top: 14px; }
 .mm-bio strong { color: var(--ink); font-weight: 600; }
-.mm-bio a { color: var(--link); font-weight: 600; text-decoration: none; }
-.mm-bio a strong { color: var(--link); }
+.mm-bio a { color: var(--accent); font-weight: 400; text-decoration: none; }
+.mm-bio a strong { color: var(--accent); font-weight: 600; }
 .mm-bio a:hover { text-decoration: underline; text-underline-offset: 3px; color: var(--link-deep); }
 .mm-affil a {
   color: var(--ink-2);
@@ -751,28 +747,28 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 }
 .mm-photo-frame {
   position: absolute; top: 14px; left: 14px; right: -14px; bottom: -14px;
-  border: 1px solid var(--rule); border-radius: 6px;
+  border: 1px solid var(--rule); border-radius: 18px;
   pointer-events: none;
 }
 .mm-photo-wrap .mm-photo {
-  position: relative; aspect-ratio: 4/5; max-width: 320px;
+  position: relative; aspect-ratio: 4/5; max-width: 320px; border-radius: 18px;
 }
 
 .mm-talks-section {
-  margin-top: 40px; padding-top: 36px;
-  border-top: 1px solid var(--rule);
+  margin-top: 44px; padding-top: 0;
 }
 .mm-talks-h {
-  font-family: var(--serif);
-  font-size: 28px; font-weight: 600;
-  color: var(--ink); letter-spacing: -0.01em;
-  margin: 0 0 14px 0;
+  font-family: var(--sans);
+  font-size: 21px; font-weight: 600;
+  color: var(--ink); letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
 }
 .mm-talks-list {
-  list-style: none; padding: 0; margin: 0 0 16px 0;
+  list-style: none; padding: 6px 26px; margin: 0 0 16px 0;
+  background: #fff; border: 1px solid var(--rule); border-radius: 18px;
 }
 .mm-talks-list li {
-  padding: 11px 0; font-size: 16px; color: var(--ink-2);
+  padding: 15px 0; font-size: 16px; color: var(--ink);
   border-bottom: 1px solid var(--rule-soft);
   display: flex; justify-content: space-between; gap: 24px; align-items: baseline;
 }

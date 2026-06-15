@@ -133,7 +133,7 @@
 
         <AbstractCiteRow p={p} />
 
-        {p.awards && <div className="badges"><span className="badge-award">★ {p.awards[0]}</span></div>}
+        {p.awards && <div className="badges"><strong className="badges-label">Awarded:</strong> <span className="award-text">{p.awards[0]}</span></div>}
 
         {p.coverage && (
           <div className="badges">
