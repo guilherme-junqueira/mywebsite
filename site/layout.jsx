@@ -1,83 +1,30 @@
-// Shared layout: nav (with theme toggle + mobile More) + footer.
-// Changes vs production:
-//   ⑥ mobile nav — primary 4 inline + "More" disclosure for the rest
-//   ⑧ dark mode — sun/moon toggle, persists to localStorage
-//   ⑨ footer — two-line hierarchy
-
+// Shared layout: sticky nav + footer.
 (function () {
   const D = window.SITE_DATA;
-  const PRIMARY = ['home', 'research', 'talks', 'cv'];
 
-  // ── Nav ──────────────────────────────────────────────────────
   function Nav({ active }) {
     const items = [
       { id: 'home', label: 'Home', href: 'index.html' },
       { id: 'research', label: 'Research', href: 'research.html' },
-      { id: 'talks', label: 'Talks', href: 'talks.html' },
-      { id: 'discussions', label: 'Discussions', href: 'discussions.html' },
-      { id: 'teaching', label: 'Teaching', href: 'teaching.html' },
+      { id: 'talks', label: 'Presentations', href: 'talks.html' },
       { id: 'cv', label: 'CV (PDF) ↗', href: D.cvUrl, external: true, cta: true },
     ];
-    const primary = items.filter(i => PRIMARY.includes(i.id));
-    const overflow = items.filter(i => !PRIMARY.includes(i.id));
-
-    const [moreOpen, setMoreOpen] = React.useState(false);
-    const moreRef = React.useRef(null);
-    React.useEffect(() => {
-      const onClickAway = (e) => {
-        if (moreRef.current && !moreRef.current.contains(e.target)) setMoreOpen(false);
-      };
-      const onKey = (e) => { if (e.key === 'Escape') setMoreOpen(false); };
-      document.addEventListener('mousedown', onClickAway);
-      document.addEventListener('keydown', onKey);
-      return () => {
-        document.removeEventListener('mousedown', onClickAway);
-        document.removeEventListener('keydown', onKey);
-      };
-    }, []);
-
     const linkFor = (i) => (
       <a key={i.id} href={i.href}
          target={i.external ? '_blank' : undefined}
          rel={i.external ? 'noopener' : undefined}
          className={[active === i.id ? 'active' : '', i.cta ? 'cv-cta' : ''].filter(Boolean).join(' ')}>{i.label}</a>
     );
-
     return (
       <div className="cl-nav-wrap">
         <header className="cl-nav">
           <a href="index.html" className="brand">Guilherme Junqueira</a>
-          <nav>
-            {primary.map(linkFor)}
-            <span className="cl-nav-overflow">{overflow.map(linkFor)}</span>
-            <span className="cl-mobile-more" ref={moreRef}>
-              <button
-                type="button"
-                className="cl-mobile-more-btn"
-                onClick={() => setMoreOpen(o => !o)}
-                aria-expanded={moreOpen}
-                aria-label="More navigation"
-              >
-                More ▾
-              </button>
-              {moreOpen && (
-                <div className="cl-mobile-more-panel">
-                  {overflow.map(i => (
-                    <a key={i.id} href={i.href}
-                       target={i.external ? '_blank' : undefined}
-                       rel={i.external ? 'noopener' : undefined}
-                       onClick={() => setMoreOpen(false)}>{i.label}</a>
-                  ))}
-                </div>
-              )}
-            </span>
-          </nav>
+          <nav>{items.map(linkFor)}</nav>
         </header>
       </div>
     );
   }
 
-  // ⑨ Footer
   function Footer() {
     return (
       <footer className="cl-footer">

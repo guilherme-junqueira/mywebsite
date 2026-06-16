@@ -30,6 +30,7 @@
 }
 
 * { box-sizing: border-box; }
+html, body { overflow-x: clip; }
 html, body {
   margin: 0; padding: 0; background: var(--bg); color: var(--ink);
   font-family: var(--sans);
@@ -127,8 +128,8 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 @media (max-width: 760px) {
   .cl-main { padding: 32px 24px 40px; }
   .cl-nav {
-    padding: 18px 24px 14px;
-    gap: 10px 14px;
+    padding: 14px 24px 12px;
+    gap: 8px 14px;
     flex-wrap: wrap;                /* allow brand row + nav row */
   }
   .cl-nav .brand { font-size: 21px; }
@@ -138,11 +139,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
     flex-wrap: wrap;                /* tabs themselves can wrap if narrow */
     justify-content: flex-start;
   }
-  .cl-nav nav a { font-size: 13px; letter-spacing: 0; }
-  /* ⑥ on mobile: hide overflow nav items, show More button */
-  .cl-mobile-more { display: inline-flex; }
-  .cl-nav-overflow { display: none; }
-  .cl-nav-overflow.is-mobile-open { display: contents; }
+  .cl-nav nav a { font-size: 14px; letter-spacing: 0; }
 }
 
 /* ─── Home (mm) ──────────────────────────────────────────────────── */
@@ -512,6 +509,19 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
 @media (max-width: 720px) { .cl-gallery { grid-template-columns: repeat(2, 1fr); } }
 
 /* Talks list */
+.cl-jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 0 0 28px 0;
+}
+.cl-jump a {
+  font-family: var(--sans);
+  font-size: 13.5px; font-weight: 500; color: var(--ink-2);
+  background: var(--bg-soft); border: 1px solid var(--rule);
+  padding: 7px 16px; border-radius: 980px; text-decoration: none;
+  transition: background .15s, color .15s;
+}
+.cl-jump a:hover { background: #ececef; color: var(--ink); }
+.cl-section-h[id] { scroll-margin-top: 90px; }
 .cl-talks-list { list-style: none; padding: 0; margin: 0; }
 .cl-year-block .cl-talks-list { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 6px 24px; }
 .cl-talks-list li {
@@ -524,10 +534,15 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   font-size: 13px; color: var(--ink-4); font-variant-numeric: tabular-nums;
 }
 .cl-talks-list .body { font-size: 16px; line-height: 1.5; color: var(--ink); }
+.cl-disc-list { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 6px 24px; }
+.cl-disc-list li { display: block; padding: 14px 0; border-bottom: 1px solid var(--rule-soft); }
+.cl-disc-list li:last-child { border-bottom: 0; }
+.cl-disc-list .body { font-size: 15.5px; }
+.cl-disc-list a { color: var(--accent); text-decoration: none; }
+.cl-disc-list a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .cl-talks-list .body .sub {
   font-family: var(--sans);
-  font-size: 14px; color: var(--ink-3); display: block; margin-top: 3px;
-}
+  font-size: 14px; color: var(--ink-3); display: block; margin-top: 3px;}
 
 /* Year-grouped */
 .cl-year-block { margin-top: 28px; }
@@ -748,7 +763,7 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 .mm-photo-frame {
   position: absolute; top: 14px; left: 14px; right: -14px; bottom: -14px;
   border: 1px solid var(--rule); border-radius: 18px;
-  pointer-events: none;
+  pointer-events: none; max-width: calc(100% + 14px);
 }
 .mm-photo-wrap .mm-photo {
   position: relative; aspect-ratio: 4/5; max-width: 320px; border-radius: 18px;
@@ -781,9 +796,20 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 
 @media (max-width: 760px) {
   .mm-grid { grid-template-columns: 1fr; gap: 28px; }
-  .mm-photo-wrap { margin-left: 0; max-width: 280px; }
-  .mm-name { font-size: 44px; }
-  .mm-btn-row .mm-btn { padding: 11px 18px; font-size: 10.5px; }
+  .mm-photo-wrap { margin-left: 0; margin-right: 14px; max-width: 280px; }
+  .mm-name { font-size: 34px; line-height: 1.05; white-space: normal; overflow-wrap: break-word; }
+  .mm-role { font-size: 15px; }
+  .mm-affil { font-size: 15px; }
+  .mm-interests { font-size: 16px; }
+  .mm-btn-row { gap: 10px; }
+  .mm-btn-row .mm-btn { padding: 12px 20px; font-size: 14px; }
+  .mm-bio { font-size: 16px; overflow-wrap: break-word; word-break: break-word; }
+  .mm-talks-list { padding: 4px 18px; }
+  .mm-talks-list li {
+    flex-direction: column; gap: 4px; align-items: flex-start;
+    padding: 13px 0;
+  }
+  .mm-talks-list li .mm-talk-date { font-size: 13px; }
 }
 
 

@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Teaching — Guilherme Junqueira</title>
-<script src="site/theme-init.js?v=20260615"></script>
-<link rel="stylesheet" href="site/styles.css?v=20260615" />
-<link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260615" />
+<link rel="canonical" href="/" />
+<meta http-equiv="refresh" content="0; url=/" />
+<link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260616" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY28WWYZXQ"></script>
 <script>
@@ -15,42 +15,10 @@
   gtag('js', new Date());
   gtag('config', 'G-SY28WWYZXQ');
 </script>
+<script>window.location.replace('/');</script>
+<style>body{font-family:-apple-system,system-ui,sans-serif;color:#1d1d1f;background:#fff;display:grid;place-items:center;min-height:100vh;margin:0;padding:24px;text-align:center}a{color:#0071e3}</style>
 </head>
 <body>
-<div id="root"></div>
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=20260615"></script>
-<script type="text/babel" src="site/layout.jsx?v=20260615"></script>
-<script type="text/babel" data-presets="react">
-  const D = window.SITE_DATA;
-  function Teaching() {
-    return (
-      <Layout active="teaching">
-        
-        <h2 className="cl-section-h">Instructor of Record</h2>
-        {D.teaching.map((t,i) => (
-          <article key={i} className="cl-course">
-            <div className="cl-course-head"><h3>{t.course}</h3></div>
-            <div className="meta">{t.role} · {t.level}</div>
-            <p>{t.desc}</p>
-            <div className="cl-offerings">
-              {t.offerings.map((o,j) => (
-                <div key={j} className="cl-offering">
-                  <span className="term">{o.term}</span>
-                  <span className="rating">{o.note}</span>
-                  {o.noteRef && <span className="note-ref"> ({o.noteRef})</span>}
-                  {o.syllabus && <React.Fragment> · <a href={o.syllabus} target="_blank" rel="noopener">Syllabus (PDF)</a></React.Fragment>}
-                </div>
-              ))}
-            </div>
-          </article>
-        ))}
-      </Layout>
-    );
-  }
-  ReactDOM.createRoot(document.getElementById('root')).render(<Teaching />);
-</script>
+<p>This page has moved. Redirecting to the <a href="/">home page</a>…</p>
 </body>
 </html>
