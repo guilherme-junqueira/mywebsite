@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Talks — Guilherme Junqueira</title>
-<script src="site/theme-init.js?v=20260616"></script>
-<link rel="stylesheet" href="site/styles.css?v=20260616" />
-<link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260616" />
+<script src="site/theme-init.js?v=20260621"></script>
+<link rel="stylesheet" href="site/styles.css?v=20260621" />
+<link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260621" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY28WWYZXQ"></script>
 <script>
@@ -21,8 +21,8 @@
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=20260616"></script>
-<script type="text/babel" src="site/layout.jsx?v=20260616"></script>
+<script src="site/data.js?v=20260621"></script>
+<script type="text/babel" src="site/layout.jsx?v=20260621"></script>
 <script type="text/babel" data-presets="react">
   const D = window.SITE_DATA;
 
@@ -48,6 +48,89 @@
   function ytThumb(url) {
     const m = url.match(/[?&]v=([^&]+)/);
     return m ? `https://img.youtube.com/vi/${m[1]}/hqdefault.jpg` : null;
+  }
+
+  const LOCATIONS = [
+    ["nber tax policy", "Washington, DC"],
+    ["nber new developments", "Chicago, IL"],
+    ["nber innovation information", "Cambridge, MA"],
+    ["nber place-based", "Cambridge, MA"],
+    ["nber public economics", "Cambridge, MA"],
+    ["nber economic analysis", "Cambridge, MA"],
+    ["sfs cavalcade", "Charlottesville, VA"],
+    ["cepr development", "Dublin, Ireland"],
+    ["cepr summer", "Athens, Greece"],
+    ["university of washington 7th summer", "Seattle, WA"],
+    ["cca-escp", "Turin, Italy"],
+    ["cesifo", "Munich, Germany"],
+    ["ifn stockholm", "Stockholm, Sweden"],
+    ["inaugural rutgers", "New Brunswick, NJ"],
+    ["lake district", "Lancaster, England"],
+    ["lse workshop", "London, England"],
+    ["luso-brazilian", "Foz do Iguaçu, Brazil"],
+    ["sgf conference", "Zurich, Switzerland"],
+    ["society of labor economists", "Denver, CO"],
+    ["melbourne", "Melbourne, Australia"],
+    ["university of minnesota data", "Minneapolis, MN"],
+    ["world bank land", "Washington, DC"],
+    ["london business school", "London, England"],
+    ["university of oregon", "Eugene, OR"],
+    ["oxford centre for business", "Oxford, England"],
+    ["oxford private equity", "Oxford, England"],
+    ["hec paris", "Paris, France"],
+    ["boca finance", "Boca Raton, FL"],
+    ["finance theory group summer school", "Seattle, WA"],
+    ["latin american economic", "Recife, Brazil"],
+    ["rcf-ecgi", "Hoboken, NJ"],
+    ["wefi", "Online"],
+    ["spanish finance association", "Pamplona, Spain"],
+    ["national university of singapore", "Singapore"],
+    ["abfer", "Singapore"],
+    ["rutgers university", "New Brunswick, NJ"],
+    ["tulane", "New Orleans, LA"],
+    ["university college dublin", "Dublin, Ireland"],
+    ["university of edinburgh", "Edinburgh, Scotland"],
+    ["university of florida", "Gainesville, FL"],
+    ["university of glasgow", "Glasgow, Scotland"],
+    ["university of miami", "Miami, FL"],
+    ["university of tennessee", "Knoxville, TN"],
+    ["washington university in st. louis", "St. Louis, MO"],
+    ["bank of england", "London, England"],
+    ["brazilian finance society", "Online"],
+    ["copenhagen business school", "Frederiksberg, Denmark"],
+    ["cunef", "Madrid, Spain"],
+    ["ecgi corporate", "Hoboken, NJ"],
+    ["ecgi public lecture", "Online"],
+    ["insper", "São Paulo, Brazil"],
+    ["university of alabama", "Tuscaloosa, AL"],
+    ["university of cambridge", "Cambridge, England"],
+    ["university of milan", "Milan, Italy"],
+    ["university of naples", "Naples, Italy"],
+    ["são paulo", "São Paulo, Brazil"],
+    ["sao paulo", "São Paulo, Brazil"],
+    ["ut san antonio", "San Antonio, TX"],
+    ["efa", "Ghent, Belgium"],
+    ["wfa", "Denver, CO"],
+    ["firs", "Miami, FL"],
+    ["nfa", "Montreal, Canada"],
+    ["afa", "Washington, DC"],
+  ];
+  function getLoc(venue) {
+    const v = (venue || "").toLowerCase();
+    for (const [k, loc] of LOCATIONS) if (v.includes(k)) return loc;
+    return null;
+  }
+
+  const CONF_LINKS = [
+    ["cesifo", "https://www.ifo.de/en/cesifo/event/2026-04-15/cesifo-area-conference-public-economics-2026"],
+    ["ecgi corporate", "https://www.ecgi.global/system/files/2025-09/rcf-ecgi-2025-day-1-track-a-programme.pdf"],
+    ["boca", "https://business.fau.edu/boca-finance-and-real-estate-conference/"],
+    ["spanish finance association", "https://finance-forum.es/"],
+  ];
+  function getConfUrl(venue) {
+    const v = (venue || "").toLowerCase();
+    for (const [k, u] of CONF_LINKS) if (v.includes(k)) return u;
+    return null;
   }
 
   function buildAllTalks() {
@@ -97,6 +180,10 @@
       const main = document.querySelector('main.cl-main');
       const lis = document.querySelectorAll('.cl-year-block .cl-talks-list li');
       if (main) main.style.setProperty('--talk-total', String(lis.length + 1));
+      // Each discussions / session-chair list counts down from its own length.
+      document.querySelectorAll('.cl-disc-list').forEach(ul => {
+        ul.style.setProperty('--disc-total', String(ul.querySelectorAll('li').length + 1));
+      });
     });
     const all = buildAllTalks();
     const byKey = new Map();
@@ -107,7 +194,7 @@
     }
     const merged = Array.from(byKey.values());
     const PRIORITY = {
-      2026: ["NBER New Dev. in Long-Term Asset Management","NBER Tax Policy and the Economy","SFS Cavalcade","WFA","FIRS","EFA","CEPR Development Economics Symposium","CEPR Summer Conference on Financial Intermediation and Corporate Finance","ABFER Annual Conference","University of Washington 7th Summer Finance Conference"],
+      2026: ["NBER Tax Policy and the Economy","NBER New Developments in Long-Term Asset Management","SFS Cavalcade","WFA","FIRS","EFA","CEPR Development Economics Symposium","CEPR Summer Conference on Financial Intermediation and Corporate Finance","ABFER Annual Conference","University of Washington 7th Summer Finance Conference"],
       2025: [
         "NBER Innovation Information Initiative",
         "NBER Place-Based Policies & Entrepreneurship",
@@ -126,24 +213,28 @@
         "Spanish Finance Association's 32nd Finance Forum",
       ],
     };
-    const priorityRank = (venue, year) => {
-      const list = PRIORITY[year]; if (!list) return Infinity;
-      for (let i = 0; i < list.length; i++) if (venue.toLowerCase().includes(list[i].toLowerCase())) return i;
+    const SEM_PRIORITY = {
+      2026: ["National University of Singapore","University College Dublin","University of Florida"],
+      2025: ["Insper","University of São Paulo","UT San Antonio","Brazilian Finance Society"],
+    };
+    const priorityRank = (t, year) => {
+      const list = (t.kind === 'seminar' ? SEM_PRIORITY[year] : PRIORITY[year]);
+      if (!list) return Infinity;
+      for (let i = 0; i < list.length; i++) if (t.venue.toLowerCase().includes(list[i].toLowerCase())) return i;
       return Infinity;
     };
     const years = Array.from(new Set(merged.map(t => t.year).filter(Boolean))).sort((a,b) => b - a);
     const byYear = Object.fromEntries(years.map(y => [y, merged.filter(t => t.year === y).sort((a,b) => {
-      const ra = priorityRank(a.venue, y), rb = priorityRank(b.venue, y);
+      const ra = priorityRank(a, y), rb = priorityRank(b, y);
       if (ra !== rb) return ra - rb;
       return a.venue.localeCompare(b.venue);
     })]));
 
     return (
       <Layout active="talks">
-        <nav className="cl-jump">
-          <a href="#all-talks">Presentations</a>
-          <a href="#discussions">Discussions</a>
-        </nav>
+        <p className="cl-intro">
+          Recorded presentations, a full list of <a href="#all-talks">conference and seminar presentations</a> of my work, and the papers I have <a href="#discussions">discussed</a>. For presentations by paper, see <a href="research.html">Research</a>.
+        </p>
 
         <h2 className="cl-section-h" id="recorded">Recorded Presentations</h2>
         <div className="cl-videos">
@@ -186,6 +277,7 @@
                           {t.count > 1 && <span className="cl-mult"> ({t.count} Papers)</span>}
                           {t.byCoauthor && <span className="cl-co">*</span>}
                         </span>
+                        {getLoc(t.venue) && <span className="cl-loc">{getLoc(t.venue)}</span>}
                       </li>
                     ))}
                   </ul>
@@ -201,6 +293,7 @@
                           {t.url ? <a href={t.url} target="_blank" rel="noopener">{renderVenue(t.venue)}</a> : renderVenue(t.venue)}
                           {t.byCoauthor && <span className="cl-co">*</span>}
                         </span>
+                        {getLoc(t.venue) && <span className="cl-loc">{getLoc(t.venue)}</span>}
                       </li>
                     ))}
                   </ul>
@@ -218,8 +311,9 @@
               <li key={i}>
                 <span className="body">
                   <em>“{d.paper}”</em>
-                  <span className="sub">by {d.author} — {d.venue}, {d.year}{d.slidesUrl && <React.Fragment> · <a href={d.slidesUrl} target="_blank" rel="noopener">Slides [PDF]</a></React.Fragment>}</span>
+                  <span className="sub">by {d.author} — {getConfUrl(d.venue) ? <a href={getConfUrl(d.venue)} target="_blank" rel="noopener" className="conf-link">{d.venue}</a> : d.venue}, {d.year}{d.slidesUrl && <React.Fragment> · <a href={d.slidesUrl} target="_blank" rel="noopener">Slides [PDF]</a></React.Fragment>}</span>
                 </span>
+                {getLoc(d.venue) && <span className="cl-loc">{getLoc(d.venue)}</span>}
               </li>
             ))}
           </ul>
@@ -229,7 +323,8 @@
           <ul className="cl-talks-list cl-disc-list">
             {D.sessionChair.map((s,i) => (
               <li key={i}>
-                <span className="body">{s.role} — {s.venue}, {s.year}<span className="sub">{s.location}</span></span>
+                <span className="body">{s.role} — {getConfUrl(s.venue) ? <a href={getConfUrl(s.venue)} target="_blank" rel="noopener" className="conf-link">{s.venue}</a> : s.venue}, {s.year}</span>
+                {s.location && <span className="cl-loc">{s.location}</span>}
               </li>
             ))}
           </ul>

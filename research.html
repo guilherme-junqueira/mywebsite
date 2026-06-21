@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Research — Guilherme Junqueira</title>
-<script src="site/theme-init.js?v=20260616"></script>
-<link rel="stylesheet" href="site/styles.css?v=20260616" />
-<link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260616" />
+<script src="site/theme-init.js?v=20260621"></script>
+<link rel="stylesheet" href="site/styles.css?v=20260621" />
+<link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260621" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY28WWYZXQ"></script>
 <script>
@@ -21,8 +21,8 @@
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=20260616"></script>
-<script type="text/babel" src="site/layout.jsx?v=20260616"></script>
+<script src="site/data.js?v=20260621"></script>
+<script type="text/babel" src="site/layout.jsx?v=20260621"></script>
 <script type="text/babel" data-presets="react">
   const D = window.SITE_DATA;
 
@@ -40,11 +40,15 @@
   function AbstractCiteRow({ p }) {
     const [open, setOpen] = React.useState(null);
     const has = (k) => Boolean(p[k]);
-    if (!has('abstract') && !has('bibtex')) return null;
+    const hasVersions = p.versions && p.versions.length > 0;
+    if (!has('abstract') && !has('bibtex') && !hasVersions) return null;
     const toggle = (which) => setOpen(o => o === which ? null : which);
     return (
       <div className="paper-toggles">
         <div className="toggle-row">
+          {hasVersions && p.versions.map((v,i) => (
+            <a key={i} href={v.url} target="_blank" rel="noopener" className="toggle-link version-link">{v.name} [PDF]</a>
+          ))}
           {has('abstract') && (
             <button type="button" className={`toggle-link ${open==='abstract'?'open':''}`} onClick={() => toggle('abstract')}>
               <span className="caret">▸</span> ABSTRACT
@@ -77,6 +81,22 @@
         )}
       </div>
     );
+  }
+
+  // Render the award with the venue linked + styled like a conference link
+  function renderAward(text) {
+    const venue = "Spanish Finance Association's 32nd Finance Forum";
+    const idx = text.indexOf(venue);
+    if (idx !== -1) {
+      return (
+        <React.Fragment>
+          {text.slice(0, idx)}
+          <a href="https://aefin.es/conference-awards/" target="_blank" rel="noopener" className="conf-link">{venue}</a>
+          {text.slice(idx + venue.length)}
+        </React.Fragment>
+      );
+    }
+    return text;
   }
 
   // Render the Spanish Finance Forum venue with its Best Paper tag bolded & parenthesized
@@ -112,13 +132,6 @@
 
     return (
       <article className="cl-paper-detail">
-        {p.versions && p.versions.length > 0 && (
-          <div className="paper-versions">
-            {p.versions.map((v, i) => (
-              <a key={i} href={v.url} target="_blank" rel="noopener">{v.name}</a>
-            ))}
-          </div>
-        )}
         <div className="paper-body">
         <div className="paper-title-row">
           <div className="num">[{String(p.n).padStart(2,'0')}]</div>
@@ -133,7 +146,7 @@
 
         <AbstractCiteRow p={p} />
 
-        {p.awards && <div className="badges"><strong className="badges-label">Awarded:</strong> <span className="award-text">{p.awards[0]}</span></div>}
+        {p.awards && <div className="badges"><strong className="badges-label">Awarded:</strong> <span className="award-text">{renderAward(p.awards[0])}</span></div>}
 
         {p.coverage && (
           <div className="badges">

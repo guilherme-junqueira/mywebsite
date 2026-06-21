@@ -50,9 +50,9 @@ window.SITE_DATA = {
     {
       n: 2,
       title: "Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program",
-      url: "https://conference.nber.org/conf_papers/f233872.pdf",
+      url: "https://www.dropbox.com/scl/fi/q0pbvladmjg27m0ma4g05/Tax_Incentives_and_Venture_Capital_Risk_Taking.pdf?rlkey=2s2ry6d2hnr1u1anaveygmaiz&st=1xzcvnv7&dl=0",
       versions: [
-        { name: "Working Paper", url: "https://conference.nber.org/conf_papers/f233872.pdf" },
+        { name: "Working Paper", url: "https://www.dropbox.com/scl/fi/q0pbvladmjg27m0ma4g05/Tax_Incentives_and_Venture_Capital_Risk_Taking.pdf?rlkey=2s2ry6d2hnr1u1anaveygmaiz&st=1xzcvnv7&dl=0" },
         { name: "Oxford CBT WP", url: "https://oxfordtax.sbs.ox.ac.uk/sitefiles/wp25.10-guilherme-junqueira.pdf" },
       ],
       bibtex: `@unpublished{campello2026taxincentives,
@@ -64,7 +64,7 @@ window.SITE_DATA = {
       apa: "Campello, M., & Junqueira, G. (2026). Tax incentives and venture capital risk-taking: Evidence from the QSBS program. Working Paper.",
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
       abstract:
-        "Do tax subsidies prompt investors to take on risk? We address this question looking at investors' responses to changes to the Qualified Small Business Stock (QSBS) program, which cut capital gains taxes on startup investing. We do so under a framework in which some startup investors—venture capitalists (VCs)—combine outside funding with incentive-based compensation, while others invest their own funds. Using bunching, regression discontinuity, triple-differences, and matching designs that exploit industry eligibility, investment vintage, and holding-period requirements, we analyze data from 158 thousand investor–firm pairings over two decades. We first identify strategic investment timing, with subsidies prompting clustering at tax-eligible holding-period thresholds. We then document strategic capital allocation, with firms just below eligibility thresholds receiving more funding than those just above. Most notably, when and where tax subsidies apply, VCs shift their project selection toward riskier ventures: they invest more in pre-commercial stage startups, become more likely to provide startups with their initial capital, and invest more in startups with pre-existing debt, while becoming less likely to co-syndicate their investments. Tax-subsidized VC-backed ventures show higher failure rates. On the flip side, they attain higher valuations at exit and are more likely to reach \"unicorn status.\" None of these patterns are observed for comparable non-VC investors receiving the same tax subsidies. Our tests also suggest that tax incentives lead to reallocation toward more innovative industries, yielding more impactful patents. Our study is the first to show that tax policy can shift entrepreneurial financing toward riskier, more innovative, valuable ventures.",
+        "Do tax subsidies prompt investors to take on risk? We address this question looking at investors' responses to changes to the Qualified Small Business Stock (QSBS) program, which cut capital gains taxes on startup investing. We do so under a framework in which some startup investors—venture capitalists (VCs)—combine outside funding with incentive-based compensation, while others invest their own funds. Using bunching, triple-differences, and matching designs that exploit industry eligibility, investment vintage, and holding-period requirements, we analyze data from 158 thousand investor–firm pairings over two decades. We first identify strategic investment timing, with subsidies prompting clustering at tax-eligible holding-period thresholds. Most notably, when and where tax subsidies apply, VCs shift their project selection toward riskier ventures: they invest more in pre-commercial stage startups, become more likely to provide startups with their initial capital, and invest more in startups with pre-existing debt, while becoming less likely to co-syndicate their investments. Tax-subsidized VC-backed ventures show higher failure rates. On the flip side, they attain higher valuations at exit and are more likely to reach “unicorn status.” None of these patterns are observed for comparable non-VC investors receiving the same tax subsidies. Our tests also suggest that tax incentives lead to reallocation toward more innovative industries, yielding more impactful patents. Our study is the first to show that tax policy can shift entrepreneurial financing toward riskier, more innovative, and valuable ventures.",
       awards: ["Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum"],
       coverage: [
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
@@ -73,10 +73,10 @@ window.SITE_DATA = {
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
         { name: "FIRS 2026", url: "https://www.conftool.org/firs2026/sessions.php" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
-        { name: "NBER New Dev. in Long-Term Asset Management, Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.youtube.com/watch?v=__BDxxwHTlk" },
+        { name: "NBER New Developments in Long-Term Asset Management, Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.youtube.com/watch?v=__BDxxwHTlk" },
         { name: "NBER Place-Based Policies & Entrepreneurship, Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
         { name: "NBER Public Economics, Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
-        { name: "NBER Econ. Analysis of Business Taxation, Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
+        { name: "NBER Economic Analysis of Business Taxation, Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
         { name: "LSE Workshop on Capital Gains Tax 2026", url: "https://www.lse.ac.uk/international-inequalities/research/wealth-elites-and-tax-justice/centax" },
         { name: "London Business School's Private Capital Symposium 2025", url: "https://drive.google.com/file/d/1-sO1gMD8QtmN0qakvzS66MGGKq0BkfJH/view" },
       ],
@@ -84,10 +84,10 @@ window.SITE_DATA = {
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
         { name: "FIRS 2026", url: "https://www.conftool.org/firs2026/sessions.php" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
-        { name: "NBER New Dev. in Long-Term Asset Management, Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.youtube.com/watch?v=__BDxxwHTlk" },
+        { name: "NBER New Developments in Long-Term Asset Management, Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.youtube.com/watch?v=__BDxxwHTlk" },
         { name: "NBER Place-Based Policies & Entrepreneurship, Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
         { name: "NBER Public Economics, Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
-        { name: "NBER Econ. Analysis of Business Taxation, Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
+        { name: "NBER Economic Analysis of Business Taxation, Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
         { name: "University of Melbourne's Finance Down Under Conference 2026", url: "https://fbe.unimelb.edu.au/conferences/fdu" },
         { name: "LSE Workshop on Capital Gains Tax 2026", url: "https://www.lse.ac.uk/international-inequalities/research/wealth-elites-and-tax-justice/centax" },
         { name: "SGF Conference at the University of Zurich 2026", url: "https://www.df.uzh.ch/en/news-events/events/2026/2026-SGF-conference.html" },
@@ -126,9 +126,9 @@ window.SITE_DATA = {
     {
       n: 3,
       title: "Entrepreneurship on a Safety Net: Evidence from the World's Largest Cash Transfer Program",
-      url: "https://westernfinance-portal.org/viewpaper?n=1044036",
+      url: "https://www.dropbox.com/scl/fi/4fdi4dajpb2354gxyviv7/Entrepreneurship_on_a_Safety_Net.pdf?rlkey=kheavu51lzb3zu78iu5rbqau9&st=e8of9q5y&dl=0",
       versions: [
-        { name: "Working Paper", url: "https://westernfinance-portal.org/viewpaper?n=1044036" },
+        { name: "Working Paper", url: "https://www.dropbox.com/scl/fi/4fdi4dajpb2354gxyviv7/Entrepreneurship_on_a_Safety_Net.pdf?rlkey=kheavu51lzb3zu78iu5rbqau9&st=e8of9q5y&dl=0" },
       ],
       bibtex: `@unpublished{campello2026entrepreneurship,
   author = {Campello, Murillo and Junqueira, Guilherme and Lagaras, Spyridon},
@@ -142,7 +142,7 @@ window.SITE_DATA = {
         { name: "Spyridon Lagaras", url: "https://sites.google.com/view/spyridonlagaras/home" },
       ],
       abstract:
-        "Do social transfer programs boost entrepreneurship among low-income populations? We address this question by examining Brazil's Bolsa Família—the world's largest cash transfer program—and its effects on entrepreneurial entry, performance, and economic mobility. Using administrative data covering 2.3 million sole-proprietorships, we track entrepreneurs through the complete business lifecycle—from entry through performance to post-failure employment. We address selection combining instrumental variables—exploiting bunching across program eligibility thresholds—with matching and granular fixed effects. We first show that cash transfers increase transitions into entrepreneurship from both non-employment and wage employment, increasing beneficiaries' representation among entrepreneurs. We then identify systematic performance disadvantages: cash-transfer entrepreneurs exhibit lower survival, business growth, employment creation, and credit access, eventually facing higher rates of tax violations and debt collection proceedings. Performance gaps appear to reflect two mechanisms: managerial constraints—evident in hiring less-educated workers at higher wages with stable employment—and program dependence, revealed by income bunching at eligibility thresholds and widening gaps among longer-tenured beneficiaries. Yet these same hiring patterns, along with stronger recruitment of racial minorities, produce positive spillovers extending beyond cash-transfer recipients. Examining post-entrepreneurship trajectories, we find that cash-transfer entrepreneurs transition back to employment faster and their wage losses are 61% smaller than those of other failed entrepreneurs. Overall, our analysis reveals that cash-transfer businesses remain trapped in subsistence, generating neither growth nor economic transformation, but the entrepreneurial experience itself builds human capital that disproportionately benefits beneficiaries.",
+        "Do social transfer programs boost entrepreneurship among low-income populations? We address this question by examining Brazil's Bolsa Família—the world's largest cash transfer program—and its effects on entrepreneurial entry, performance, economic mobility, and human capital formation. Using administrative data covering 2.3 million sole-proprietorships, we track entrepreneurs through the complete business lifecycle—from entry through performance to post-failure employment. We address selection combining instrumental variables—exploiting bunching across program eligibility thresholds—with matching and granular fixed effects. We first show that cash transfers increase transitions into entrepreneurship from both non-employment and wage employment, increasing beneficiaries' representation among entrepreneurs. We then identify systematic performance disadvantages: cash-transfer entrepreneurs exhibit lower survival, business growth, employment creation, and credit access, eventually facing higher rates of tax violations and debt collection proceedings. Performance gaps do not reflect insufficient cash alone—they generally narrow where local prices make the uniform cash transfer worth more, yet persist even where its real value is highest. Instead, the gaps appear consistent with program dependence, revealed by income bunching at eligibility thresholds and widening gaps among longer-tenured beneficiaries. Examining post-entrepreneurship trajectories, we find that cash-transfer entrepreneurs return to wage employment faster and more often than other failed entrepreneurs; and although both groups return at lower pay, cash-transfer founders' wage losses are 61% smaller. Overall, our analysis reveals that cash-transfer businesses remain trapped in subsistence, generating neither growth nor economic transformation, but the entrepreneurial experience itself builds human capital that disproportionately benefits beneficiaries.",
       topConferences: [
         { name: "WFA 2026", url: "https://westernfinance-portal.org/conference" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
@@ -292,7 +292,7 @@ window.SITE_DATA = {
   ],
   // Featured talk videos
   videos: [
-    { title: "NBER New Dev. in Long-Term Asset Management", year: 2026, url: "https://www.youtube.com/watch?v=__BDxxwHTlk", paper: "Tax Incentives and Venture Capital Risk-Taking" },
+    { title: "NBER New Developments in Long-Term Asset Management", year: 2026, url: "https://www.youtube.com/watch?v=__BDxxwHTlk", paper: "Tax Incentives and Venture Capital Risk-Taking" },
     { title: "NBER Innovation Information Initiative", year: 2025, url: "https://www.youtube.com/watch?v=5ji3nPiLcx8", paper: "Measuring Innovation in U.S. Food Markets" },
   ],
   gallery: [
