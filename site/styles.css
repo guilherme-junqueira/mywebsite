@@ -271,6 +271,15 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   border-color: var(--link);
   background: var(--bg);
 }
+.paper-toggles .version-link.version-primary {
+  color: #b89968;
+  border-color: color-mix(in oklab, #b89968 55%, var(--rule));
+}
+.paper-toggles .version-link.version-primary:hover {
+  color: #8f7445;
+  border-color: #b89968;
+  background: var(--bg);
+}
 .cl-paper-detail .paper-versions {
   display: flex; flex-wrap: wrap; gap: 8px;
   margin: 12px 0 0 0;
@@ -577,10 +586,11 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 .cl-year-block .cl-talks-list { padding-left: 0; }
 .cl-year-block .cl-talks-list li {
   display: flex; justify-content: space-between; gap: 16px; align-items: baseline;
-  padding: 6px 0 6px 44px; border-bottom: 0;
+  padding: 10px 0 10px 44px; border-bottom: 1px solid var(--rule-soft);
   position: relative;
   counter-increment: talk-num -1;
 }
+.cl-year-block .cl-talks-list li:last-child { border-bottom: 0; }
 .cl-loc {
   font-family: var(--sans);
   font-size: 13px; color: var(--ink-3); flex-shrink: 0;
@@ -603,7 +613,8 @@ main { counter-reset: talk-num var(--talk-total, 59); }
   text-decoration-thickness: 1px;
 }
 .cl-year-block .cl-talks-list a:hover {
-  text-decoration-color: var(--ink-3);                            /* ① WAS accent */
+  color: var(--link);
+  text-decoration-color: var(--link);
 }
 .cl-co {
   display: inline-block; margin-left: 4px;
