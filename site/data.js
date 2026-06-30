@@ -52,8 +52,9 @@ window.SITE_DATA = {
       title: "Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program",
       url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7004578",
       versions: [
-        { name: "Working Paper", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7004578" },
-        { name: "Oxford WP", url: "https://oxfordtax.sbs.ox.ac.uk/sitefiles/wp25.10-guilherme-junqueira.pdf" },
+        { name: "SSRN", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7004578", primary: true, pdf: false },
+        { name: "CESifo WP", url: "https://www.ifo.de/en/cesifo/publications/2026/working-paper/tax-incentives-and-venture-capital-risk-taking-evidence-qsbs", pdf: false },
+        { name: "Oxford WP", url: "https://oxfordtax.sbs.ox.ac.uk/sitefiles/wp25.10-guilherme-junqueira.pdf", pdf: false },
       ],
       bibtex: `@unpublished{campello2026taxincentives,
   author = {Campello, Murillo and Junqueira, Guilherme},
@@ -121,6 +122,7 @@ window.SITE_DATA = {
         { name: "University of Glasgow*", year: 2026 },
         { name: "University of Miami*", year: 2026 },
         { name: "University of Tennessee*", year: 2026 },
+        { name: "Federal Reserve Board*", year: 2026 },
       ],
     },
     {
