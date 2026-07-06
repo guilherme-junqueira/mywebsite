@@ -53,21 +53,28 @@ window.SITE_DATA = {
       url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7004578",
       versions: [
         { name: "SSRN", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7004578", primary: true, pdf: false },
-        { name: "CESifo WP", url: "https://www.ifo.de/en/cesifo/publications/2026/working-paper/tax-incentives-and-venture-capital-risk-taking-evidence-qsbs", pdf: false },
+        { name: "NBER WP", url: "https://www.nber.org/papers/w35418", primary: true, pdf: false },
+        { name: "CESifo WP", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7032862", pdf: false },
         { name: "Oxford WP", url: "https://oxfordtax.sbs.ox.ac.uk/sitefiles/wp25.10-guilherme-junqueira.pdf", pdf: false },
       ],
-      bibtex: `@unpublished{campello2026taxincentives,
-  author = {Campello, Murillo and Junqueira, Guilherme},
-  title  = {Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program},
-  year   = {2026},
-  note   = {Working Paper}
+      bibtex: `@techreport{campello2026taxincentives,
+  author      = {Campello, Murillo and Junqueira, Guilherme},
+  title       = {Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program},
+  institution = {National Bureau of Economic Research},
+  type        = {Working Paper},
+  number      = {35418},
+  year        = {2026},
+  doi         = {10.3386/w35418},
+  url         = {https://www.nber.org/papers/w35418}
 }`,
-      apa: "Campello, M., & Junqueira, G. (2026). Tax incentives and venture capital risk-taking: Evidence from the QSBS program. Working Paper.",
+      apa: "Murillo Campello and Guilherme Junqueira, \"Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program,\" NBER Working Paper 35418 (2026), https://doi.org/10.3386/w35418.",
+      citeLabel: "Suggested Citation",
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
       abstract:
         "Do tax subsidies prompt investors to take on risk? We address this question by looking at investors' responses to changes to the Qualified Small Business Stock (QSBS) program, which reduces capital gains taxes on startup investing. We do so under a framework in which some startup investors — venture capitalists (VCs) — combine outside funding with incentive-based compensation, while others invest their own funds. Using bunching, triple-differences, and matching designs that exploit industry eligibility, investment vintage, and holding-period requirements, we analyze data from 158 thousand investor–firm pairings over two decades. We identify strategic investment timing, with subsidies prompting bunching at tax-eligible holding-period thresholds. Most notably, when and where tax subsidies apply, VCs shift their project selection toward riskier ventures: they invest more in pre-commercial stage startups, become more likely to provide startups with their initial capital, and invest more in startups with pre-existing debt, while becoming less likely to co-syndicate their investments. Tax-subsidized VC-backed ventures show higher failure rates, but on the flip side, attain higher valuations at exit and are more likely to reach “unicorn status.” None of these patterns are observed for comparable non-VC investors in startups exposed to the same tax subsidies. Our tests further show that tax incentives lead to reallocation toward more innovative industries, yielding more impactful patents. Our study is the first to show that tax policy can shift entrepreneurial financing toward riskier, more innovative, and valuable startups.",
       awards: ["Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum"],
       coverage: [
+        { name: "2026 Joint Economic Report of the U.S. Congress", url: "https://www.jec.senate.gov/public/_cache/files/f345678d-f8f4-47e2-801c-cacac8d93b7e/crpt-119hrpt649.pdf" },
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
       ],
       topConferences: [
@@ -193,10 +200,12 @@ window.SITE_DATA = {
       ],
       topConferences: [
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
+        { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
       conferences: [
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
+        { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
     },
