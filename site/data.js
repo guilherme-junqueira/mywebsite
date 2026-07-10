@@ -75,6 +75,7 @@ window.SITE_DATA = {
       awards: ["Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum"],
       coverage: [
         { name: "2026 Joint Economic Report of the U.S. Congress", url: "https://www.jec.senate.gov/public/_cache/files/f345678d-f8f4-47e2-801c-cacac8d93b7e/crpt-119hrpt649.pdf" },
+        { name: "Brookings' Hutchins Roundup", url: "https://www.brookings.edu/centers/the-hutchins-center-on-fiscal-and-monetary-policy/the-hutchins-roundup/" },
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
       ],
       topConferences: [
@@ -173,7 +174,8 @@ window.SITE_DATA = {
         { name: "Society of Labor Economists (SOLE) Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
         { name: "Inaugural Rutgers Finance Research Conference 2026*", url: "https://www.business.rutgers.edu/finance-research-conference" },
         { name: "Luso-Brazilian Finance Network (Lubrafin) Meeting 2026*", url: "https://sites.google.com/view/lubrafin/home" },
-        { name: "NFA Conference 2026*", url: "https://northernfinanceassociation.org/" },
+        { name: "NFA Conference 2026", url: "https://northernfinanceassociation.org/" },
+        { name: "RAPS/RCFS Europe Conference 2026*", url: "https://sfs.org/raps-rcfs-europe-conference-2026/" },
         { name: "University of Minnesota Data-Intensive Research Conference 2026", url: "https://lcc.umn.edu/DIRC" },
         { name: "Lake District Workshop in Corporate Finance 2026*", url: "https://wp.lancs.ac.uk/ldwcf/" },
         { name: "IFN Stockholm Conference on Firms and Human Capital 2026*", url: "https://www.ifn.se/en/seminars-and-calendar/ifn-stockholm-conference/2026-firm-competitiveness/" },
@@ -241,8 +243,9 @@ window.SITE_DATA = {
       role: "Instructor of Record",
       desc: "Corporate capital-raising across the financing lifecycle — venture capital, IPOs, SEOs, bank lending, bond issuances, and project finance & leasing — taught through lectures and Harvard cases (e.g., Pear VC, Netflix, Goodyear, Alibaba).",
       offerings: [
-        { term: "Summer 2026", note: "Upcoming" },
-        { term: "Summer 2025", note: "Overall rating: 5.00 / 5.00",
+        { term: "Summer 2026", note: "Instructor rating: 4.92 / 5.00",
+          noteRef: "Finance Dept. mean: 3.44/5.00" },
+        { term: "Summer 2025", note: "Instructor rating: 5.00 / 5.00",
           noteRef: "Finance Dept. mean: 3.66/5.00 · College mean: 4.10/5.00",
           syllabus: "https://asset.warrington.ufl.edu/syllabi/20255_FIN4414_Financial%20Management_0774_Junqueira,G.pdf" },
       ],
@@ -253,7 +256,7 @@ window.SITE_DATA = {
     { date: "Mar 2026", text: "Warrington College's Nomination for University-Level Int'l Student Achievement Award." },
     { date: "Jan 2026", text: "Selected for the IFP PhD Course on Economics of Ideas, Science, and Innovation (Feb–Apr 2026).", url: "https://ifp.org/economics-of-ideas/" },
     { date: "Jul 2025", text: "Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum.", url: "https://aefin.es/conference-awards/" },
-    { date: "May 2025", text: "Taught Financial Management for UF's undergraduate program (overall rating: 5.00/5.00)." },
+    { date: "May 2025", text: "Taught Financial Management for UF's undergraduate program (instructor rating: 5.00/5.00)." },
     { date: "Apr 2025", text: "Selected for the Finance Theory Group Summer School 2025 (Jun 25–28).", url: "https://foster.uw.edu/faculty-research/academic-departments/finance-and-business-economics/financial-theory-group-summer-school-2025/" },
     { date: "Nov 2024", text: "Selected as a 2025 Graduate Fellow in the NBER Innovation Information Initiative (I3).", url: "https://www.nber.org/programs-projects/projects-and-centers/innovative-information-initiative" },
     { date: "Apr 2024", text: "Selected for the Finance & Product Markets Summer School 2024 (Aug 12–16).", url: "https://www.usi.ch/en/feeds/29040" },

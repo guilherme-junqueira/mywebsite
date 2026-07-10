@@ -182,7 +182,7 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   width: 64px; height: 2.5px; background: var(--accent);    /* ⑤ thicker */
   margin: 24px 0 24px 0; border: 0; border-radius: 1px;
 }
-.mm-bio { font-size: 16px; margin: 0 0 22px 0; color: var(--ink-2); line-height: 1.65; max-width: 560px; }
+.mm-bio { font-size: 16px; margin: 0 0 22px 0; color: var(--ink-2); line-height: 1.65; }
 .mm-ri-label { font-size: 16px; margin: 18px 0 10px 0; color: var(--ink); }
 .mm-ri-label strong { font-weight: 600; color: var(--ink); }
 .mm-ri { list-style: none; padding-left: 0; margin: 0 0 22px 0; font-size: 16px; line-height: 1.9; color: var(--ink-2); }
@@ -769,6 +769,21 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 .mm-btn-primary:hover {
   background: var(--accent-deep); color: #fff;
 }
+
+.mm-contact {
+  font-family: var(--sans);
+  font-size: 16px; color: var(--ink-2);
+  margin: 2px 0 20px 0;
+}
+.mm-contact a {
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.mm-contact a:hover { color: var(--link-deep); text-decoration-color: var(--link-deep); }
+.mm-contact-sep { color: var(--ink-4); margin: 0 10px; }
 
 .mm-bio {
   font-family: var(--sans);
