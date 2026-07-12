@@ -29,13 +29,13 @@ window.SITE_DATA = {
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
       bibtex: `@unpublished{campello2026democratizing,
   author = {Campello, Murillo and Junqueira, Guilherme},
-  title  = {Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing},
+  title  = {{Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing}},
   year   = {2026},
   note   = {Working Paper}
 }`,
       apa: "Campello, M., & Junqueira, G. (2026). Democratizing venture capital: Tax incentives and the geographic expansion of startup investing. Working Paper.",
       abstract:
-        "Can tax subsidies expand the geographic reach of startup investing? We address this question by studying the 2009 enhancement of the Qualified Small Business Stock (QSBS) program, which eliminated federal capital gains taxes on investments in qualifying startups. Despite decades of growth, institutional startup investing is confined to a handful of coastal hubs, leaving most of the country with little access to the risk-seeking capital that finances high-growth entrepreneurship. Using investment-level data covering 158 thousand investor\u2013firm pairings, we show that the QSBS enhancement increased by 33% the probability that a previously unserved U.S. metropolitan area received venture capital (VC) investment in qualifying sectors. VC investment in ineligible sectors showed no comparable expansion, nor did angel investment qualifying for the same benefits. The program also reshaped investment across the full distribution of underserved markets: investors actively reallocated capital from ineligible to eligible sectors within already-active metros, with the largest compositional shifts in the most underserved areas. VCs entering previously unserved and underserved markets did so with less-syndicated, more concentrated positions, consistent with pioneering behavior in thin ecosystems where local co-investors are scarce and tax-induced risk-seeking behavior documented in the literature. These markets attracted investment shaped by local economic structure rather than transplanted from established hubs, with industrial and manufacturing startups gaining ground relative to the software-heavy activity typical of incumbent centers. Firms entering these markets were not systematically lower quality than those in established VC hubs: failure rates, patent rates, and employment per firm are similar across metro tiers, and both previously unserved and underserved metros produced their first \u201Cunicorns.\u201D Our findings suggest that a geographically neutral subsidy can generate meaningful geographic redistribution when it is large enough to overcome the informational frictions and network gaps that concentrate investor funds in established hubs.",
+        "Can tax subsidies expand the geographic reach of startup investing? We address this question by studying the 2009 enhancement of the Qualified Small Business Stock (QSBS) program, which eliminated federal capital gains taxes on investments in qualifying startups. Despite decades of growth, institutional startup investing is confined to a handful of coastal hubs, leaving most of the country with little access to the risk-seeking capital that finances high-growth entrepreneurship. Using investment-level data covering 158 thousand investor\u2013firm pairings, we show that the QSBS enhancement raised\u2014by 7 to 8 percentage points\u2014the probability that a previously unserved U.S. metropolitan area received venture capital (VC) investment in qualifying sectors. VC investment in ineligible sectors showed no comparable expansion, nor did angel investment qualifying for the same benefits. The program also reshaped investment across the full distribution of underserved markets: investors actively reallocated capital from ineligible to eligible sectors within already-active metros, with the largest compositional shifts in the most underserved areas. These markets attracted investment shaped by local economic structure rather than transplanted from established hubs, with industrial and manufacturing startups gaining ground relative to the software-heavy activity typical of incumbent centers. Firms entering these markets were not systematically lower quality than those in established VC hubs: failure rates, patent rates, and employment per firm are similar across metro tiers, and both previously unserved and underserved metros produced their first \u201Cunicorns.\u201D Drawing on worker-level data, we further show that startups in newly served markets created high-wage jobs, attracted scientific and technical workers\u2014including direct inflows from established hubs\u2014and retained them at higher rates than hub startups, while metros receiving more QSBS-induced entry saw faster growth in wages. Our findings suggest that a geographically neutral subsidy can generate meaningful geographic redistribution when it is large enough to overcome the informational frictions and network gaps that concentrate investor funds in established hubs.",
       venue: "NBER Tax Policy and the Economy, Volume 41",
       status: "forthcoming",
       topConferences: [
@@ -59,7 +59,7 @@ window.SITE_DATA = {
       ],
       bibtex: `@techreport{campello2026taxincentives,
   author      = {Campello, Murillo and Junqueira, Guilherme},
-  title       = {Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program},
+  title       = {{Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program}},
   institution = {National Bureau of Economic Research},
   type        = {Working Paper},
   number      = {35418},
@@ -77,6 +77,7 @@ window.SITE_DATA = {
         { name: "2026 Joint Economic Report of the U.S. Congress", url: "https://www.jec.senate.gov/public/_cache/files/f345678d-f8f4-47e2-801c-cacac8d93b7e/crpt-119hrpt649.pdf" },
         { name: "Brookings' Hutchins Roundup", url: "https://www.brookings.edu/centers/the-hutchins-center-on-fiscal-and-monetary-policy/the-hutchins-roundup/" },
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
+        { name: "UDLAP Global Observatory", url: "https://observatorioglobal.udlap.mx/tax-incentives-and-venture-capital-risk-taking-evidence-from-the-qsbs-program/" },
       ],
       topConferences: [
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
@@ -142,7 +143,7 @@ window.SITE_DATA = {
       ],
       bibtex: `@unpublished{campello2026entrepreneurship,
   author = {Campello, Murillo and Junqueira, Guilherme and Lagaras, Spyridon},
-  title  = {Entrepreneurship on a Safety Net: Evidence from the World's Largest Cash Transfer Program},
+  title  = {{Entrepreneurship on a Safety Net: Evidence from the World's Largest Cash Transfer Program}},
   year   = {2026},
   note   = {Working Paper}
 }`,
