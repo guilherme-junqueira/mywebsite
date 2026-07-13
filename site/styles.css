@@ -722,7 +722,7 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 .mm-name {
   font-family: var(--sans);
   font-size: 56px; font-weight: 700; letter-spacing: -0.03em;
-  margin: -6px 0 14px 0; line-height: 1.03; color: var(--ink);
+  margin: -6px 0 6px 0; line-height: 1.03; color: var(--ink);
   white-space: nowrap;
 }
 
@@ -744,6 +744,9 @@ main { counter-reset: talk-num var(--talk-total, 59); }
   font-size: 18px; color: var(--accent); font-weight: 600; letter-spacing: -0.01em;
   line-height: 1.45;
   margin: 26px 0 18px 0;
+}
+.mm-interests-label {
+  color: var(--ink-3); font-weight: 500;
 }
 
 .mm-bar { display: none; }
