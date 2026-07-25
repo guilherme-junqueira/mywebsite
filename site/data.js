@@ -88,6 +88,7 @@ window.SITE_DATA = {
         { name: "NBER Public Economics, Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
         { name: "NBER Economic Analysis of Business Taxation, Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
         { name: "LSE Workshop on Capital Gains Tax 2026", url: "https://www.lse.ac.uk/international-inequalities/research/wealth-elites-and-tax-justice/centax" },
+        { name: "CESifo Area Conference on Public Economics 2026", url: "https://www.cesifo.org/en/events/2026/cesifo-area-conference-public-economics-2026" },
         { name: "London Business School's Private Capital Symposium 2025", url: "https://drive.google.com/file/d/1-sO1gMD8QtmN0qakvzS66MGGKq0BkfJH/view" },
       ],
       conferences: [
@@ -155,19 +156,24 @@ window.SITE_DATA = {
       abstract:
         "Do social transfer programs boost entrepreneurship among low-income populations? We address this question by examining Brazil's Bolsa Família—the world's largest cash transfer program—and its effects on entrepreneurial entry, performance, economic mobility, and human capital formation. Using administrative data covering 2.3 million sole-proprietorships, we track entrepreneurs through the complete business lifecycle—from entry through performance to post-failure employment. We address selection combining instrumental variables—exploiting bunching across program eligibility thresholds—with matching and granular fixed effects. We first show that cash transfers increase transitions into entrepreneurship from both non-employment and wage employment, increasing beneficiaries' representation among entrepreneurs. We then identify systematic performance disadvantages: cash-transfer entrepreneurs exhibit lower survival, business growth, employment creation, and credit access, eventually facing higher rates of tax violations and debt collection proceedings. Performance gaps do not reflect insufficient cash alone—they generally narrow where local prices make the uniform cash transfer worth more, yet persist even where its real value is highest. Instead, the gaps appear consistent with program dependence, revealed by income bunching at eligibility thresholds and widening gaps among longer-tenured beneficiaries. Examining post-entrepreneurship trajectories, we find that cash-transfer entrepreneurs return to wage employment faster and more often than other failed entrepreneurs; and although both groups return at lower pay, cash-transfer founders' wage losses are 61% smaller. Overall, our analysis reveals that cash-transfer businesses remain trapped in subsistence, generating neither growth nor economic transformation, but the entrepreneurial experience itself builds human capital that disproportionately benefits beneficiaries.",
       topConferences: [
+        { name: "AEA 2027", url: "https://www.aeaweb.org/conference/" },
         { name: "WFA 2026", url: "https://westernfinance-portal.org/conference" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
+        { name: "ABFER 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
+        { name: "WAPFIN@Stern 2026*", url: "https://wapfin-stern.weebly.com/" },
+        { name: "ESADE Entrepreneurial Finance Conference 2026*", url: "https://form.jotform.com/261373711218352" },
         { name: "CEPR Development Economics Symposium 2026", url: "https://cepr.org/events/event-series/development-economics-symposium/cepr-development-economics-joint-tcd-2026-1" },
         { name: "CEPR Summer Conference on Financial Intermediation and Corporate Finance 2026*", url: "https://cepr.org/events/8th-summer-conference-financial-intermediation-and-corporate-finance" },
-        { name: "ABFER 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
         { name: "University of Washington 7th Summer Finance Conference 2026*", url: "https://foster.uw.edu/faculty-research/academic-departments/finance-and-business-economics/summer-finance-conference/" },
         { name: "Society of Labor Economists (SOLE) Meeting 2026", url: "https://www.sole-jole.org/index.php?option=com_content&view=article&id=147:sole-2026-submissions-now-open&catid=23:latest-news" },
-        { name: "Inaugural Rutgers Finance Research Conference 2026*", url: "https://www.business.rutgers.edu/finance-research-conference" },
         { name: "HEC Paris Entrepreneurship Workshop 2025", url: "https://hecparisentrepreneurship.github.io/" },
       ],
       conferences: [
         { name: "WFA 2026", url: "https://westernfinance-portal.org/conference" },
+        { name: "AEA 2027", url: "https://www.aeaweb.org/conference/" },
+        { name: "WAPFIN@Stern 2026*", url: "https://wapfin-stern.weebly.com/" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
+        { name: "ESADE Entrepreneurial Finance Conference 2026*", url: "https://form.jotform.com/261373711218352" },
         { name: "CEPR Development Economics Symposium 2026", url: "https://cepr.org/events/event-series/development-economics-symposium/cepr-development-economics-joint-tcd-2026-1" },
         { name: "CEPR Summer Conference on Financial Intermediation and Corporate Finance 2026*", url: "https://cepr.org/events/8th-summer-conference-financial-intermediation-and-corporate-finance" },
         { name: "ABFER 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
@@ -204,11 +210,13 @@ window.SITE_DATA = {
       topConferences: [
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
+        { name: "8th World Bank/ODI Global/IFS Public Finance Conference 2026", url: "https://www.worldbank.org/en/events/2026/09/24/8th-world-bank-odi-global-ifs-public-finance-conference" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
       conferences: [
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
+        { name: "8th World Bank/ODI Global/IFS Public Finance Conference 2026", url: "https://www.worldbank.org/en/events/2026/09/24/8th-world-bank-odi-global-ifs-public-finance-conference" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
     },

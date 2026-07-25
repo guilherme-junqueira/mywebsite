@@ -886,6 +886,7 @@ main { counter-reset: talk-num var(--talk-total, 59); }
   color: var(--link);
   text-decoration-color: var(--link);
 }
+.cl-paper-detail .badges span.conf-plain { color: var(--ink-2); }
 .cl-paper-detail .badges a.video-link,
 .cl-expand-body a.video-link {
   color: var(--link);

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Research — Guilherme Junqueira</title>
 <script src="site/theme-init.js?v=20260707"></script>
-<link rel="stylesheet" href="site/styles.css?v=20260712c" />
+<link rel="stylesheet" href="site/styles.css?v=20260725d" />
 <link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260707" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY28WWYZXQ"></script>
@@ -21,7 +21,7 @@
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=20260712b"></script>
+<script src="site/data.js?v=20260725h"></script>
 <script type="text/babel" src="site/layout.jsx?v=20260707"></script>
 <script type="text/babel" data-presets="react">
   const D = window.SITE_DATA;
@@ -125,7 +125,7 @@
         ))}</React.Fragment>
       : <span style={{color:'var(--ink-3)', fontStyle:'italic'}}>Solo project.</span>;
 
-    const selected = (p.topConferences || []).filter(c => c && c.url);
+    const selected = (p.topConferences || []).filter(c => c && c.name);
     const conferences = p.conferences || [];
     const seminars = p.seminars || [];
     const hasMore = conferences.length > selected.length || seminars.length > 0;
@@ -161,7 +161,9 @@
             {selected.map((c,i)=> (
               <React.Fragment key={i}>
                 {i>0?' · ':''}
-                <a href={c.url} target="_blank" rel="noopener" className="conf-link">{renderVenueName(c.name)}</a>
+                {c.url
+                  ? <a href={c.url} target="_blank" rel="noopener" className="conf-link">{renderVenueName(c.name)}</a>
+                  : <span className="conf-plain">{renderVenueName(c.name)}</span>}
                 {c.recordingUrl && <> <a href={c.recordingUrl} target="_blank" rel="noopener" className="video-link">(Video)</a></>}
               </React.Fragment>
             ))}
