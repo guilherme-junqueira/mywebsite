@@ -391,6 +391,8 @@ a:hover { color: var(--link-deep); text-decoration: underline; text-underline-of
   font-weight: 700; color: var(--accent-deep);
 }
 .cl-paper-detail .badges .award-text { color: var(--ink); font-weight: 500; }
+.cl-paper-detail .badges .award-text a { color: var(--ink); font-weight: 500; }
+.cl-paper-detail .badges a.cited-link { color: var(--ink); font-weight: 500; }
 
 /* ① — award badge becomes a real callout, gold reserved here */
 .cl-paper-detail .badge-award {

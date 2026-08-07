@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Research — Guilherme Junqueira</title>
 <script src="site/theme-init.js?v=20260707"></script>
-<link rel="stylesheet" href="site/styles.css?v=20260725d" />
+<link rel="stylesheet" href="site/styles.css?v=20260807" />
 <link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260707" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY28WWYZXQ"></script>
@@ -21,7 +21,7 @@
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=20260725h"></script>
+<script src="site/data.js?v=20260807b"></script>
 <script type="text/babel" src="site/layout.jsx?v=20260707"></script>
 <script type="text/babel" data-presets="react">
   const D = window.SITE_DATA;
@@ -146,11 +146,20 @@
 
         <AbstractCiteRow p={p} />
 
-        {p.awards && <div className="badges"><strong className="badges-label">Awarded:</strong> <span className="award-text">{renderAward(p.awards[0])}</span></div>}
+        {p.awards && p.awards.map((a, i) => (
+          <div className="badges" key={i}><strong className="badges-label">{i === 0 ? 'Awarded:' : 'Selected:'}</strong> <span className="award-text">{a.url ? <a href={a.url} target="_blank" rel="noopener">{renderAward(a.text || a)}</a> : renderAward(a.text || a)}</span></div>
+        ))}
+
+        {p.citedIn && (
+          <div className="badges">
+            <strong className="badges-label">Cited in:</strong>{' '}
+            {p.citedIn.map((c,i)=> <React.Fragment key={i}>{i>0?' · ':''}<a className="cited-link" href={c.url} target="_blank" rel="noopener">{c.name}</a></React.Fragment>)}
+          </div>
+        )}
 
         {p.coverage && (
           <div className="badges">
-            <strong className="badges-label">Featured in:</strong>{' '}
+            <strong className="badges-label">Media:</strong>{' '}
             {p.coverage.map((c,i)=> <React.Fragment key={i}>{i>0?' · ':''}<a href={c.url} target="_blank" rel="noopener">{c.name}</a></React.Fragment>)}
           </div>
         )}

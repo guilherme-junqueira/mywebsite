@@ -72,11 +72,17 @@ window.SITE_DATA = {
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
       abstract:
         "Do tax subsidies prompt investors to take on risk? We address this question by looking at investors' responses to changes to the Qualified Small Business Stock (QSBS) program, which reduces capital gains taxes on startup investing. We do so under a framework in which some startup investors — venture capitalists (VCs) — combine outside funding with incentive-based compensation, while others invest their own funds. Using bunching, triple-differences, and matching designs that exploit industry eligibility, investment vintage, and holding-period requirements, we analyze data from 158 thousand investor–firm pairings over two decades. We identify strategic investment timing, with subsidies prompting bunching at tax-eligible holding-period thresholds. Most notably, when and where tax subsidies apply, VCs shift their project selection toward riskier ventures: they invest more in pre-commercial stage startups, become more likely to provide startups with their initial capital, and invest more in startups with pre-existing debt, while becoming less likely to co-syndicate their investments. Tax-subsidized VC-backed ventures show higher failure rates, but on the flip side, attain higher valuations at exit and are more likely to reach “unicorn status.” None of these patterns are observed for comparable non-VC investors in startups exposed to the same tax subsidies. Our tests further show that tax incentives lead to reallocation toward more innovative industries, yielding more impactful patents. Our study is the first to show that tax policy can shift entrepreneurial financing toward riskier, more innovative, and valuable startups.",
-      awards: ["Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum"],
-      coverage: [
+      awards: [
+        { text: "Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum" },
+        { text: "NBER Featured Working Paper (July 2026)", url: "https://www.nber.org/nber-news/featured-working-papers-archive?page=1&perPage=50" },
+      ],
+      citedIn: [
         { name: "2026 Joint Economic Report of the U.S. Congress", url: "https://www.jec.senate.gov/public/_cache/files/f345678d-f8f4-47e2-801c-cacac8d93b7e/crpt-119hrpt649.pdf" },
+      ],
+      coverage: [
         { name: "Brookings' Hutchins Roundup", url: "https://www.brookings.edu/centers/the-hutchins-center-on-fiscal-and-monetary-policy/the-hutchins-roundup/" },
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
+        { name: "The Idea Farm", url: "https://theideafarm.com/alternative-investment/tax-incentives-and-venture-capital-risk-taking-evidence-from-the-qsbs-program/" },
         { name: "UDLAP Global Observatory", url: "https://observatorioglobal.udlap.mx/tax-incentives-and-venture-capital-risk-taking-evidence-from-the-qsbs-program/" },
       ],
       topConferences: [
