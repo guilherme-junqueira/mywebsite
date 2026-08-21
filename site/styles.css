@@ -846,6 +846,8 @@ main { counter-reset: talk-num var(--talk-total, 59); }
   display: flex; justify-content: space-between; gap: 24px; align-items: baseline;
 }
 .mm-talks-list li:last-child { border-bottom: 0; }
+.mm-talks-list li a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.mm-talks-list li a:hover { color: var(--link-deep); text-decoration-color: var(--link-deep); }
 .mm-talks-list li .mm-talk-date {
   font-family: var(--sans);
   color: var(--ink-3); font-size: 13.5px; flex-shrink: 0;
