@@ -81,7 +81,7 @@ window.SITE_DATA = {
       ],
       coverage: [
         { name: "NBER Digest", url: "https://www.nber.org/digest" },
-        { name: "Brookings' Hutchins Roundup", url: "https://www.brookings.edu/centers/the-hutchins-center-on-fiscal-and-monetary-policy/the-hutchins-roundup/" },
+        { name: "Brookings' Hutchins Roundup", url: "https://connect.brookings.edu/hutchins-roundup-vc-tax-breaks-lower-birth-rates-and-more" },
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
         { name: "The Idea Farm", url: "https://theideafarm.com/alternative-investment/tax-incentives-and-venture-capital-risk-taking-evidence-from-the-qsbs-program/" },
         { name: "UDLAP Global Observatory", url: "https://observatorioglobal.udlap.mx/tax-incentives-and-venture-capital-risk-taking-evidence-from-the-qsbs-program/" },
@@ -212,6 +212,7 @@ window.SITE_DATA = {
       url: "#",
       coauthors: [
         { name: "Murillo Campello", url: "https://murillocampello.com/" },
+        { name: "Matheus Sampaio", url: "https://www.matheussampaio.com/" },
         { name: "Changcheng Song", url: "https://sites.google.com/site/songchch02/" },
       ],
       topConferences: [
@@ -231,6 +232,21 @@ window.SITE_DATA = {
   worksInProgress: [
     {
       n: 5,
+      title: "Cash Transfers and Dependence in Entrepreneurial Finance",
+      coauthors: [
+        { name: "Murillo Campello", url: "https://murillocampello.com/" },
+        { name: "Spyridon Lagaras", url: "https://sites.google.com/site/spyridonlagaras/" },
+        { name: "Chi-Yang Tsou", url: "https://sites.google.com/view/chiyangtsou/home" },
+      ],
+      topConferences: [
+        { name: "Taiwan Symposium on Innovation Economics and Entrepreneurship 2026*", url: "https://oir.site.nthu.edu.tw/p/404-1487-164855.php" },
+      ],
+      conferences: [
+        { name: "Taiwan Symposium on Innovation Economics and Entrepreneurship 2026*", url: "https://oir.site.nthu.edu.tw/p/404-1487-164855.php" },
+      ],
+    },
+    {
+      n: 6,
       title: "Measuring Innovation in U.S. Food Markets",
       coauthors: [],
 
@@ -239,7 +255,7 @@ window.SITE_DATA = {
       ],
     },
     {
-      n: 6,
+      n: 7,
       title: "The Industrial Organization of Private Equity",
       coauthors: [
         { name: "Murillo Campello", url: "https://murillocampello.com/" },
@@ -248,7 +264,7 @@ window.SITE_DATA = {
       note: "Granted access to MSCI–Burgiss data by the Private Equity Research Consortium.",
     },
     {
-      n: 7,
+      n: 8,
       title: "Job Market Paper [Title TBA]",
       coauthors: [],
     },
