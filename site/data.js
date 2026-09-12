@@ -79,6 +79,9 @@ window.SITE_DATA = {
         { text: "Best Paper of the Conference, Spanish Finance Association's 32nd Finance Forum" },
         { text: "NBER Featured Working Paper (July 2026)", url: "https://www.nber.org/nber-news/featured-working-papers-archive?page=1&perPage=50" },
       ],
+      press: [
+        { name: "The Wall Street Journal (Editorial Board)", url: "https://www.wsj.com/opinion/nber-study-capital-gains-tax-unicorns-investment-ab0095fb" },
+      ],
       citedIn: [
         { name: "2026 Joint Economic Report of the U.S. Congress", url: "https://www.jec.senate.gov/public/_cache/files/f345678d-f8f4-47e2-801c-cacac8d93b7e/crpt-119hrpt649.pdf" },
       ],
@@ -87,7 +90,6 @@ window.SITE_DATA = {
         { name: "Brookings' Hutchins Roundup", url: "https://connect.brookings.edu/hutchins-roundup-vc-tax-breaks-lower-birth-rates-and-more" },
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
         { name: "The Idea Farm", url: "https://theideafarm.com/alternative-investment/tax-incentives-and-venture-capital-risk-taking-evidence-from-the-qsbs-program/" },
-        { name: "UDLAP Global Observatory", url: "https://observatorioglobal.udlap.mx/tax-incentives-and-venture-capital-risk-taking-evidence-from-the-qsbs-program/" },
       ],
       topConferences: [
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
