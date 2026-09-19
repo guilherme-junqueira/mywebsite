@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Presentations — Guilherme Junqueira</title>
 <script src="site/theme-init.js?v=20260707"></script>
-<link rel="stylesheet" href="site/styles.css?v=20260821" />
+<link rel="stylesheet" href="site/styles.css?v=20260919" />
 <link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260707" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY28WWYZXQ"></script>
@@ -21,7 +21,7 @@
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=20260912"></script>
+<script src="site/data.js?v=20260919e"></script>
 <script type="text/babel" src="site/layout.jsx?v=20260707"></script>
 <script type="text/babel" data-presets="react">
   const D = window.SITE_DATA;
@@ -47,7 +47,23 @@
 
   function ytThumb(url) {
     const m = url.match(/[?&]v=([^&]+)/);
-    return m ? `https://img.youtube.com/vi/${m[1]}/hqdefault.jpg` : null;
+    return m ? `https://img.youtube.com/vi/${m[1]}/maxresdefault.jpg` : null;
+  }
+
+  function ytThumbFallback(url) {
+    const m = url.match(/[?&]v=([^&]+)/);
+    return m ? `https://img.youtube.com/vi/${m[1]}/mqdefault.jpg` : null;
+  }
+
+  function VideoThumb({ url }) {
+    const [src, setSrc] = React.useState(ytThumb(url));
+    return (
+      <div className="thumb">
+        <img className="thumb-img" src={src} alt="" loading="lazy" onError={() => { const fb = ytThumbFallback(url); if (fb && src !== fb) setSrc(fb); }} />
+        <div className="thumb-scrim"></div>
+        <div className="play-btn"><PlayIcon /></div>
+      </div>
+    );
   }
 
   const LOCATIONS = [
@@ -66,6 +82,7 @@
     ["ifn stockholm", "Stockholm, Sweden"],
     ["inaugural rutgers", "New Brunswick, NJ"],
     ["lake district", "Lancaster, England"],
+    ["smu-jinan", "Singapore"],
     ["centax workshop", "London, England"],
     ["luso-brazilian", "Foz do Iguaçu, Brazil"],
     ["sgf conference", "Zurich, Switzerland"],
@@ -255,12 +272,7 @@
         <div className="cl-videos">
           {D.videos.map((v,i) => (
             <a key={i} href={v.url} target="_blank" rel="noopener" className="card">
-              <div className="thumb" style={{
-                backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.45)), url(${ytThumb(v.url)})`,
-                backgroundSize: 'cover', backgroundPosition: 'center'
-              }}>
-                <div className="play-btn"><PlayIcon /></div>
-              </div>
+              <VideoThumb url={v.url} />
               <div className="meta">
                 <div className="ttl">{v.title} ({v.year})</div>
                 <div className="sub">Paper: {v.paper}</div>

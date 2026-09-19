@@ -25,22 +25,26 @@ window.SITE_DATA = {
     {
       n: 1,
       title: "Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing",
-      url: "#",
+      url: "https://www.nber.org/books-and-chapters/tax-policy-and-economy-volume-41/democratizing-venture-capital-tax-incentives-and-geographic-expansion-startup-investing",
       versions: [
         { name: "Working Paper", url: "https://conference.nber.org/conf_papers/f247859.pdf", primary: true },
       ],
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
-      bibtex: `@unpublished{campello2026democratizing,
-  author = {Campello, Murillo and Junqueira, Guilherme},
-  title  = {{Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing}},
-  year   = {2026},
-  note   = {Working Paper}
+      bibtex: `@inbook{campello2026democratizing,
+  author    = {Campello, Murillo and Junqueira, Guilherme},
+  title     = {{Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing}},
+  booktitle = {Tax Policy and the Economy, Volume 41},
+  publisher = {University of Chicago Press},
+  year      = {2026},
+  month     = {September},
+  chapter   = {2},
+  url       = {http://www.nber.org/chapters/c15501}
 }`,
-      apa: "Campello, M., & Junqueira, G. (2026). Democratizing venture capital: Tax incentives and the geographic expansion of startup investing. Working Paper.",
+      apa: "Campello, M., & Junqueira, G. (2026). Democratizing venture capital: Tax incentives and the geographic expansion of startup investing. In Tax Policy and the Economy, Volume 41 (chap. 2). University of Chicago Press.",
       abstract:
         "Can tax subsidies expand the geographic reach of startup investing? Despite decades of growth, institutional startup investing remains confined to a handful of coastal hubs, leaving most of the country with little access to the risk-seeking capital that finances high-growth entrepreneurship. We exploit the 2009\u20132010 enhancement of the Qualified Small Business Stock (QSBS) program\u2014which eliminated federal capital gains taxes on investments in qualifying startups\u2014to study whether tax subsidies can broaden the reach of startup investing. Using investment-level data covering 158 thousand investor\u2013firm pairings, we show that the QSBS enhancement raised the probability that a previously unserved U.S. metropolitan area received venture capital (VC) investment in qualifying sectors by 8 to 10 percentage points. VC investment in ineligible sectors showed no comparable expansion. Within markets already served, investment tilted toward qualifying sectors, most sharply where venture activity had been thinnest. Investment in newly reached markets leaned toward industrial and manufacturing startups relative to the software-heavy mix of established hubs, consistent with local economic structure shaping where capital landed. Entering firms were not systematically lower quality than those in other non-hub markets, trailing established hubs mainly in outlier successes. Drawing on worker-level data, we further show that startups in newly served markets created high-wage jobs, attracted scientific and technical workers\u2014including direct inflows from established hubs\u2014and retained them at higher rates than hub startups, while metros receiving more eligible-sector entry saw faster growth in wages. Our findings suggest that a geographically neutral subsidy can generate a meaningful expansion of VC\u2019s geographic reach when it is large enough to overcome the informational frictions and network gaps that concentrate investor funds in established hubs.",
-      venue: "NBER Tax Policy and the Economy, Volume 41",
-      status: "forthcoming",
+      venue: "NBER Tax Policy and the Economy, Volume 41 (University of Chicago Press)",
+      status: "chap. 2, 2026",
       topConferences: [
         { name: "NBER Tax Policy and the Economy Annual Conference, 2026", url: "https://www.nber.org/conferences/41st-annual-nber-tax-policy-and-economy-conference-2026" },
       ],
@@ -90,12 +94,13 @@ window.SITE_DATA = {
         { name: "Brookings' Hutchins Roundup", url: "https://connect.brookings.edu/hutchins-roundup-vc-tax-breaks-lower-birth-rates-and-more" },
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
         { name: "The Idea Farm", url: "https://theideafarm.com/alternative-investment/tax-incentives-and-venture-capital-risk-taking-evidence-from-the-qsbs-program/" },
+        { name: "SSTI", url: "https://www.ssti.org/blog/impact-tax-incentives-early-stage-company-investment-varies" },
       ],
       topConferences: [
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
         { name: "FIRS 2026", url: "https://www.conftool.org/firs2026/sessions.php" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
-        { name: "NBER New Developments in Long-Term Asset Management, Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.youtube.com/watch?v=__BDxxwHTlk" },
+        { name: "NBER New Developments in Long-Term Asset Management, Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.nber.org/research/videos/2026-new-developments-long-term-asset-management-guilherme-junqueira-tax-incentives-and-venture" },
         { name: "NBER Place-Based Policies & Entrepreneurship, Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
         { name: "NBER Public Economics, Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
         { name: "NBER Economic Analysis of Business Taxation, Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
@@ -107,7 +112,7 @@ window.SITE_DATA = {
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
         { name: "FIRS 2026", url: "https://www.conftool.org/firs2026/sessions.php" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
-        { name: "NBER New Developments in Long-Term Asset Management, Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.youtube.com/watch?v=__BDxxwHTlk" },
+        { name: "NBER New Developments in Long-Term Asset Management, Spring 2026", url: "https://www.nber.org/conferences/new-developments-long-term-asset-management-spring-2026", recordingUrl: "https://www.nber.org/research/videos/2026-new-developments-long-term-asset-management-guilherme-junqueira-tax-incentives-and-venture" },
         { name: "NBER Place-Based Policies & Entrepreneurship, Fall 2025*", url: "https://www.nber.org/conferences/place-based-policies-and-entrepreneurship-fall-2025" },
         { name: "NBER Public Economics, Fall 2025*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2025" },
         { name: "NBER Economic Analysis of Business Taxation, Spring 2025*", url: "https://www.nber.org/conferences/economic-analysis-business-taxation-spring-2025" },
@@ -225,12 +230,14 @@ window.SITE_DATA = {
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
         { name: "8th World Bank/ODI Global/IFS Public Finance Conference 2026", url: "https://www.worldbank.org/en/events/2026/09/24/8th-world-bank-odi-global-ifs-public-finance-conference" },
+        { name: "SMU-Jinan Urban and Regional Economics / WB-GWU Urbanization and Development Conference 2026", url: "https://www.worldbank.org/en/events/2026/12/14/11th-urbanization-and-development-conference" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
       conferences: [
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
         { name: "8th World Bank/ODI Global/IFS Public Finance Conference 2026", url: "https://www.worldbank.org/en/events/2026/09/24/8th-world-bank-odi-global-ifs-public-finance-conference" },
+        { name: "SMU-Jinan Urban and Regional Economics / WB-GWU Urbanization and Development Conference 2026", url: "https://www.worldbank.org/en/events/2026/12/14/11th-urbanization-and-development-conference" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
     },
@@ -344,7 +351,7 @@ window.SITE_DATA = {
   ],
   // Featured talk videos
   videos: [
-    { title: "NBER New Developments in Long-Term Asset Management", year: 2026, url: "https://www.youtube.com/watch?v=__BDxxwHTlk", paper: "Tax Incentives and Venture Capital Risk-Taking" },
+    { title: "NBER New Developments in Long-Term Asset Management", year: 2026, url: "https://www.youtube.com/watch?v=Y_VkcuL2TbI", paper: "Tax Incentives and Venture Capital Risk-Taking" },
     { title: "NBER Innovation Information Initiative", year: 2025, url: "https://www.youtube.com/watch?v=5ji3nPiLcx8", paper: "Measuring Innovation in U.S. Food Markets" },
   ],
   gallery: [
