@@ -35,16 +35,16 @@ window.SITE_DATA = {
   title     = {{Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing}},
   booktitle = {Tax Policy and the Economy, Volume 41},
   publisher = {University of Chicago Press},
-  year      = {2026},
+  year      = {forthcoming},
   month     = {September},
   chapter   = {2},
   url       = {http://www.nber.org/chapters/c15501}
 }`,
-      apa: "Campello, M., & Junqueira, G. (2026). Democratizing venture capital: Tax incentives and the geographic expansion of startup investing. In Tax Policy and the Economy, Volume 41 (chap. 2). University of Chicago Press.",
+      apa: "Campello, M., & Junqueira, G. (forthcoming). Democratizing venture capital: Tax incentives and the geographic expansion of startup investing. In Tax Policy and the Economy, Volume 41 (chap. 2). University of Chicago Press.",
       abstract:
         "Can tax subsidies expand the geographic reach of startup investing? Despite decades of growth, institutional startup investing remains confined to a handful of coastal hubs, leaving most of the country with little access to the risk-seeking capital that finances high-growth entrepreneurship. We exploit the 2009\u20132010 enhancement of the Qualified Small Business Stock (QSBS) program\u2014which eliminated federal capital gains taxes on investments in qualifying startups\u2014to study whether tax subsidies can broaden the reach of startup investing. Using investment-level data covering 158 thousand investor\u2013firm pairings, we show that the QSBS enhancement raised the probability that a previously unserved U.S. metropolitan area received venture capital (VC) investment in qualifying sectors by 8 to 10 percentage points. VC investment in ineligible sectors showed no comparable expansion. Within markets already served, investment tilted toward qualifying sectors, most sharply where venture activity had been thinnest. Investment in newly reached markets leaned toward industrial and manufacturing startups relative to the software-heavy mix of established hubs, consistent with local economic structure shaping where capital landed. Entering firms were not systematically lower quality than those in other non-hub markets, trailing established hubs mainly in outlier successes. Drawing on worker-level data, we further show that startups in newly served markets created high-wage jobs, attracted scientific and technical workers\u2014including direct inflows from established hubs\u2014and retained them at higher rates than hub startups, while metros receiving more eligible-sector entry saw faster growth in wages. Our findings suggest that a geographically neutral subsidy can generate a meaningful expansion of VC\u2019s geographic reach when it is large enough to overcome the informational frictions and network gaps that concentrate investor funds in established hubs.",
       venue: "NBER Tax Policy and the Economy, Volume 41 (University of Chicago Press)",
-      status: "chap. 2, 2026",
+      status: "forthcoming",
       topConferences: [
         { name: "NBER Tax Policy and the Economy Annual Conference, 2026", url: "https://www.nber.org/conferences/41st-annual-nber-tax-policy-and-economy-conference-2026" },
       ],
@@ -95,6 +95,7 @@ window.SITE_DATA = {
         { name: "ECGI Blog", url: "https://www.ecgi.global/publications/blog/tax-incentives-and-the-venture-capital-appetite-for-risk" },
         { name: "The Idea Farm", url: "https://theideafarm.com/alternative-investment/tax-incentives-and-venture-capital-risk-taking-evidence-from-the-qsbs-program/" },
         { name: "SSTI", url: "https://www.ssti.org/blog/impact-tax-incentives-early-stage-company-investment-varies" },
+        { name: "QSBS Rollover", url: "https://www.qsbsrollover.com/blog/7-QSBS-topics-advisors-are-talking-about" },
       ],
       topConferences: [
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
@@ -109,6 +110,7 @@ window.SITE_DATA = {
         { name: "LBS Private Capital Symposium 2025", url: "https://drive.google.com/file/d/1-sO1gMD8QtmN0qakvzS66MGGKq0BkfJH/view" },
       ],
       conferences: [
+        { name: "BDI–EIEF–CEPR Conference on Finance and Innovation 2026", url: "https://cepr.org/events/bank-italycepreief-conference-innovation-and-finance" },
         { name: "SFS Cavalcade 2026", url: "https://www.conftool.com/sfs-cavalcade-2026/sessions.php" },
         { name: "FIRS 2026", url: "https://www.conftool.org/firs2026/sessions.php" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
@@ -217,6 +219,7 @@ window.SITE_DATA = {
         { name: "University College Dublin", year: 2026 },
         { name: "University of Florida (Economics Dept.)", year: 2026 },
         { name: "Washington University in St. Louis*", year: 2026 },
+        { name: "University of Illinois Urbana-Champaign*", year: 2026 },
       ],
     },
     {
@@ -232,13 +235,19 @@ window.SITE_DATA = {
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
         { name: "8th World Bank/ODI Global/IFS Public Finance Conference 2026", url: "https://www.worldbank.org/en/events/2026/09/24/8th-world-bank-odi-global-ifs-public-finance-conference" },
+        { name: "Workshop on Entrepreneurial Finance and Innovation 2026", url: "https://workshop-efi.com/" },
+        { name: "SMU-Jinan Conference on Urban and Regional Economics / 11th WB-GWU Urbanization and Development Conference 2026", url: "https://www.worldbank.org/en/events/2026/12/14/11th-urbanization-and-development-conference" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
       conferences: [
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
         { name: "8th World Bank/ODI Global/IFS Public Finance Conference 2026", url: "https://www.worldbank.org/en/events/2026/09/24/8th-world-bank-odi-global-ifs-public-finance-conference" },
+        { name: "SMU-Jinan Conference on Urban and Regional Economics / 11th WB-GWU Urbanization and Development Conference 2026", url: "https://www.worldbank.org/en/events/2026/12/14/11th-urbanization-and-development-conference" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
+      ],
+      seminars: [
+        { name: "Workshop on Entrepreneurial Finance and Innovation", year: 2026 },
       ],
     },
   ],
