@@ -911,3 +911,5 @@ main { counter-reset: talk-num var(--talk-total, 59); }
 .cl-expand-body a.video-link:hover {
   color: var(--link-deep);
 }
+
+.mm-talk-note{font-size:13px;color:var(--ink-3);margin:6px 0 0;}

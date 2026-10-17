@@ -176,7 +176,7 @@ window.SITE_DATA = {
         "Do social transfer programs boost entrepreneurship among low-income populations? We address this question by examining Brazil's Bolsa Família—the world's largest cash transfer program—and its effects on entrepreneurial entry, performance, economic mobility, and human capital formation. Using administrative data covering 2.3 million sole-proprietorships, we track entrepreneurs through the complete business lifecycle—from entry through performance to post-failure employment. We address selection combining instrumental variables—exploiting bunching across program eligibility thresholds—with matching and granular fixed effects. We first show that cash transfers increase transitions into entrepreneurship from both non-employment and wage employment, increasing beneficiaries' representation among entrepreneurs. We then identify systematic performance disadvantages: cash-transfer entrepreneurs exhibit lower survival, business growth, employment creation, and credit access, eventually facing higher rates of tax violations and debt collection proceedings. Performance gaps do not reflect insufficient cash alone—they generally narrow where local prices make the uniform cash transfer worth more, yet persist even where its real value is highest. Instead, the gaps appear consistent with program dependence, revealed by income bunching at eligibility thresholds and widening gaps among longer-tenured beneficiaries. Examining post-entrepreneurship trajectories, we find that cash-transfer entrepreneurs return to wage employment faster and more often than other failed entrepreneurs; and although both groups return at lower pay, cash-transfer founders' wage losses are 61% smaller. Overall, our analysis reveals that cash-transfer businesses remain trapped in subsistence, generating neither growth nor economic transformation, but the entrepreneurial experience itself builds human capital that disproportionately benefits beneficiaries.",
       topConferences: [
         { name: "AEA 2027", url: "https://www.aeaweb.org/conference/" },
-        { name: "NBER Public Economics 2026", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2026" },
+        { name: "NBER Public Economics 2026*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2026" },
         { name: "WFA 2026", url: "https://westernfinance-portal.org/conference" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
         { name: "ABFER 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
@@ -189,7 +189,7 @@ window.SITE_DATA = {
         { name: "HEC Paris Entrepreneurship Workshop 2025", url: "https://hecparisentrepreneurship.github.io/" },
       ],
       conferences: [
-        { name: "NBER Public Economics 2026", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2026" },
+        { name: "NBER Public Economics 2026*", url: "https://www.nber.org/conferences/public-economics-program-meeting-fall-2026" },
         { name: "WFA 2026", url: "https://westernfinance-portal.org/conference" },
         { name: "AEA 2027", url: "https://www.aeaweb.org/conference/" },
         { name: "WAPFIN@Stern 2026*", url: "https://wapfin-stern.weebly.com/" },
@@ -236,14 +236,12 @@ window.SITE_DATA = {
         { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
         { name: "8th World Bank/ODI Global/IFS Public Finance Conference 2026", url: "https://www.worldbank.org/en/events/2026/09/24/8th-world-bank-odi-global-ifs-public-finance-conference" },
         { name: "Workshop on Entrepreneurial Finance and Innovation 2026", url: "https://workshop-efi.com/" },
-        { name: "SMU-Jinan Conference on Urban and Regional Economics / 11th WB-GWU Urbanization and Development Conference 2026", url: "https://www.worldbank.org/en/events/2026/12/14/11th-urbanization-and-development-conference" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
       conferences: [
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
         { name: "8th World Bank/ODI Global/IFS Public Finance Conference 2026", url: "https://www.worldbank.org/en/events/2026/09/24/8th-world-bank-odi-global-ifs-public-finance-conference" },
-        { name: "SMU-Jinan Conference on Urban and Regional Economics / 11th WB-GWU Urbanization and Development Conference 2026", url: "https://www.worldbank.org/en/events/2026/12/14/11th-urbanization-and-development-conference" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
       ],
       seminars: [
@@ -253,6 +251,14 @@ window.SITE_DATA = {
   ],
   worksInProgress: [
     {
+      n: 8,
+      title: "Job Market Paper [Title TBA]",
+      coauthors: [],
+      topConferences: [
+        { name: "NBER Innovation Information Initiative 2026", url: "https://www.nber.org/programs-projects/projects-and-centers/innovative-information-initiative" },
+      ],
+    },
+    {
       n: 5,
       title: "Cash Transfers and Dependence in Entrepreneurial Finance",
       coauthors: [
@@ -261,10 +267,14 @@ window.SITE_DATA = {
         { name: "Chi-Yang Tsou", url: "https://sites.google.com/view/chiyangtsou/home" },
       ],
       topConferences: [
+        { name: "University of Melbourne 2026*" },
         { name: "Taiwan Symposium on Innovation Economics and Entrepreneurship 2026*", url: "https://oir.site.nthu.edu.tw/p/404-1487-164855.php" },
       ],
       conferences: [
         { name: "Taiwan Symposium on Innovation Economics and Entrepreneurship 2026*", url: "https://oir.site.nthu.edu.tw/p/404-1487-164855.php" },
+      ],
+      seminars: [
+        { name: "University of Melbourne*", year: 2026 },
       ],
     },
     {
@@ -284,11 +294,6 @@ window.SITE_DATA = {
         { name: "Michael S. Weisbach", url: "https://u.osu.edu/weisbach.2/" },
       ],
       note: "Granted access to MSCI–Burgiss data by the Private Equity Research Consortium.",
-    },
-    {
-      n: 8,
-      title: "Job Market Paper [Title TBA]",
-      coauthors: [],
     },
   ],
   teaching: [

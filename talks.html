@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Presentations — Guilherme Junqueira</title>
 <script src="site/theme-init.js?v=20260707"></script>
-<link rel="stylesheet" href="site/styles.css?v=20260919" />
+<link rel="stylesheet" href="site/styles.css?v=20261017b" />
 <link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260707" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY28WWYZXQ"></script>
@@ -21,7 +21,7 @@
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=20261003g"></script>
+<script src="site/data.js?v=20261017e"></script>
 <script type="text/babel" src="site/layout.jsx?v=20260707"></script>
 <script type="text/babel" data-presets="react">
   const D = window.SITE_DATA;
@@ -69,7 +69,6 @@
   const LOCATIONS = [
     ["nber tax policy", "Washington, DC"],
     ["bdi–eief–cepr", "Rome, Italy"],
-    ["smu-jinan", "Singapore"],
     ["workshop on entrepreneurial finance", "Online"],
     ["university of illinois", "Champaign, IL"],
     ["nber new developments", "Chicago, IL"],
@@ -145,8 +144,10 @@
     ["wapfin", "New York, NY"],
     ["labor & finance conference", "State College, PA"],
   ];
-  function getLoc(venue) {
+  const YEAR_LOCATIONS = [];
+  function getLoc(venue, year) {
     const v = (venue || "").toLowerCase();
+    for (const [k, y, loc] of YEAR_LOCATIONS) if (y === year && v.includes(k)) return loc;
     for (const [k, loc] of LOCATIONS) if (v.includes(k)) return loc;
     return null;
   }
@@ -178,6 +179,7 @@
       if (/Homeownership Hinders/i.test(t)) return "Housing Lottery";
       if (/Measuring Innovation/i.test(t)) return "Food Innovation";
       if (/Industrial Organization of Private Equity/i.test(t)) return "PE Industrial Org.";
+      if (/Job Market Paper/i.test(t)) return "Job Market Paper";
       return t.split(":")[0];
     };
     const out = [];
@@ -229,7 +231,7 @@
     }
     const merged = Array.from(byKey.values());
     const PRIORITY = {
-      2026: ["NBER Public Economics","NBER Tax Policy and the Economy","NBER New Developments in Long-Term Asset Management","SFS Cavalcade","WFA","FIRS","EFA","CEPR Development Economics Symposium","CEPR Summer Conference on Financial Intermediation and Corporate Finance","ABFER Annual Conference","University of Washington 7th Summer Finance Conference"],
+      2026: ["NBER Innovation Information Initiative","NBER Public Economics","NBER Tax Policy and the Economy","NBER New Developments in Long-Term Asset Management","SFS Cavalcade","WFA","FIRS","EFA","CEPR Development Economics Symposium","CEPR Summer Conference on Financial Intermediation and Corporate Finance","ABFER Annual Conference","University of Washington 7th Summer Finance Conference"],
       2025: [
         "NBER Innovation Information Initiative",
         "NBER Place-Based Policies & Entrepreneurship",
@@ -307,7 +309,7 @@
                           {t.count > 1 && <span className="cl-mult"> ({t.count} Papers)</span>}
                           {t.byCoauthor && <span className="cl-co">*</span>}
                         </span>
-                        {getLoc(t.venue) && <span className="cl-loc">{getLoc(t.venue)}</span>}
+                        {getLoc(t.venue, t.year) && <span className="cl-loc">{getLoc(t.venue, t.year)}</span>}
                       </li>
                     ))}
                   </ul>
@@ -323,7 +325,7 @@
                           {t.url ? <a href={t.url} target="_blank" rel="noopener">{renderVenue(t.venue)}</a> : renderVenue(t.venue)}
                           {t.byCoauthor && <span className="cl-co">*</span>}
                         </span>
-                        {getLoc(t.venue) && <span className="cl-loc">{getLoc(t.venue)}</span>}
+                        {getLoc(t.venue, t.year) && <span className="cl-loc">{getLoc(t.venue, t.year)}</span>}
                       </li>
                     ))}
                   </ul>
