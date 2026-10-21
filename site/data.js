@@ -152,6 +152,7 @@ window.SITE_DATA = {
         { name: "University of Miami*", year: 2026 },
         { name: "University of Tennessee*", year: 2026 },
         { name: "Federal Reserve Board*", year: 2026 },
+        { name: "Tuck School of Business at Dartmouth", year: 2026 },
       ],
     },
     {
@@ -255,7 +256,10 @@ window.SITE_DATA = {
       title: "Job Market Paper [Title TBA]",
       coauthors: [],
       topConferences: [
-        { name: "NBER Innovation Information Initiative 2026", url: "https://www.nber.org/programs-projects/projects-and-centers/innovative-information-initiative" },
+        { name: "NBER Innovation Information Initiative 2026", url: "https://www.nber.org/conferences/innovation-information-initiative-technical-working-group-meeting-fall-2026" },
+      ],
+      seminars: [
+        { name: "University of Florida", year: 2026 },
       ],
     },
     {
