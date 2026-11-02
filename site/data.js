@@ -153,6 +153,7 @@ window.SITE_DATA = {
         { name: "University of Tennessee*", year: 2026 },
         { name: "Federal Reserve Board*", year: 2026 },
         { name: "Tuck School of Business at Dartmouth", year: 2026 },
+        { name: "Collegio Carlo Alberto", year: 2026 },
       ],
     },
     {
@@ -182,7 +183,7 @@ window.SITE_DATA = {
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
         { name: "ABFER 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
         { name: "Labor & Finance Conference, Fall 2026", url: "https://www.ssrn.com/index.cfm/en/janda/announcement/?id=19234" },
-        { name: "ESADE Entrepreneurial Finance Conference 2026*", url: "https://form.jotform.com/261373711218352" },
+        { name: "ESADE Entrepreneurial Finance Conference 2027*", url: "https://form.jotform.com/261373711218352" },
         { name: "CEPR Development Economics Symposium 2026", url: "https://cepr.org/events/event-series/development-economics-symposium/cepr-development-economics-joint-tcd-2026-1" },
         { name: "RAPS/RCFS Europe Conference 2026*", url: "https://sfs.org/raps-rcfs-europe-conference-2026/" },
         { name: "University of Washington 7th Finance Conference 2026*", url: "https://foster.uw.edu/faculty-research/academic-departments/finance-and-business-economics/summer-finance-conference/" },
@@ -196,7 +197,7 @@ window.SITE_DATA = {
         { name: "WAPFIN@Stern 2026*", url: "https://wapfin-stern.weebly.com/" },
         { name: "Labor & Finance Conference, Fall 2026", url: "https://www.ssrn.com/index.cfm/en/janda/announcement/?id=19234" },
         { name: "EFA 2026", url: "https://www.conftool.com/efa2026/sessions.php" },
-        { name: "ESADE Entrepreneurial Finance Conference 2026*", url: "https://form.jotform.com/261373711218352" },
+        { name: "ESADE Entrepreneurial Finance Conference 2027*", url: "https://form.jotform.com/261373711218352" },
         { name: "CEPR Development Economics Symposium 2026", url: "https://cepr.org/events/event-series/development-economics-symposium/cepr-development-economics-joint-tcd-2026-1" },
         { name: "CEPR Summer Conference on Financial Intermediation and Corporate Finance 2026*", url: "https://cepr.org/events/8th-summer-conference-financial-intermediation-and-corporate-finance" },
         { name: "ABFER 2026", url: "https://abfer.org/events/abfer-events/annual-conference/417:accfp2026" },
@@ -236,8 +237,9 @@ window.SITE_DATA = {
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
         { name: "7th CEAR-RSI Household Finance Workshop 2026", url: "https://cear.gsu.edu/event-archives/7th-cear-rsi-household-finance-workshop/" },
         { name: "8th World Bank/ODI Global/IFS Public Finance Conference 2026", url: "https://www.worldbank.org/en/events/2026/09/24/8th-world-bank-odi-global-ifs-public-finance-conference" },
-        { name: "Workshop on Entrepreneurial Finance and Innovation 2026", url: "https://workshop-efi.com/" },
+        { name: "Workshop on Entrepreneurial Finance and Innovation", url: "https://workshop-efi.com/" },
         { name: "World Bank Land and Property Research Conference 2026*", url: "https://www.worldbank.org/en/events/2026/04/29/land-and-property-research-conference" },
+        { name: "Florida State University*" },
       ],
       conferences: [
         { name: "AFA 2027", url: "https://afajof.org/annual-meeting/" },
@@ -247,6 +249,7 @@ window.SITE_DATA = {
       ],
       seminars: [
         { name: "Workshop on Entrepreneurial Finance and Innovation", year: 2026 },
+        { name: "Florida State University*", year: 2026 },
       ],
     },
   ],
@@ -256,6 +259,10 @@ window.SITE_DATA = {
       title: "Job Market Paper [Title TBA]",
       coauthors: [],
       topConferences: [
+        { name: "NBER Innovation Information Initiative 2026", url: "https://www.nber.org/conferences/innovation-information-initiative-technical-working-group-meeting-fall-2026" },
+        { name: "University of Florida" },
+      ],
+      conferences: [
         { name: "NBER Innovation Information Initiative 2026", url: "https://www.nber.org/conferences/innovation-information-initiative-technical-working-group-meeting-fall-2026" },
       ],
       seminars: [
@@ -271,8 +278,8 @@ window.SITE_DATA = {
         { name: "Chi-Yang Tsou", url: "https://sites.google.com/view/chiyangtsou/home" },
       ],
       topConferences: [
-        { name: "University of Melbourne 2026*" },
         { name: "Taiwan Symposium on Innovation Economics and Entrepreneurship 2026*", url: "https://oir.site.nthu.edu.tw/p/404-1487-164855.php" },
+        { name: "University of Melbourne*" },
       ],
       conferences: [
         { name: "Taiwan Symposium on Innovation Economics and Entrepreneurship 2026*", url: "https://oir.site.nthu.edu.tw/p/404-1487-164855.php" },
