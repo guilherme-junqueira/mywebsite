@@ -27,7 +27,7 @@ window.SITE_DATA = {
       title: "Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing",
       url: "https://www.nber.org/books-and-chapters/tax-policy-and-economy-volume-41/democratizing-venture-capital-tax-incentives-and-geographic-expansion-startup-investing",
       versions: [
-        { name: "Working Paper", url: "https://conference.nber.org/conf_papers/f247859.pdf", primary: true },
+        { name: "SSRN", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7687918", primary: true, pdf: false },
       ],
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
       bibtex: `@inbook{campello2026democratizing,
@@ -42,7 +42,7 @@ window.SITE_DATA = {
 }`,
       apa: "Campello, M., & Junqueira, G. (forthcoming). Democratizing venture capital: Tax incentives and the geographic expansion of startup investing. In Tax Policy and the Economy, Volume 41 (chap. 2). University of Chicago Press.",
       abstract:
-        "Can tax subsidies expand the geographic reach of startup investing? Despite decades of growth, institutional startup investing remains confined to a handful of coastal hubs, leaving most of the country with little access to the risk-seeking capital that finances high-growth entrepreneurship. We exploit the 2009\u20132010 enhancement of the Qualified Small Business Stock (QSBS) program\u2014which eliminated federal capital gains taxes on investments in qualifying startups\u2014to study whether tax subsidies can broaden the reach of startup investing. Using investment-level data covering 158 thousand investor\u2013firm pairings, we show that the QSBS enhancement raised the probability that a previously unserved U.S. metropolitan area received venture capital (VC) investment in qualifying sectors by 8 to 10 percentage points. VC investment in ineligible sectors showed no comparable expansion. Within markets already served, investment tilted toward qualifying sectors, most sharply where venture activity had been thinnest. Investment in newly reached markets leaned toward industrial and manufacturing startups relative to the software-heavy mix of established hubs, consistent with local economic structure shaping where capital landed. Entering firms were not systematically lower quality than those in other non-hub markets, trailing established hubs mainly in outlier successes. Drawing on worker-level data, we further show that startups in newly served markets created high-wage jobs, attracted scientific and technical workers\u2014including direct inflows from established hubs\u2014and retained them at higher rates than hub startups, while metros receiving more eligible-sector entry saw faster growth in wages. Our findings suggest that a geographically neutral subsidy can generate a meaningful expansion of VC\u2019s geographic reach when it is large enough to overcome the informational frictions and network gaps that concentrate investor funds in established hubs.",
+        "Can tax subsidies expand the geographic reach of startup investing? Despite decades of growth, venture capital (VC) remains concentrated in a handful of metropolitan areas, leaving most of the country with limited access to startup financing. We study the 2009–2010 enhancement of the Qualified Small Business Stock (QSBS) program, which eliminated federal capital gains taxes on investments in qualifying startups. By raising the payoff to success, the reform made riskier investments more attractive, including entry into unfamiliar markets. This incentive is especially strong for VC funds. Relative to similarly sized metros that already had VC, the reform raised the probability that a previously unserved metro received VC investment in qualifying sectors by 8 to 10 percentage points. There was no comparable increase in sectors excluded from QSBS or among angel investors, who receive the same tax benefit. Startups in newly served markets performed like those in other non-hub markets, created high-wage jobs, and attracted scientific and technical workers, some from established hubs. Our findings suggest that a sufficiently large subsidy can extend VC into markets it had long bypassed, even with no requirement on where startups are located.",
       venue: "NBER Tax Policy and the Economy, Volume 41 (University of Chicago Press)",
       status: "forthcoming",
       topConferences: [
@@ -62,7 +62,7 @@ window.SITE_DATA = {
         { name: "SSRN", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7004578", primary: true, pdf: false },
         { name: "NBER WP", url: "https://www.nber.org/papers/w35418", primary: true, pdf: false },
         { name: "CESifo WP", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7032862", pdf: false },
-        { name: "Oxford WP", url: "https://oxfordtax.sbs.ox.ac.uk/sitefiles/wp25.10-guilherme-junqueira.pdf", pdf: false },
+        { name: "Oxford WP", url: "https://oxfordtax.site.ox.ac.uk/sites/g/files/vzsiac2436/files/2026-09/wp25.10-guilherme-junqueira.pdf", pdf: false },
       ],
       bibtex: `@techreport{campello2026taxincentives,
   author      = {Campello, Murillo and Junqueira, Guilherme},
@@ -256,14 +256,16 @@ window.SITE_DATA = {
   worksInProgress: [
     {
       n: 8,
-      title: "Job Market Paper [Title TBA]",
+      title: "Human Capital and Asset Pledgeability: Evidence from Inventors within Firms",
       coauthors: [],
       topConferences: [
         { name: "NBER Innovation Information Initiative 2026", url: "https://www.nber.org/conferences/innovation-information-initiative-technical-working-group-meeting-fall-2026" },
+        { name: "Berkeley CenSoc Conference 2026", url: "https://populationsciences.berkeley.edu/conferences/call-for-submissions-2026-censoc-users-conference/" },
         { name: "University of Florida" },
       ],
       conferences: [
         { name: "NBER Innovation Information Initiative 2026", url: "https://www.nber.org/conferences/innovation-information-initiative-technical-working-group-meeting-fall-2026" },
+        { name: "Berkeley CenSoc Conference 2026", url: "https://populationsciences.berkeley.edu/conferences/call-for-submissions-2026-censoc-users-conference/" },
       ],
       seminars: [
         { name: "University of Florida", year: 2026 },
