@@ -24,10 +24,12 @@ window.SITE_DATA = {
   publications: [
     {
       n: 1,
+      figure: { title: "VC Reached 86 New Metro Areas After the 2009–2010 QSBS Reforms", src: "site/assets/figs/fig-democratizing-vc.png?v=20261125c" },
       title: "Democratizing Venture Capital: Tax Incentives and the Geographic Expansion of Startup Investing",
       url: "https://www.nber.org/books-and-chapters/tax-policy-and-economy-volume-41/democratizing-venture-capital-tax-incentives-and-geographic-expansion-startup-investing",
       versions: [
         { name: "SSRN", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7687918", primary: true, pdf: false },
+        { name: "NBER WP", url: "https://www.nber.org/papers/w36039", primary: true, pdf: false },
       ],
       coauthors: [{ name: "Murillo Campello", url: "https://murillocampello.com/" }],
       bibtex: `@inbook{campello2026democratizing,
@@ -56,6 +58,7 @@ window.SITE_DATA = {
   workingPapers: [
     {
       n: 2,
+      figure: { title: "Lower Capital Gains Taxes Make Riskier Projects Worth Funding", src: "site/assets/figs/fig-vc-taxes.png?v=20261125c" },
       title: "Tax Incentives and Venture Capital Risk-Taking: Evidence from the QSBS Program",
       url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7004578",
       versions: [
@@ -158,6 +161,7 @@ window.SITE_DATA = {
     },
     {
       n: 3,
+      figure: { title: "Cash Transfers Increase Entry into Entrepreneurship", src: "site/assets/figs/fig-safety-net.png?v=20261125c" },
       title: "Entrepreneurship on a Safety Net: Evidence from the World's Largest Cash Transfer Program",
       url: "https://www.dropbox.com/scl/fi/4fdi4dajpb2354gxyviv7/Entrepreneurship_on_a_Safety_Net.pdf?rlkey=kheavu51lzb3zu78iu5rbqau9&st=e8of9q5y&dl=0",
       versions: [
@@ -226,6 +230,7 @@ window.SITE_DATA = {
     },
     {
       n: 4,
+      figure: { title: "Winning a Home Deters Entrepreneurship", src: "site/assets/figs/fig-homeownership.png?v=20261125c" },
       title: "Homeownership Hinders Entrepreneurship: Evidence from a Housing Lottery",
       url: "#",
       coauthors: [

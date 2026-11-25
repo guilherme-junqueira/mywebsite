@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Research — Guilherme Junqueira</title>
 <script src="site/theme-init.js?v=20260707"></script>
-<link rel="stylesheet" href="site/styles.css?v=20261021" />
+<link rel="stylesheet" href="site/styles.css?v=20261125c" />
 <link rel="icon" type="image/png" sizes="32x32" href="site/assets/favicon-32.png?v=20260707" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SY28WWYZXQ"></script>
@@ -21,7 +21,7 @@
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="site/data.js?v=034627"></script>
+<script src="site/data.js?v=20261125g"></script>
 <script type="text/babel" src="site/layout.jsx?v=20260707"></script>
 <script type="text/babel" data-presets="react">
   const D = window.SITE_DATA;
@@ -115,6 +115,31 @@
     return name;
   }
 
+  function PaperFigure({ f, title }) {
+    const [open, setOpen] = React.useState(false);
+    React.useEffect(() => {
+      if (!open) return;
+      const k = e => { if (e.key === 'Escape') setOpen(false); };
+      window.addEventListener('keydown', k);
+      return () => window.removeEventListener('keydown', k);
+    }, [open]);
+    return (
+      <React.Fragment>
+        <figure className="paper-fig" onClick={() => setOpen(true)}>
+          {f.title && <div className="paper-fig-title">{f.title}</div>}
+          <img src={f.src} alt={f.caption || title} loading="lazy" decoding="async" />
+          {f.caption && <figcaption>{f.caption}</figcaption>}
+        </figure>
+        {open && (
+          <div className="lb" onClick={() => setOpen(false)}>
+            <img className="lb-fig" src={f.src} alt={f.caption || title} />
+            {f.caption && <div className="lb-cap">{f.caption}</div>}
+          </div>
+        )}
+      </React.Fragment>
+    );
+  }
+
   function PaperDetail({ p }) {
     const authorLine = p.coauthors.length
       ? <React.Fragment>with {p.coauthors.map((c,i) => (
@@ -131,7 +156,7 @@
     const hasMore = conferences.length > selected.length || seminars.length > 0;
 
     return (
-      <article className="cl-paper-detail">
+      <article className={"cl-paper-detail" + (p.figure ? " has-fig" : "")}>
         <div className="paper-body">
         <div className="paper-title-row">
           <div className="num">[{String(p.n).padStart(2,'0')}]</div>
@@ -139,6 +164,8 @@
             {p.url && p.url !== '#' ? <a href={p.url} target="_blank" rel="noopener">{p.title}</a> : p.title}
           </h3>
         </div>
+        <div className="paper-cols">
+        <div className="paper-main">
         <div className="authors">
           {authorLine}
           {p.venue && <React.Fragment> — <span className="venue">{p.venue}</span>{p.status?`, ${p.status}`:''}</React.Fragment>}
@@ -166,7 +193,7 @@
 
         {p.coverage && (
           <div className="badges">
-            <strong className="badges-label">Other Media:</strong>{' '}
+            <strong className="badges-label">Media:</strong>{' '}
             {p.coverage.map((c,i)=> <React.Fragment key={i}>{i>0?' · ':''}<a href={c.url} target="_blank" rel="noopener">{c.name}</a></React.Fragment>)}
           </div>
         )}
@@ -218,6 +245,9 @@
             </div>
           </details>
         )}
+        </div>
+        {p.figure && <PaperFigure f={p.figure} title={p.title} />}
+        </div>
         </div>
       </article>
     );
